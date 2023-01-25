@@ -49,3 +49,17 @@
   --sub-bg2: #151823;
   --point: #007eff;
 }
+
+/* 레이아웃 */
+.d-flex {
+  display: flex;
+}
+.jcc {
+  justify-content: center;
+}
+.jcsb {
+  justify-content: space-between;
+}
+.aic {
+  align-items: center;
+}
