@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    .top_btn{
+        background: none;
+        border: none;
+        position: relative;
+    }
+    .top_btn img{
+        animation: rotate_image 6s linear infinite;
+    }
+    .top_btn i{
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        color: #fff;
+        transition: 0.5s;
+    }
+    .top_btn i:hover{
+        color: #007eff;
+    }
+
+
+    @keyframes rotate_image {
+        100% {
+        transform: rotate(360deg);
+    }
+    }
+</style>
+<body>
+
+    <button class="top_btn">
+        <a href=""><img src="./img/TOP/TOP.png" alt=""><i class="fa-solid fa-arrow-up-long fa-3x"></i></a>
+    </button>
+
+   
+</body>
+</html>
