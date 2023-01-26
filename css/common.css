@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "samsungOne_400";
+  src: url(../font/samsungone-cufonfonts/SamsungOne-400.ttf) format("truetype");
+}
+@font-face {
+  font-family: "samsungOne_700";
+  src: url(../font/samsungone-cufonfonts/SamsungOne-700.ttf) format("truetype");
+}
+@font-face {
+  font-family: "samsungsharpsans_medium";
+  src: url(../font/samsung-sharp-sans-cufonfonts/samsungsharpsans-medium.otf)
+    format("opentype");
+}
+@font-face {
+  font-family: "samsungsharpsans_bold";
+  src: url(../font/samsung-sharp-sans-cufonfonts/samsungsharpsans-bold.otf)
+    format("opentype");
+}
+/* 패딩 */
+/* 폰트사이즈 */
+/* PC */
+.ft32 {
+  font-size: 32px;
+}
+.ft24 {
+  font-size: 24px;
+}
+
+/* 테블릿 */
+.ft20 {
+  font-size: 20px;
+}
+.ft18 {
+  font-size: 18px;
+}
+/* 모바일 */
+.ft15 {
+  font-size: 15px;
+}
+.ft13 {
+  font-size: 13px;
+}
+/* 컬러 */
+:root {
+  --main-bg: #000;
+  --text: #fff;
+  --primary: #03509f;
+  --sub-bg1: #090d17;
+  --sub-bg2: #151823;
+  --point: #007eff;
+}
+
+/* 레이아웃 */
+.d-flex {
+  display: flex;
+}
+.jcc {
+  justify-content: center;
+}
+.jcsb {
+  justify-content: space-between;
+}
+.aic {
+  align-items: center;
+}
