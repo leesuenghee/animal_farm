@@ -17,6 +17,13 @@
     format("opentype");
 }
 /* 패딩 */
+.pd_ow {
+  padding: 162px 0 162px 0;
+}
+/* 마진 */
+.m_ow {
+  margin: 0 290px 0 290px;
+}
 /* 폰트사이즈 */
 /* PC */
 .ft32 {
