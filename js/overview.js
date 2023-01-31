@@ -15,6 +15,7 @@ $(window).scroll(() => {
       let effect = $(this).attr("data-effect");
       // console.log(effect);
       $(this).css({ visiblity: "visible" });
+
       $(this).addClass(effect);
     }
   });
@@ -23,7 +24,7 @@ $(window).scroll(() => {
 //#toggle
 $(window).scroll(() => {
   let sct = $(window).scrollTop();
-  console.log(sct);
+  // console.log(sct);
 
   if (sct > toggleOST - 500) {
     toggleTs.css({
@@ -56,3 +57,5 @@ $(window).scroll(() => {
     }
   }
 });
+
+// display
