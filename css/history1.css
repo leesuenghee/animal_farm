@@ -7,7 +7,6 @@ body {
   color: var(--text);
   font-family: "samsungOne_400";
 }
-
 .history_submenu {
   background: var(--sub-bg1);
   line-height: 80px;
@@ -18,23 +17,46 @@ body {
   left: 0;
   right: 0;
 }
-
-.parallax-mirror {
-  height: 890px;
+#section1 {
+  background-image: url(/img/map_history/history_01.jpg);
 }
-
-.parallax-window {
+#section1 .history_sticky {
+  padding-top: 0px;
+  padding-bottom: 300px;
+}
+#section2 {
+  background-image: url(/img/map_history/history_02.jpg);
+}
+#section3 {
+  background-image: url(/img/map_history/history_03.jpg);
+}
+#section4 {
+  background-image: url(/img/map_history/history_04.jpg);
+}
+#section5 {
+  background-image: url(/img/map_history/history_05.jpg);
+}
+section{
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 890px;
-  min-width: 1920px;
-  background: transparent;
-  /* background-attachment: fixed; */
 }
+
 
 section .container > h2 {
   text-align: center;
   font-weight: 700;
   padding-top: 54px;
 }
+
+.history_sticky {
+  order: 2;
+  width: 50%;
+}
+
 .history_desc {
   width: 50%;
   order: 1;
@@ -42,8 +64,6 @@ section .container > h2 {
 }
 
 .history_title {
-  order: 2;
-  width: 50%;
   flex-direction: column;
   margin-top: 250px;
 }
