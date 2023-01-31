@@ -1,0 +1,36 @@
+a {
+  color: var(--text);
+}
+
+body {
+  background: var(--main-bg);
+  color: var(--text);
+}
+
+.history_submenu {
+  background: var(--sub-bg1);
+  line-height: 80px;
+  font-family: "samsungOne_400";
+  gap: 210px;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.parallax-window {
+  min-height: 890px;
+  background: transparent;
+}
+
+.section {
+  height: 890px;
+}
+
+.history_desc {
+  width: 50%;
+}
+.history_title {
+  width: 50%;
+}
