@@ -260,3 +260,46 @@ header nav #toggle {
     width: 200px;
   }
 }
+<<<<<<< HEAD
+=======
+
+/* FOOTER */
+a {
+  color: var(--text);
+}
+
+.container {
+  width: 1340px;
+  margin: 0 auto;
+}
+
+footer {
+  background: var(--main-bg);
+  color: var(--text);
+  font-family: "samsungOne_400";
+  padding: 81px 0;
+}
+
+footer .footer-menu {
+  margin-bottom: 81px;
+}
+
+footer .footer-menu,
+footer .copyright,
+footer .sns {
+  gap: 20px;
+}
+
+footer .sns {
+  font-size: 0;
+}
+
+footer .sns .fa-brands {
+  font-size: 32px;
+}
+
+footer .sns svg {
+  width: 80%;
+  height: 80%;
+}
+>>>>>>> cb336d5a2a2379f82d35e7519661e4feeb5c22ad
