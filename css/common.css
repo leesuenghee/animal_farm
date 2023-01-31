@@ -260,8 +260,6 @@ header nav #toggle {
     width: 200px;
   }
 }
-<<<<<<< HEAD
-=======
 
 /* FOOTER */
 a {
@@ -284,7 +282,6 @@ footer .footer-menu {
   margin-bottom: 81px;
 }
 
-footer .footer-menu,
 footer .copyright,
 footer .sns {
   gap: 20px;
@@ -302,4 +299,3 @@ footer .sns svg {
   width: 80%;
   height: 80%;
 }
->>>>>>> cb336d5a2a2379f82d35e7519661e4feeb5c22ad
