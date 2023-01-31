@@ -198,6 +198,25 @@
           skrollr.init().destroy();
         }
       });
+
+      const trigger =new ScrollTrigger.default({
+trigger: {
+once: true,
+offset : {
+element : {
+x : 0,
+y : 0.2
+}
+},
+toggle:{
+class:{
+in:'active',
+out:'inactive'
+}
+}
+}
+})
+// trigger.add('[data-trigger]')
     </script>
   </body>
 </html>

@@ -195,11 +195,7 @@ h4 {
   #toggle {
     width: 100%;
     margin: 0 auto;
-    padding: 0;
-  }
-  #toggle .content {
-    width: 100%;
-    padding: 0;
+    padding-bottom: 150px;
   }
   #toggle .ts {
     flex-direction: column-reverse;
@@ -212,6 +208,7 @@ h4 {
   }
   #toggle .ts:nth-child(2) img {
     height: 292px;
+    width: 180px;
   }
   #toggle .ts:nth-child(2) p {
     bottom: -40%;
@@ -222,12 +219,14 @@ h4 {
     height: 324px;
   }
   #toggle .ts:first-child.active {
-    opacity: 1;
-    transition: none;
+    /* opacity: 1;
+    transition: none; */
     transform: translateY(-30%);
   }
   #toggle .ts:first-child.active img {
-    opacity: 0;
+    /* opacity: 0; */
+    width: 177px;
+    height: 298px;
   }
   #toggle .ts:first-child p {
     top: 0;
