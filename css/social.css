@@ -1,0 +1,109 @@
+/* Main BANNER */
+
+.banner {
+    text-align: center;
+}
+.banner h2,
+.banner h3,
+.banner h4,
+.banner h5{
+    font-family: "samsungOne_700";
+    line-height: 40px;
+}
+
+/* SECTION1 함께가요 미래로 */
+
+
+/* SECTION2 무지개 */
+
+
+/* SECTION3 지역사회활동 */
+.social_s3 .s3_title_wrapper {
+    text-align: left;
+    background: url(../img/social/social_s3_bg.jpg) no-repeat center center/cover;
+}
+.social_s3 .s3_title_wrapper .pager {
+    font-family:  "samsungOne_700";
+}
+.social_s3 .s3_title_wrapper .pager a {
+    position: relative;
+    display: inline-block;
+    margin: 0 50px;
+    transition: transform 0.4s;
+}
+.social_s3 .s3_title_wrapper .pager a:after {
+    content:'';
+    display: inline-block;
+    width: 160px;
+    height: 2px;
+    background: rgba(255,255,255,.6);
+    position: absolute;
+    top: calc(100% + 30px);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.4s;
+}
+.social_s3 .s3_title_wrapper .pager a:hover {
+    transform: translateY(-40px);
+}
+.social_s3 .s3_title_wrapper .pager a:hover:after {
+    height: 8px;
+    width: 200px;
+}
+.social_s3 .s3_slidewrapper {
+    background: #151823;
+    padding: 70px;
+}
+.social_s3 .s3_slidewrapper .controls i {
+    background: rgba(255,255,255,.2);
+    color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    transition: 0.4s;
+}
+.social_s3 .s3_slidewrapper .controls i:hover {
+    background: rgba(0,126,255,.2);
+}
+.social_s3 img {
+    width: 700px;
+    height: 450px;
+    border-radius: 30px;
+    margin-top: 70px;
+}
+.social_s3 .s3_slidewrapper p {
+    margin-bottom: 70px;
+}
+
+
+/* SECTION4 나눔경영 */
+
+.social_s4 .s4_slidewrapper img {
+    width: 450px;
+    height: 250px;
+    border-radius: 30px;
+    
+}
+.s4_contents_wrapper h4 {
+    
+}
+/* SECTION5 자매마을결연 */
+
+
+
+/* 반응형 */
+@media (max-width:768px){
+    .social_s3.title_wrapper .pager a:after {
+        width: 160px;
+        height: 2px;
+        top: calc(100% + 30px);
+    }
+    .social_s3.title_wrapper .pager a:hover:after {
+        height: 8px;
+        width: 200px;
+    }
+}
+
+@media (max-width:480px){
+
+}
