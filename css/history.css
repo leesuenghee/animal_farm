@@ -7,7 +7,6 @@ body {
   color: var(--text);
   font-family: "samsungOne_400";
 }
-
 .history_submenu {
   background: var(--sub-bg1);
   line-height: 80px;
@@ -17,36 +16,60 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 50;
 }
-
-.parallax-mirror {
-  height: 890px;
+#section1 {
+  background-image: url(/img/map_history/history_01.jpg);
 }
-
-.parallax-window {
+#section2 {
+  background-image: url(/img/map_history/history_02.jpg);
+}
+#section3 {
+  background-image: url(/img/map_history/history_03.jpg);
+}
+#section4 {
+  background-image: url(/img/map_history/history_04.jpg);
+}
+#section5 {
+  background-image: url(/img/map_history/history_05.jpg);
+}
+section {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 890px;
-  min-width: 1920px;
-  background: transparent;
-  /* background-attachment: fixed; */
 }
-
-section .container > h2 {
-  text-align: center;
-  font-weight: 700;
+#section1 {
   padding-top: 54px;
 }
-.history_desc {
-  width: 50%;
-  order: 1;
-  margin-top: 250px;
+
+section > h2 {
+  text-align: center;
+  font-weight: 700;
 }
 
-.history_title {
-  order: 2;
-  width: 50%;
-  flex-direction: column;
-  margin-top: 250px;
+.history_desc {
+  margin-top: 350px;
 }
+#section1 .history_desc {
+  margin-top: 200px;
+}
+
+section .history_title {
+  width: 490px;
+  flex-direction: column;
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* #section2 .history_title {
+  width: 490px;
+  flex-direction: column;
+  position: static;
+  margin-top: 350px;
+} */
 .history_title h3 {
   font-size: 72px;
   font-weight: 700;
@@ -54,6 +77,7 @@ section .container > h2 {
 }
 .history_title p {
   font-size: 36px;
+  line-height: 40px;
   font-family: "samsungsharpsans_bold";
   text-align: center;
 }
@@ -80,7 +104,53 @@ section .container > h2 {
   font-size: 24px;
   line-height: 27px;
 }
-.history_desc .year_wrap .year_desc .desc{
+.history_desc .year_wrap .year_desc .desc {
   font-size: 16px;
   line-height: 27px;
+}
+
+/* 상하단 진행바 */
+#progress1 {
+  height: 1%;
+  background: #444;
+  bottom: 0;
+  z-index: 20;
+}
+
+#progress2 {
+  width: 1px;
+  top: 30%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+#progress2::before,
+#progress2::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+}
+#progress2::before {
+  top: -20px;
+}
+#progress2::after {
+  bottom: 0;
+}
+
+.skrollable {
+  /*
+	 * First-level skrollables are positioned relative to window
+	 */
+  position: fixed;
+
+  /*
+	 * Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
+	 */
+  z-index: 10;
 }
