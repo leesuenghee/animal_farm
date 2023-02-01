@@ -130,14 +130,16 @@
             data-2400="width:28%; "
             data-2500="width:100%;"
           />
-          <p class="animate__animated" data-effect="animate__fadeInUp">
-            상상 속에만 존재하던 디스플레이를 <br />
-            현실로 만들어 가고 있습니다.
-          </p>
-          <p data-2400="opacity:0;" data-2500="opacity:1;">
-            대형 디스플레이 시장의 판도를 뒤집을 QD-OLED라는 새로운 도전을
-            시작하고 있습니다.
-          </p>
+          <span>
+            <p class="animate__animated" data-effect="animate__fadeInUp">
+              상상 속에만 존재하던 디스플레이를 <br />
+              현실로 만들어 가고 있습니다.
+            </p>
+            <p>
+              대형 디스플레이 시장의 판도를 뒤집을 <br />
+              QD-OLED라는 새로운 도전을 시작하고 있습니다.
+            </p>
+          </span>
         </div>
       </div>
     </section>
@@ -156,12 +158,15 @@
       </div>
     </section>
     <section id="earth">
-      <img src="./img/Overview_sh/bg6.png" alt="" />
-      <h3 class="animate__animated" data-effect="animate__fadeInUp">
-        글로벌 1위로서 시장을 이끌어 온 삼성디스플레이는 앞선 기술과 제품 <br />
-        고객의 신뢰를 바탕으로 앞으로도 디스플레이 리더로서의 역할을 다할
-        것입니다.
-      </h3>
+      <div>
+        <!-- <img src="./img/Overview_sh/bg6.png" alt="" /> -->
+        <h3 class="animate__animated" data-effect="animate__fadeInUp">
+          글로벌 1위로서 시장을 이끌어 온 삼성디스플레이는 앞선 기술과 제품
+          <br />
+          고객의 신뢰를 바탕으로 앞으로도 디스플레이 리더로서의 역할을 다할
+          것입니다.
+        </h3>
+      </div>
     </section>
     <section id="display" class="pd_ow">
       <div
@@ -188,35 +193,44 @@
       integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+      integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <script src="./js/overview.js"></script>
     <script type="text/javascript" src="skrollr.min.js"></script>
     <script type="text/javascript">
-      var s = skrollr.init();
+      if ($(window).width() > 767) {
+        skrollrInit();
+      }
 
-      $(window).on("resize", function () {
-        if ($(window).width() < 768) {
+      $(window).resize(function () {
+        if ($(window).width() <= 768) {
           skrollr.init().destroy();
         }
       });
 
-      const trigger =new ScrollTrigger.default({
-trigger: {
-once: true,
-offset : {
-element : {
-x : 0,
-y : 0.2
-}
-},
-toggle:{
-class:{
-in:'active',
-out:'inactive'
-}
-}
-}
-})
-// trigger.add('[data-trigger]')
+      // const trigger = new ScrollTrigger.default({
+      //   trigger: {
+      //     once: true,
+      //     offset: {
+      //       element: {
+      //         x: 0,
+      //         y: 0.2,
+      //       },
+      //     },
+      //     toggle: {
+      //       class: {
+      //         in: "active",
+      //         out: "inactive",
+      //       },
+      //     },
+      //   },
+      // });
+      // trigger.add('[data-trigger]')
     </script>
   </body>
 </html>
