@@ -1,0 +1,174 @@
+a {
+  color: var(--text);
+}
+
+body {
+  background: var(--main-bg);
+  color: var(--text);
+}
+
+header {
+  height: 80px;
+  background: var(--main-bg);
+  border-bottom: 1px solid #fff;
+}
+
+.container {
+  width: 1340px;
+  margin: 0 auto;
+}
+
+.map_main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.map_main .map_title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 54px;
+  font-family: "samsungOne_700";
+}
+.map_main figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.map_submenu {
+  justify-content: space-around;
+  background: var(--sub-bg1);
+  height: 80px;
+  font-family: "samsungOne_400";
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.map_spots {
+  position: relative;
+  height: 100%;
+  background: transparent;
+}
+
+.map_list {
+  flex-wrap: wrap;
+  gap: 25px 20px;
+  margin-bottom: 81px;
+}
+.map_list_item {
+  text-align: center;
+  width: 320px;
+  box-sizing: border-box;
+  padding: 27px 0;
+}
+.map_list_item span:first-of-type {
+  margin-top: 27px;
+}
+.map_list_item span {
+  display: block;
+  line-height: 27px;
+}
+#tabs-2 .map_main img ,
+#tabs-3 .map_main img {
+  margin-top: 100px;
+}
+#tabs-3 .map_list_item {
+  width: 420px;
+}
+
+/* 위치 스팟 */
+#tabs .map_spots > span {
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--point);
+  text-indent: -9999em;
+  overflow: hidden;
+}
+
+#tabs .map_spots > span:hover ::after {
+  display: block;
+}
+
+
+/* #tabs .map_spots > span::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid var(--text);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+} */
+
+#tabs #tabs-3 .map_spots .spot_301 {
+  top: 40%;
+  right: 11%;
+}
+
+
+#tabs .map_submenu li a.active {
+  color: var(--point);
+  transition: 0.3s;
+}
+
+
+
+
+@media (max-width:768px) {
+  .map_submenu {
+    height: 54px;
+  }
+  #tabs > ul {
+    font-size: 24px;
+  }
+  .map_main .map_title {
+    font-size: 24px;
+  }
+  .map_list.container{
+    width: 580px;
+  }
+  .map_list {
+    margin-bottom: 54px;
+  }
+  .map_list_item {
+    width: 180px;
+  }
+  .map_list_item h3{
+    font-size: 24px;
+  }
+  #tabs-3 .map_list {
+    justify-content: flex-start;
+  }
+  #tabs-3 .map_list_item {
+    width: 280px;
+  }
+}
+
+@media (max-width:480px) {
+  #tabs-1.map_main figure {
+    margin-top: 54px;
+  }
+  .map_list.container{
+    width: 340px;
+  }
+  #tabs > ul {
+    font-size: 16px;
+  }
+  .map_list_item {
+    width: 160px;
+  }
+  #tabs-3 .map_list {
+    justify-content: center;
+  }
+}

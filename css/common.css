@@ -299,6 +299,7 @@ footer .sns svg {
   footer {
     position: relative;
     width: 580px;
+    padding: 40px 0;
   }
   footer .footer-menu{
     justify-content: flex-start;
@@ -332,6 +333,7 @@ footer .sns svg {
 @media (max-width: 480px){
   footer {
     width: 340px;
+    padding: 20px 0;
   }
   footer .footer-menu {
     font-size: 13px;
