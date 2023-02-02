@@ -2,105 +2,146 @@ body {
   background-color: var(--main-bg);
   color: var(--text);
 }
+h1,
 h2,
 h3,
-h4 {
-  font-family: "samsungOne_700";
-  font-size: 18px;
+h4,
+p {
+  /* font-family: "samsungOne_700"; */
+  font-size: 17px;
 }
 
-/* section1 */
-#pearl {
-  position: relative;
+/* section */
+#pearl{
+ position: relative;
+ height: 100%;
+ overflow: hidden;
 }
-#pearl > div {
-  justify-content: center;
-  flex-direction: row-reverse;
-  position: relative;
+#pearl .bgs{
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  /* padding-top: 162px; */
 }
-
-#pearl > div span {
+#pearl .bgs .bgss{
+  position: relative;
+  width: 100%;
+}
+#pearl .bgs .bgss img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#pearl .bgs .bgss p{
   position: absolute;
-  transform: translateX(-40%);
+  left: 20%;
   top: 50%;
-  text-align: center;
+  transform:translate(-50%,-50%);
+  z-index:1;
+  text-align: left;
   line-height: 40px;
-  font-size: 18px;
 }
 
 /* section2 */
-#monitors {
-  background: url("../img/Overview_sh/bg2.png") no-repeat;
-  background-size: 100%;
-  height: 847px;
+#monitors{
   position: relative;
-  background-size: cover;
-  background-position: bottom center;
-}
-#monitors h3 {
-  width: 100%;
-  position: absolute;
-  text-align: center;
   margin: 0 auto;
-  top: 40%;
+}
+#monitors img{
+  width: 100%;
+}
+#monitors div{
+  text-align: center;
   line-height: 40px;
+}
+#monitors div h1{
+  position: absolute;
+  top: 20%;
+  left: 0; right: 0;
 }
 
 /* section3 */
-#toggle {
-  width: 1340px;
-  margin: 0 auto;
-  height: 1040px;
-}
-#toggle .content {
+#toggle{
   width: 100%;
-  height: 1070px;
+  text-align: center;
+  padding-bottom: 189px;
+}
+#toggle .contents{
+  position: relative;
   overflow: hidden;
+  height: 800px;
+}
+#toggle .contents .content2 img,#toggle .contents .content1 img{
+  width: 20%;
+  height: 50vh;
+  border-radius: 30%;
   position: relative;
 }
-#toggle .ts {
-  width: 100%;
-}
-#toggle .ts img {
-  width: 380px;
-  top: 20%;
-  bottom: 0;
-}
-#toggle .ts:nth-child(2) img {
-  width: 380px;
-  height: 578px;
-  border-radius: 300px;
-}
-
-#toggle .ts:first-child p {
-  text-align: center;
+#toggle .contents .content2 span,#toggle .contents .content1 span{
+  width: 512px;
   line-height: 40px;
+  text-align: center;
+  /* position: absolute;
+  left: 65%; right: 50%; */
+ 
+}
+#toggle .contents .content2 span{
   position: absolute;
-  top: 20%;
-  left: 0;
+  top: 50%;
+}
+/* active */
+#toggle .contents .content1.active{
   transition: 3s;
-}
-#toggle .ts:nth-child(2) p {
-  text-align: center;
-  line-height: 40px;
-  position: absolute;
-  bottom: 20%;
-  right: 0;
-  transform: translateX(-100%);
-}
-#toggle .ts:first-child.active {
-  transform: translateY(-50%);
-  transition: 2s;
   opacity: 0;
 }
-#toggle .ts:nth-child(2).active {
-  transform: translateY(-100%);
-  transition: 3s;
+#toggle .contents .content2.active{
+  transform: translateY(-70%);
+  transition: 4s;
+}
+#toggle .contents .content2.active span p:last-child{
+  display: none;
+}
+/* fiexd */
+#toggle .contents .content2.active span p:first-child.fiexd{
+  display: none;
+}
+#toggle .contents .content2.active span p:last-child.fiexd{
+  display: inline-block;
+  /* position: absolute; */
+  right: 100%;
+  transform: translateY(100%);
+  width: 100%;
+  z-index: 10;
+  transition: 5s;
 }
 
 /* section4 */
+/* #monitor div{
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+#monitor .bg{
+  width: 45%;
+  position: relative;
+  margin: 0 auto;
+}
+#monitor .bg img{
+  width: 100%;
+}
+#monitor .bg img:nth-child(1){
+  position: absolute;
+  z-index: 1;
+}
+#monitor .bg img:nth-child(2){
+  width: 82%;
+  margin: 0 auto;
+  transform: translate(11%,10%);
+  
+} */
+
 #monitor {
-  padding-bottom: 170px;
+  /* padding-bottom: 170px; */
 }
 #monitor div {
   position: relative;
@@ -111,7 +152,7 @@ h4 {
 }
 #monitor div img:first-child {
   position: absolute;
-  top: 40%;
+  top: 47%;
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);
@@ -126,29 +167,32 @@ h4 {
   font-size: 18px;
 }
 
-/* section5 */
-#earth div {
-  position: relative;
-  background-image: url("../img/Overview_sh/bg6.png");
-  background-position: cover;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  z-index: 100;
-  height: 400px;
-}
-/* #earth img {
-  opacity: 0.8;
-  width: 100%;
-} */
-#earth h3 {
+#monitor .bg p{
   width: 100%;
   position: absolute;
   text-align: center;
-  top: 45%;
-  transform: translate(-50%, -50%);
-  line-height: 40px;
-  font-weight: 700;
+  z-index: 10;
+  left: 50%; right: 50%; top: 50%; 
+  transform: translate(-50%,-50%);
 }
+
+/* section5 */
+#earth .bg2{
+  position: relative;
+  background: url('../img/Overview_sh/bg6.png') no-repeat;
+  width: 100%;
+  height: 900px;
+  margin: 0 auto;
+}
+#earth .bg2 h2{
+  position: absolute;
+  left: 50%; right: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+}
+
 /* section6 */
 #display {
   position: relative;
@@ -169,193 +213,132 @@ h4 {
   text-align: center;
   transform: translate(-50%, -50%);
   line-height: 40px;
+  opacity: 0;
 }
 #display h4,
 #display p {
   font-size: 40px;
 }
 
-@media (max-width: 768px) {
-  h2,
-  h3,
-  h4,
-  p {
-    font-family: "samsungOne_700";
-    font-size: 15px;
-  }
-  /* section1 */
-  #pearl > div img {
-    width: 45%;
-  }
-  #pearl > div span {
-    line-height: 30px;
-    transform: translateX(-10%);
-    width: 60%;
-    text-align: left;
-  }
-  #pearl > div h2 {
-    margin-bottom: 20px;
-  }
-  #monitors {
-    margin: 0 92px 0 92px;
-    background-size: 100%;
-    padding: 0;
-  }
-  #toggle {
-    width: 100%;
-    margin: 0 auto;
-    height: 795px;
-  }
-  #toggle .ts {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-  #toggle .ts:nth-child(2).active {
-    transform: translateY(-100%);
-  }
-  #toggle .ts:nth-child(2) img {
-    height: 292px;
-    width: 180px;
-  }
-  #toggle .ts:nth-child(2) p:first-child {
-    bottom: -40%;
-    left: 0;
-    transform: none;
-    text-align: center;
-    /* right: 50%; */
-  }
-  #toggle .ts:nth-child(2) p:last-child {
-    bottom: 40%;
-    transform: none;
-    text-align: center;
-    left: 0;
-    /* opacity: 0; */
-  }
-  #toggle .ts:nth-child(2) p:first-child.fiexd {
-    display: none;
-  }
-  #toggle .ts:nth-child(2) p:last-child.fiexd {
-    animation: animate;
-    transition: 3s;
-    animation-delay: 4s;
-  }
-
-  @keyframes animate {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-      bottom: 40%;
-    }
-  }
-
-  #toggle .ts img {
-    width: 200px;
-    height: 324px;
-  }
-  #toggle .ts:first-child.active {
-    transform: translateY(-30%);
-  }
-  #toggle .ts:first-child.active img {
-    width: 177px;
-    height: 298px;
-  }
-  #toggle .ts:first-child p {
-    top: 0;
-    right: 0;
-  }
-
-  #monitor {
-    padding: 0;
-    margin: 0;
-  }
-  #monitor p:last-child {
-    font-size: 12px;
-  }
-  #monitor div img:first-child {
-    width: 40%;
-  }
-  #monitor div img:nth-child(2) {
-    width: 48%;
-  }
-
-  #earth {
-    width: 100%;
-  }
-  #earth h3 {
-    font-size: 15px;
-    line-height: 27px;
-  }
-  #display div img {
-    width: 40%;
-  }
-  #display div {
-    width: 50%;
-  }
-  #display h4,
-  #display p {
-    font-size: 20px;
-    line-height: 27px;
-  }
-  #display span {
-    opacity: 1;
-  }
+/* opacity */
+#display div.opacity{
+  opacity: 0.6;
+  transition: 0.7s;
+}
+#display span.opacity{
+  opacity: 1;
+  /* transition: 0.4s; */
 }
 
-@media (max-width: 480px) {
+@media (max-width:768px) {
+  h1,
   h2,
   h3,
   h4,
   p {
-    font-family: "samsungOne_700";
-    font-size: 13px;
+    /* font-family: "samsungOne_700"; */
+    font-size: 14px;
+}
+#pearl .bgs .bgss p{
+  line-height: 27px;
+  left: 40%;
+}
+#toggle .contents{
+  width: 100%;
+}
+#toggle .contents .content2 img,#toggle .contents .content1 img{
+  width: 40%;
+  /* height: 578px; */
+  border-radius: 30%;
+  position: relative;
+}
+#toggle .contents .content2.active span p:last-child.fiexd{
+  display: inline-block;
+  /* position: absolute; */
+  right: 100%;
+  transform: translateY(100%);
+  width: 100%;
+  z-index: 10;
+  transition: 5s;
+}
+#toggle .contents .content2 span{
+  position: relative;
+}
+  #monitors img{
+      width: 100%;
   }
-  #pearl > div img {
+  #monitor .bg p{
+      font-size: 13px;
+  }
+  #earth .bg2{
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      opacity: 0.8;
+  }
+  #display div img {
+      width: 40%;
+    }
+    #display div {
+      width: 80%;
+    }
+    #display h4,
+    #display p {
+      font-size: 20px;
+      line-height: 27px;
+    }
+    #display span {
+      opacity: 1;
+    }
+    #monitors div h1{
+      width: 80%;
+      margin: 0 auto;
+      transform: translateY(-60%);
+    }
+}
+
+@media (max-width:480px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    /* font-family: "samsungOne_700"; */
+    font-size: 12px;
+}
+  #pearl .bgs{
+      width: 100%;
+  }
+  #monitors div h1{
+      line-height: 27px;
+  }
+  #toggle .contents .content1 img{
+      display: none;
+  }
+  #monitor{
+      padding-bottom: 163px;
+  }
+  #monitor p:last-child{
+      font-size: 11px;
+  }
+  #toggle .contents .content2 img{
+      /* width: 20%; */
+      height: 40vh;
+  }
+  #toggle .contents{
+      height: 600px;
+  }
+  #monitor div img:first-child{
     width: 100%;
-  }
-  #pearl > div span {
-    top: 30%;
-  }
-  #pearl > div img {
-    width: 100%;
-  }
-  #toggle .ts:first-child p {
-    transition: none;
-    opacity: 1;
-    margin-top: 80px;
-  }
-  #toggle .content {
-    /* padding-top: 300px; */
-    height: 300px;
-  }
-  #toggle .ts:first-child img {
-    display: none;
-  }
-  #toggle .ts:nth-child(2) img {
-    /* margin-top: 200px; */
-    width: 157px;
-    height: 238px;
-  }
-  #toggle .ts:nth-child(2).active {
-    transform: none;
-  }
-  #toggle .ts:nth-child(2) p:last-child {
-    bottom: 0;
-  }
-  #toggle .ts:nth-child(2) p:first-child {
-    bottom: 20%;
+    height: 575px;
   }
 
-  #monitor div img:first-child {
-    width: 100%;
+  #earth .bg2 h2{
+   width: 80%;
+   line-height: 27px;
   }
-  #monitor p:last-child {
-    font-size: 10px;
-  }
-  #earth h3 {
-    transform: none;
-    font-size: 13px;
-    top: 30%;
+  #toggle .contents .content2 span p:last-child{
+    width: 80%;
+    margin: 0 auto;
   }
 }

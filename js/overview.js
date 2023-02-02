@@ -1,21 +1,26 @@
-let imgs = $('h3[class*="animate__"],p[class*="animate__"]');
+let imgs = $('p[class*="animate__"],h1[class*="animate__"]');
+console.log(imgs)
 
-let toggles = $("#toggle .content");
-let toggleHeight = toggles.height();
-let toggleOST = toggles.offset().top;
-let toggleTs = toggles.find(".ts");
-let toggleWidth = toggleTs.width();
-let toggleLeft = toggleTs.offset().left;
-imgs.css({ visiblity: "hidden" });
+let target = $("#toggle .contents");
+let targetOST = target.offset().top;
+let stickyEl = target.find(".content1, .content2");
+let stickyWidth = target.width();
 
-let toggle_am = $("#toggle .ts:last-child p:last-child");
-let toggle_amf = $("#toggle .ts:last-child p:first-child");
-let toggle_ams = $("#toggle .ts:last-child img");
-let monitor = $("#monitor div img:first-child");
-let monitorImg = $("#monitor div img:nth-child(2)");
-let pearl = $("#pearl > div img");
+let toggle_lam = $('#toggle .contents .content2 span p:nth-child(2) ');
+console.log(toggle_lam)
+let toggle_amf = $("#toggle .content2 span p:first-child");
+let toggle_ams = $("#toggle .contents .content2 img");
 
-console.log(imgs);
+let pearl = $("#pearl .bgs");
+let monitor_bg = $('#monitor div');
+let monitor = $('#monitor div img:first-child');
+console.log(monitor)
+
+
+let display = $('#display');
+let displays = display.find('div');
+let display_text = display.find('span');
+
 $(window).scroll(() => {
   imgs.each(function () {
     if ($(this).offset().top - 500 < $(window).scrollTop()) {
@@ -31,75 +36,76 @@ $(window).scroll(() => {
 //#toggle
 $(window).scroll(() => {
   let sct = $(window).scrollTop();
-  // console.log(sct);
-
-  if (480 < sct > toggleOST - 500) {
-    toggleTs.css({
+  if($(window).width() > 480){
+    stickyEl.css({
       position: "fixed",
       top: "500px",
-      width: toggleWidth + "px",
+      width: stickyWidth + "px",
     });
-    toggleTs.addClass("active");
-    if (480 < sct > toggleOST - 500) {
-      toggleTs.css({
+    stickyEl.addClass("active");
+    if ( sct > targetOST - 200) {
+      stickyEl.css({
         position: "relative",
         top: "auto",
         width: "auto",
       });
-      toggles.css({
-        paddingTop: "300px",
+      stickyEl.css({
+        // paddingTop: "200px",
         paddingBottom: 0,
       });
     } else {
-      toggleTs.css({
+      stickyEl.css({
         position: "relative",
         top: "auto",
         width: "auto",
       });
-      toggleTs.removeClass("active");
-      toggles.css({
+      stickyEl.removeClass("active");
+      target.css({
         paddingTop: 0,
-        paddingBottom: "300px",
+        // paddingBottom: "200px",
       });
     }
   }
 });
 
-// 768px 이하 애니메이션
-$(window).scroll(function () {
-  if ($(window).width() <= 768 >= 480)
-    if (toggle_am.offset().top || monitorImg.offset().top) {
-      {
-        setTimeout(function () {
-          toggle_ams.stop().animate(
-            {
-              width: "100%",
-            },
-            3000
-          );
-          monitor.stop().animate(
-            {
-              width: "100%",
-            },
-            3000
-          );
-          toggle_am.addClass("fiexd");
+//480px 이상 애니메이션
+$(window).scroll(function(){
+  if($(window).width() > 480){
+    if(toggle_ams.offset().top ){
+      setTimeout(function(){
+          toggle_ams.stop().animate({
+              // width : '100%',
+              // borderRadius: '0',
+              // height : '50%',
+          }, 3000)
+          toggle_lam.addClass("fiexd");
           toggle_amf.addClass("fiexd");
-        }, 6000);
-      }
-    }
+      },3000);
+
+  }  
   if (
-    $(window).scrollTop() > 0 ||
-    $(window).width() < 768 >= 480 ||
-    pearl.offset().top - 500
-  ) {
-    setTimeout(function () {
-      pearl.stop().animate(
-        {
-          width: "100%",
-        },
-        1000
-      );
-    });
+      $(window).scrollTop() > 0
+    ) {
+      setTimeout(function () {
+          pearl.stop().animate(
+          {
+            width: "100%",
+          },
+          1000
+        );
+      });
   }
-});
+    if(monitor.offset().top - 500){
+      setTimeout(function(){
+          monitor.stop().animate({
+              width : '100%',
+          }, 3000)
+      },3000);
+  }  
+  if(display.offset().top){
+    display_text.addClass('opacity')
+    displays.addClass('opacity')
+  }  
+  }
+    
+})
