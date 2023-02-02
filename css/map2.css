@@ -51,6 +51,7 @@ header {
 .map_spots {
   position: relative;
   height: 100%;
+  width: 100%;
   background: transparent;
 }
 
@@ -110,10 +111,61 @@ header {
   left: 50%;
   transform: translate(-50%,-50%);
 } */
+#tabs #tabs-2 .map_spots .spot_01 {
+  top: 580px;
+  left: 10.1%;
+}
+#tabs #tabs-2 .map_spots .spot_02 {
+  top: 690px;
+  left: 11.5%;
+}
+#tabs #tabs-2 .map_spots .spot_03 {
+  top: 710px;
+  right: 12%;
+}
+#tabs #tabs-2 .map_spots .spot_04 {
+  top: 700px;
+  right: 16%;
+}
+#tabs #tabs-2 .map_spots .spot_05 {
+  top: 730px;
+  right: 14.5%;
+}
+#tabs #tabs-2 .map_spots .spot_06 {
+  top: 610px;
+  right: 13.8%;
+}
+#tabs #tabs-2 .map_spots .spot_07 {
+  top: 780px;
+  right: 10.5%;
+}
+#tabs #tabs-2 .map_spots .spot_08 {
+  top: 640px;
+  right: 5.8%;
+}
+#tabs #tabs-2 .map_spots .spot_09 {
+  top: 860px;
+  right: 16.8%;
+}
+#tabs #tabs-2 .map_spots .spot_10 {
+  top: 560px;
+  left: 52%;
+}
+
+
+
 
 #tabs #tabs-3 .map_spots .spot_301 {
-  top: 40%;
-  right: 11%;
+  top: 630px;
+  right: 9.9%;
+}
+#tabs #tabs-3 .map_spots .spot_302 {
+  top: 580px;
+  left: 10.1%;
+}
+#tabs #tabs-3 .map_spots .spot_303 {
+  top: 640px;
+  right: 5.8%;
 }
 
 
