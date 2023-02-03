@@ -12,151 +12,164 @@ p {
 }
 
 /* section */
-#pearl{
- position: relative;
- height: 100%;
- overflow: hidden;
-}
-#pearl .bgs{
-  width: 50%;
+#pearl {
+  position: relative;
   height: 100%;
-  margin: 0 auto;
-  /* padding-top: 162px; */
+  overflow: hidden;
 }
-#pearl .bgs .bgss{
+#pearl .bgs {
+  width: 50%;
+  margin: 0 auto;
+  /* padding-top: 102px; */
+  transition: width 0.4s;
+}
+#pearl .bgs.full {
+  width: 100%;
+}
+
+#pearl .bgs .bgss {
   position: relative;
   width: 100%;
 }
-#pearl .bgs .bgss img{
+#pearl .bgs .bgss img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
-#pearl .bgs .bgss p{
+#pearl .bgs .bgss p {
   position: absolute;
   left: 20%;
   top: 50%;
-  transform:translate(-50%,-50%);
-  z-index:1;
+  transform: translateY(-50%);
+  z-index: 1;
   text-align: left;
   line-height: 40px;
 }
 
 /* section2 */
-#monitors{
+#monitors {
   position: relative;
   margin: 0 auto;
 }
-#monitors img{
+#monitors img {
   width: 100%;
 }
-#monitors div{
+#monitors div {
   text-align: center;
   line-height: 40px;
 }
-#monitors div h1{
+#monitors div h1 {
   position: absolute;
   top: 20%;
-  left: 0; right: 0;
+  left: 0;
+  right: 0;
 }
 
 /* section3 */
-#toggle{
+#toggle {
   width: 100%;
-  text-align: center;
-  padding-bottom: 189px;
+  /* text-align: center; */
+  /* padding-bottom: 189px; */
 }
-#toggle .contents{
+#toggle .contents {
   position: relative;
   overflow: hidden;
-  height: 800px;
+  height: 100vh;
 }
-#toggle .contents .content2 img,#toggle .contents .content1 img{
+#toggle .contents .content2 {
+  transform: translateY(-50%);
+}
+#toggle .contents .content2,
+#toggle .contents .content1 {
+  position: relative;
+  width: 100%;
+}
+#toggle .contents .content2 img,
+#toggle .contents .content1 img {
   width: 20%;
   height: 50vh;
   border-radius: 30%;
-  position: relative;
+  position: absolute;
+  object-fit: cover;
+  left: 50%;
+  transform: translateX(-50%);
 }
-#toggle .contents .content2 span,#toggle .contents .content1 span{
-  width: 512px;
+#toggle .contents .content2.fulls img {
+  width: 100%;
+  border-radius: 0;
+  height: auto;
+  transition: 2s;
+}
+#toggle .contents .content2,
+#toggle .contents .content1 {
+  height: 100vh;
+}
+#toggle .contents .content2 span,
+#toggle .contents .content1 span {
+  width: 100%;
   line-height: 40px;
   text-align: center;
   /* position: absolute;
   left: 65%; right: 50%; */
- 
 }
-#toggle .contents .content2 span{
+#toggle .contents .content1 span {
   position: absolute;
-  top: 50%;
+  right: 30%;
+  top: 30%;
+}
+#toggle .contents .content2 span p:first-child {
+  position: absolute;
+  top: 30%;
+  right: 10%;
 }
 /* active */
-#toggle .contents .content1.active{
+#toggle .contents .content1.active {
   transition: 3s;
   opacity: 0;
 }
-#toggle .contents .content2.active{
-  transform: translateY(-70%);
+#toggle .contents .content2.active {
+  transform: translateY(-80%);
   transition: 4s;
+  height: 100vh;
 }
-#toggle .contents .content2.active span p:last-child{
+#toggle .contents .content2.active span p:last-child {
   display: none;
 }
 /* fiexd */
-#toggle .contents .content2.active span p:first-child.fiexd{
+#toggle .contents .content2.active.fulls span p:first-child {
   display: none;
 }
-#toggle .contents .content2.active span p:last-child.fiexd{
+#toggle .contents .content2.active.fulls span p:last-child {
   display: inline-block;
-  /* position: absolute; */
-  right: 100%;
-  transform: translateY(100%);
+  position: absolute;
+  left: 0;
+  top: 45%;
   width: 100%;
-  z-index: 10;
   transition: 5s;
 }
-
-/* section4 */
-/* #monitor div{
-  margin: 0 auto;
-  width: 100%;
-  position: relative;
-}
-#monitor .bg{
-  width: 45%;
-  position: relative;
-  margin: 0 auto;
-}
-#monitor .bg img{
-  width: 100%;
-}
-#monitor .bg img:nth-child(1){
-  position: absolute;
-  z-index: 1;
-}
-#monitor .bg img:nth-child(2){
-  width: 82%;
-  margin: 0 auto;
-  transform: translate(11%,10%);
-  
-} */
 
 #monitor {
   /* padding-bottom: 170px; */
 }
 #monitor div {
   position: relative;
+  width: 100%;
 }
 #monitor div img:nth-child(2) {
-  width: 78%;
+  /* width: 78%; */
   margin: 0 auto;
 }
 #monitor div img:first-child {
   position: absolute;
-  top: 47%;
+  top: 50%;
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
+  object-fit: cover;
+}
+#monitor div.big img:first-child {
+  width: 100%;
+  height: 100vh;
 }
 #monitor p:last-child {
   width: 100%;
@@ -167,27 +180,32 @@ p {
   font-size: 18px;
 }
 
-#monitor .bg p{
+#monitor .bg p {
   width: 100%;
   position: absolute;
   text-align: center;
   z-index: 10;
-  left: 50%; right: 50%; top: 50%; 
-  transform: translate(-50%,-50%);
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* section5 */
-#earth .bg2{
+#earth .bg2 {
   position: relative;
-  background: url('../img/Overview_sh/bg6.png') no-repeat;
+  background: url("../img/Overview_sh/bg6.png") no-repeat 0 0;
   width: 100%;
-  height: 900px;
+  height: 800px;
   margin: 0 auto;
+  object-fit: cover;
 }
-#earth .bg2 h2{
+#earth .bg2 h2 {
   position: absolute;
-  left: 50%; right: 50%; top: 50%;
-  transform: translate(-50%,-50%);
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
   line-height: 40px;
@@ -221,16 +239,16 @@ p {
 }
 
 /* opacity */
-#display div.opacity{
+#display div.opacity {
   opacity: 0.6;
   transition: 0.7s;
 }
-#display span.opacity{
+#display span.opacity {
   opacity: 1;
   /* transition: 0.4s; */
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   h1,
   h2,
   h3,
@@ -238,66 +256,73 @@ p {
   p {
     /* font-family: "samsungOne_700"; */
     font-size: 14px;
-}
-#pearl .bgs .bgss p{
-  line-height: 27px;
-  left: 40%;
-}
-#toggle .contents{
-  width: 100%;
-}
-#toggle .contents .content2 img,#toggle .contents .content1 img{
-  width: 40%;
-  /* height: 578px; */
-  border-radius: 30%;
-  position: relative;
-}
-#toggle .contents .content2.active span p:last-child.fiexd{
-  display: inline-block;
-  /* position: absolute; */
-  right: 100%;
-  transform: translateY(100%);
-  width: 100%;
-  z-index: 10;
-  transition: 5s;
-}
-#toggle .contents .content2 span{
-  position: relative;
-}
-  #monitors img{
-      width: 100%;
   }
-  #monitor .bg p{
-      font-size: 13px;
+  #pearl .bgs .bgss p {
+    line-height: 27px;
   }
-  #earth .bg2{
-      width: 100%;
-      background-position: center;
-      background-size: cover;
-      opacity: 0.8;
+  #toggle .contents {
+    width: 100%;
+  }
+  #toggle .contents .content2 img,
+  #toggle .contents .content1 img {
+    width: 40%;
+    /* height: 578px; */
+    border-radius: 30%;
+    position: relative;
+  }
+  #toggle .contents .content2.fulls {
+    width: 100%;
+    border-radius: none;
+    height: 78vh;
+  }
+  #toggle .contents .content2.active {
+    transform: translateY(-100%);
+  }
+  /* #toggle .contents .content2.active span p:last-child.fiexd {
+    display: inline-block;
+    transform: translateY(100%);
+    width: 100%;
+    z-index: 10;
+    transition: 5s;
+    margin: 0 20px;
+  } */
+  #toggle .contents .content2 span {
+    position: relative;
+  }
+  #monitors img {
+    width: 100%;
+  }
+  #monitor .bg p {
+    font-size: 13px;
+  }
+  #earth .bg2 {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.8;
   }
   #display div img {
-      width: 40%;
-    }
-    #display div {
-      width: 80%;
-    }
-    #display h4,
-    #display p {
-      font-size: 20px;
-      line-height: 27px;
-    }
-    #display span {
-      opacity: 1;
-    }
-    #monitors div h1{
-      width: 80%;
-      margin: 0 auto;
-      transform: translateY(-60%);
-    }
+    width: 40%;
+  }
+  #display div {
+    width: 80%;
+  }
+  #display h4,
+  #display p {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  #display span {
+    opacity: 1;
+  }
+  #monitors div h1 {
+    width: 80%;
+    margin: 0 auto;
+    transform: translateY(-60%);
+  }
 }
 
-@media (max-width:480px) {
+@media (max-width: 480px) {
   h1,
   h2,
   h3,
@@ -305,39 +330,39 @@ p {
   p {
     /* font-family: "samsungOne_700"; */
     font-size: 12px;
-}
-  #pearl .bgs{
-      width: 100%;
   }
-  #monitors div h1{
-      line-height: 27px;
+  #pearl .bgs {
+    width: 100%;
   }
-  #toggle .contents .content1 img{
-      display: none;
+  #monitors div h1 {
+    line-height: 27px;
   }
-  #monitor{
-      padding-bottom: 163px;
+  #toggle .contents .content1 img {
+    display: none;
   }
-  #monitor p:last-child{
-      font-size: 11px;
+  #monitor {
+    padding-bottom: 163px;
   }
-  #toggle .contents .content2 img{
-      /* width: 20%; */
-      height: 40vh;
+  #monitor p:last-child {
+    font-size: 11px;
   }
-  #toggle .contents{
-      height: 600px;
+  #toggle .contents .content2 img {
+    /* width: 20%; */
+    height: 40vh;
   }
-  #monitor div img:first-child{
+  #toggle .contents {
+    height: 600px;
+  }
+  #monitor div img:first-child {
     width: 100%;
     height: 575px;
   }
 
-  #earth .bg2 h2{
-   width: 80%;
-   line-height: 27px;
+  #earth .bg2 h2 {
+    width: 80%;
+    line-height: 27px;
   }
-  #toggle .contents .content2 span p:last-child{
+  #toggle .contents .content2 span p:last-child {
     width: 80%;
     margin: 0 auto;
   }
