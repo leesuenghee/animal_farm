@@ -1,23 +1,3 @@
-// let descs = $("#section2 .history_desc"),
-//   descsOST = descs.offset().top,
-//   htSticky = $("#section2 .history_title"),
-//   htStickyOST = htSticky.offset().top;
-// console.log(descsOST);
-// $(window).scroll(() => {
-//   let sct = $(window).scrollTop();
-
-//   if (sct > descsOST) {
-//     htSticky.css({
-//       position: "skicky",
-//       top: "50%",
-//       transform: "traslateY(-50%)",
-//     });
-//   }
-// });
-//max-width가 768px 일때 #progress1의 data-end="width:580px;background:hsl(210, 100%, 50%);"로 바뀌어야한다.
-
-
-
 // 스크롤 상단 하단 선 효과
 var s = skrollr.init({
   edgeStrategy: "set",
@@ -27,21 +7,45 @@ var s = skrollr.init({
       return 1 - p;
     },
   },
-});
+});//
 
-// 0 ~ 해당 섹션 스크롤양 사이에 있을때 a태그에 active가 들어온다
 
 let sections = $("section"),
-sectionInfo = [],
-  currentIdx = 0;
-  let sct = $(window).scrollTop();
+  sectionInfo = [];
 
 sections.each(function () {
   let sectionOST = $(this).offset().top;
-  
   sectionInfo.push(sectionOST);
-  
 });
-console.log(sct);
-console.log(sectionInfo);
+// console.log(sectionInfo);
 
+let hSubmenu = $('.history_submenu');
+let menus = hSubmenu.find('a');
+
+
+$(window).scroll(function(){
+  let windowWidth = $(window).width();
+  let windowOST = $(window).scrollTop();
+  console.log(windowOST);
+
+  // history_submenu 보이게 안보이게
+  // 모바일버젼 일때 할일 (480px)
+  if(windowWidth <= 480 && windowOST > 0) {
+    hSubmenu.addClass('active');
+  }
+  if(windowWidth <= 480 && windowOST == 0) {
+    hSubmenu.removeClass('active')
+  }
+
+  //서브메뉴 색상변경
+  //스크롤양이 각 섹션의 offset top값 사이에 있을때 할일
+  for(i=1;i<sections.length;i++){
+    
+    if( sectionInfo[i] < windowOST ){
+      menus.eq(i).css({color:'var(--point)'});
+    } else {
+      menus.eq(i).css({color:'var(--text)'});
+    }
+  }; 
+
+  })
