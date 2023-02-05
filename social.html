@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/social.css">
   </head>
   <body>
@@ -84,20 +85,52 @@
         
     </header>
     <main>
-        <div class="banner">
-            <h2 class="ft32">사회공헌</h2>
-            <p class="ft32">삼성디스플레이는 지역사회를 위한 나눔 사랑을 실천하고 있습니다.</p>
-            <img src="img/social/social_main.jpg" alt="">
-            <img src="img/social/social_s1.png" alt="함께가요 미래로">
-            <p class="ft24">삼성디스플레이는 ‘청소년 교육’을 통한 ‘미래 핵심 인재 역량 강화’라는 Vision 아래</p>
-            <p class="ft24">글로벌 인재 육성을 위한 활동을 진행하고 있습니다</p>
-        </div>
+        <div class="sc_banner">
+            <div class="sc_banner_wrapper">
+                <div class="sc_title_wrapper d-flex jcc">
+                    <h2 class="ft32">사회공헌</h2>
+                    <p class="ft32">삼성디스플레이는 지역사회를 위한 나눔 사랑을 실천하고 있습니다.</p>                    
+                </div>
+                <img src="img/social/social_main.jpg" alt="">
+            </div>
+            <section class="social_s1">
+                <img src="img/social/social_s1.png" alt="함께가요 미래로">
+                <p class="ft24">
+                    삼성디스플레이는 ‘청소년 교육’을 통한 ‘미래 핵심 인재 역량 강화’라는 Vision 아래<br>
+                    글로벌 인재 육성을 위한 활동을 진행하고 있습니다
+                </p>
+            </section>
+        </div>      
         <section class="social_s2">
             <h3 class="ft32">무지개</h3>
-            <p class="ft24">무료 지원 개안사업</p>
+            <span class="ft24">무료 지원 개안사업</p>
+                <div class="s2_container d-flex">
+                    <div class="s2_inner1">
+                        <p>
+                                시력 저하로 어려움을 겪는 취약계층 환자를 비롯해<br>
+                                전문적인 안과 진료와 검사, 수술이 필요한<br>
+                                소외계층 아동·청소년들에게 밝은 빛을 선사하는<br>
+                                삼성디스플레이 대표 사회공헌 사업입니다.<br>
+                        </p>
+                        <figure>
+                            <img src="img/social/social_s2_1.jpg" alt="병원에서 안과 진료 중인 의사와 환자의 사진입니다">
+                        </figure>
+                    </div>
+                    <div class="s2_inner2">
+                        <p>
+                            사업명 ‘무지개’처럼<br>
+                            눈 질환으로 어려움을 겪는 많은 사람들이<br>
+                            함께 디스플레이를 누릴 수 있도록<br>
+                            빛과 희망을 선사하고자 합니다.<br>
+                        </p>
+                        <figure>
+                            <img src="img/social/social_s2_2.jpg" alt="무료지원개안사업 기금 전달식 기념 사진입니다">
+                        </figure>       
+                    </div>
+                </div>
         </section>
-        <section class="social_s3">
-            <div class="s3_title_wrapper">
+        <section class="social_s3 d-flex">
+            <div class="s3_title_wrapper d-flex jcsb">
                 <h3 class="ft32">지역사회활동</h3>
                 <p class="ft24">
                     삼성디스플레이는<br>
@@ -112,13 +145,11 @@
                 </div>
             </div>
             <div class="s3_slidewrapper">
-                <p class="controls d-flex jcsb aic">
-                    <i class="fa-solid fa-chevron-left"></i>
-                    <i class="fa-solid fa-chevron-right"></i>
-                </p>
-                <ul class="s2_slide">
-                    <li class="s2_slide1">
-                        <img src="" alt="">
+                    <a href=""><i class="fa-solid fa-chevron-left"></i></a>
+                    <a href=""><i class="fa-solid fa-chevron-right"></i></a>
+                <ul class="s3_slide">
+                    <li class="s3_slide1">
+                        <img src="img/social/social_s3_1.jpg" alt="학생들이 합창을 하고있는 사진입니다">
                         <p>
                             삼성디스플레이가 후원하는 VOLED 합창단은<br>
                             지적 발달장애청소년 48명으로 구성된 4성부 합창단입니다.<br>
@@ -127,8 +158,8 @@
                             장애인에 대한 긍정적 인식 확산에 기여하고 있습니다.
                         </p>
                     </li>
-                    <li class="s2_slide2">
-                        <img src="" alt="">
+                    <li class="s3_slide2">
+                        <img src="img/social/social_s3_2.jpg" alt="공원에서 상성 재활 환아 가족모임 피켓을 들고있는 단체사진입니다">
                         <p>
                             재활·보장구 지원, 정서지원 프로그램<br>
                             장애 완화에 실질적 도움 제공을 통해 아동의 사회성 확보와 가족애 증진에 기여합니다.<br>
@@ -136,8 +167,8 @@
                             가정 형편이 어려운 중증 장애 환아의 치료비와 보조기 지원을 하고 있습니다.
                         </p>
                     </li>
-                    <li class="s2_slide3">
-                        <img src="" alt="">
+                    <li class="s3_slide3">
+                        <img src="img/social/social_s3_3.jpg" alt="꽃을 포장하고 있는 사진입니다">
                         <p>
                             원테이블 원플라워 서비스를 신청하면<br>
                             매주 한번씩 발달장애인이 직접 임직원의 책상위에<br>
@@ -186,26 +217,36 @@
                 </article>
             </div>
             <div class="s4_slidewrapper">
-                <ul>
+                <ul class="s4_slides">
                     <li>
-                        <h5 class="ft24">무료지원 개안사업</h5>
-                        <img src="img/social/social_s4_slide1.jpg" alt="">
+                        <figure>
+                            <figcaption class="ft24">무료지원 개안사업</figcaption>
+                            <img src="img/social/social_s4_slide1.jpg" alt="">  
+                        </figure>
                     </li>
                     <li>
-                        <h5 class="ft24">독서지원</h5>
-                        <img src="img/social/social_s4_slide2.jpg" alt="">
+                        <figure>
+                            <figcaption class="ft24">독서지원</figcaption>
+                            <img src="img/social/social_s4_slide2.jpg" alt="">
+                        </figure>
                     </li>
                     <li>
-                        <h5 class="ft24">과학 교실</h5>
-                        <img src="img/social/social_s4_slide3.jpg" alt="">
+                        <figure>
+                            <figcaption class="ft24">과학 교실</figcaption>
+                            <img src="img/social/social_s4_slide3.jpg" alt="">
+                        </figure>
                     </li>
                     <li>
-                        <h5 class="ft24">벽화봉사</h5>
-                        <img src="img/social/social_s4_slide4.jpg" alt="">
+                        <figure>
+                            <figcaption class="ft24">벽화봉사</figcaption>
+                            <img src="img/social/social_s4_slide4.jpg" alt="">
+                        </figure>
                     </li>
                     <li>
-                        <h5 class="ft24">자장면 봉사</h5>
-                        <img src="img/social/social_s4_slide5.jpg" alt="">
+                        <figure>
+                            <figcaption class="ft24">자장면 봉사</figcaption>
+                            <img src="img/social/social_s4_slide5.jpg" alt="">
+                        </figure>
                     </li>
                 </ul>
             </div>
@@ -219,8 +260,12 @@
                 다양한 교류활동을 실천하고 있습니다.
             </p>
             <div class="s5_wrapper">
-
+                
+                <figure>
+                    <img src="img/social/social_s5_map.png" alt="">
+                </figure>
             </div>
+            
         </section>
     </main>
 
@@ -271,6 +316,7 @@
         </div>
       </footer>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
     <script src="js/social.js"></script>
   </body>
