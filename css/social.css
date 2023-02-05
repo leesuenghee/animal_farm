@@ -1,26 +1,142 @@
-/* Main BANNER */
-
-.banner {
+body {
+    background: #000;
+}
+main {
+    color: #fff;
+    line-height: 27px;
     text-align: center;
 }
-.banner h2,
-.banner h3,
-.banner h4,
-.banner h5{
+/* Main BANNER */
+
+.sc_banner {
+    background: linear-gradient(360deg, rgba(9, 13, 23, 1) 0%, #1F2537 100%);
+}
+.sc_banner h2,
+.sc_banner h3,
+.sc_banner h4 {
     font-family: "samsungOne_700";
     line-height: 40px;
 }
+.sc_banner {
+    position: relative;
+}
+.sc_banner_wrapper {
+    position: relative;
+}
+.sc_banner_wrapper > img {
+    transition: 0.7s;
+    margin-bottom: 270px;
+    height: 1370px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+.sc_banner_wrapper > img.scale {
+    width: 1300px;
+    height: 400px;
+    margin-top: 600px;
+    position: relative;
+    border-radius: 30px;
+}
+
+.sc_banner_wrapper > img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0;
+    background: rgba(0,0,0,.7);
+}
+.sc_banner > img.scale:after {
+    border-radius: 30px;
+    background: rgba(0,0,0,.25);
+}
+.sc_title_wrapper {
+    gap: 100px;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    white-space: nowrap;
+    transition: 0.7s;
+    margin-top: -260px;
+}
+
+.sc_title_wrapper.active {
+    gap: 160px;
+    margin-top: -330px;
+}
 
 /* SECTION1 함께가요 미래로 */
-
+.social_s1 p {
+    line-height: 40px;
+    padding: 100px 0 230px;
+}
 
 /* SECTION2 무지개 */
-
-
+.social_s2 {
+    background: #090D17;
+    padding-bottom: 320px;
+}
+.social_s2 .s2_container {
+    max-width: 90%;
+    margin: 0 auto;
+    width: 1470px;
+    margin-top: 163px;
+    flex-direction: column;
+    gap: 193px;
+}
+.social_s2 .s2_container .s2_inner1 p {
+    margin-top: 100px;
+    margin-left: 60px;
+}
+.social_s2 .s2_container .s2_inner2 p {
+    margin-top: 100px;
+    margin-right: 100px;
+}
+.social_s2 .s2_container .s2_inner1 p,
+.social_s2 .s2_container .s2_inner2 figure {
+    float: left;
+}
+.social_s2 .s2_container .s2_inner2 p,
+.social_s2 .s2_container .s2_inner1 figure {
+    float: right;
+}
+.social_s2 .s2_container .s2_inner1:after,
+.social_s2 .s2_container .s2_inner2:after {
+    content: '';
+    clear: both;
+}
+.social_s2 h3 {
+    padding: 190px 0 27px;
+}
+.social_s2 span {
+    display: block;
+    padding-bottom: 163px;
+}
+.social_s2 figure {
+    width: 580px;
+    height: 320px;
+}
+.social_s2 figure img {
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+}
 /* SECTION3 지역사회활동 */
+.social_s3 {
+    width: 100%;
+    height: 1066px;
+}
 .social_s3 .s3_title_wrapper {
     text-align: left;
     background: url(../img/social/social_s3_bg.jpg) no-repeat center center/cover;
+    flex-direction: column;
+    width: 40%;
+    padding: 120px;
 }
 .social_s3 .s3_title_wrapper .pager {
     font-family:  "samsungOne_700";
@@ -29,7 +145,11 @@
     position: relative;
     display: inline-block;
     margin: 0 50px;
-    transition: transform 0.4s;
+    padding-bottom: 30px;
+    transition: 0.4s;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: nowrap;
 }
 .social_s3 .s3_title_wrapper .pager a:after {
     content:'';
@@ -38,10 +158,11 @@
     height: 2px;
     background: rgba(255,255,255,.6);
     position: absolute;
-    top: calc(100% + 30px);
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     transition: 0.4s;
+    box-sizing: border-box;
 }
 .social_s3 .s3_title_wrapper .pager a:hover {
     transform: translateY(-40px);
@@ -49,45 +170,142 @@
 .social_s3 .s3_title_wrapper .pager a:hover:after {
     height: 8px;
     width: 200px;
+    transform: translate(-50%,40px);
+}
+.social_s3 .s3_title_wrapper .pager a.active {
+    transform: translateY(-40px);
+}
+.social_s3 .s3_title_wrapper .pager a.active:after {
+    height: 8px;
+    width: 200px;
+    transform: translate(-50%,40px);
 }
 .social_s3 .s3_slidewrapper {
     background: #151823;
     padding: 70px;
+    width: 60%;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
 }
-.social_s3 .s3_slidewrapper .controls i {
+
+.social_s3 .s3_slidewrapper a i {
     background: rgba(255,255,255,.2);
     color: #fff;
     border-radius: 50%;
     width: 60px;
     height: 60px;
     transition: 0.4s;
+    line-height: 60px;
+    position: absolute;
+    bottom: 230px;
+    z-index: 10;
 }
-.social_s3 .s3_slidewrapper .controls i:hover {
+.social_s3 .s3_slidewrapper a:first-of-type i {
+    left: 70px;
+}
+.social_s3 .s3_slidewrapper a:last-of-type i{
+    right: 70px;
+}
+.social_s3 .s3_slidewrapper i:hover {
     background: rgba(0,126,255,.2);
 }
-.social_s3 img {
-    width: 700px;
-    height: 450px;
+.social_s3 .s3_slidewrapper .s3_slide {
+    height: 1066px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.social_s3 .s3_slidewrapper .s3_slide li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #151823;
+    /* padding: 70px; */
+}
+.social_s3 .s3_slidewrapper .s3_slide img {
+    width: 80%;
+    height: 400px;
+    object-fit: cover;
     border-radius: 30px;
     margin-top: 70px;
 }
-.social_s3 .s3_slidewrapper p {
+.social_s3 .s3_slidewrapper .s3_slide p {
+    margin-top: 84px;
     margin-bottom: 70px;
 }
 
 
 /* SECTION4 나눔경영 */
-
+.social_s4 {
+    background: url(../img/social/social_s4_bg2.jpg) no-repeat 50% 0/cover;
+}
 .social_s4 .s4_slidewrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+.s4_slidewrapper figure {
+    border-radius: 30px;
+    position: relative;
     width: 450px;
     height: 250px;
-    border-radius: 30px;
-    
 }
-.s4_contents_wrapper h4 {
-    
+.s4_slidewrapper figcaption {
+    font-family: "samsungOne_700";
+    position: absolute;
+    /* left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%); */
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    line-height: 250px;
+    background: rgba(9,13,23,.5);
+    transition: 0.5s;
 }
+.s4_slidewrapper figure:hover figcaption {
+    background: rgba(9,13,23,.2)
+}
+
+.s4_slide_wrapper{
+	position: relative;
+	width:100%;
+	margin: 0 auto;
+	overflow:hidden;
+}
+.s4_slides {
+	position: absolute;
+	left:0; top:0;	
+	height:200px;
+	width:100%;
+}
+.s4_slides.animated{
+	transition: 0.5s ease-out;
+}
+.s4_slides li{
+	width: 200px;
+	height: 200px;
+	background:#ccc;
+	position: absolute;
+}
+
+
+
+
+
+
 /* SECTION5 자매마을결연 */
+.social_s5 {
+    background: #090D17;
+}
+.social_s5 h3 {
+    padding: 135px 0 95px;
+}
+.social_s5 .s5_wrapper {
+    padding: 120px 0 400px;
+}
 
 
 
