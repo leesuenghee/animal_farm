@@ -267,12 +267,15 @@ a {
 }
 
 footer {
-  width: 1340px;
   background: var(--main-bg);
   color: var(--text);
   font-family: "samsungOne_400";
   margin: 0 auto 81px;
+}
+footer .footer {
+  margin: 0 auto;
   padding: 81px 0;
+  width: 1340px;
 }
 footer .footer-menu {
   margin-bottom: 81px;
@@ -295,16 +298,16 @@ footer .sns svg {
   width: 80%;
   height: 80%;
 }
-@media (max-width: 768px){
+@media (max-width: 768px) {
   footer {
     position: relative;
     width: 580px;
     padding: 40px 0;
   }
-  footer .footer-menu{
+  footer .footer-menu {
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap:6px;
+    gap: 6px;
     margin-bottom: 30px;
   }
 
@@ -316,7 +319,7 @@ footer .sns svg {
     position: absolute;
     left: 0;
     right: 0;
-    top:180px;
+    top: 180px;
   }
   footer > div.aic {
     align-content: space-between;
@@ -325,12 +328,13 @@ footer .sns svg {
   footer > div .copyright {
     justify-content: space-between;
     position: absolute;
-    right: 0;left: 0;bottom: -27px;
+    right: 0;
+    left: 0;
+    bottom: -27px;
   }
-
 }
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
   footer {
     width: 340px;
     padding: 20px 0;
@@ -344,7 +348,7 @@ footer .sns svg {
   }
   footer > div {
     font-size: 12px;
-    position:static;
+    position: static;
     left: 0;
     right: 0;
     top: 100px;
@@ -352,7 +356,7 @@ footer .sns svg {
   footer .sns li {
     transform: scale(0.6);
   }
-  footer .copyright:first-child{
+  footer .copyright:first-child {
     white-space: pre-wrap;
   }
   footer .sns {
@@ -360,8 +364,10 @@ footer .sns svg {
   }
   footer > div .copyright {
     justify-content: space-between;
-    position:static;
-    right: 0;left: 0;bottom: -27px;
+    position: static;
+    right: 0;
+    left: 0;
+    bottom: -27px;
   }
   footer > div .copyright li:last-child {
     word-break: keep-all;
