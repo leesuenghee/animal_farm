@@ -42,7 +42,7 @@ $(window).scroll(() => {
         top: "500px",
         width: stickyWidth + "px",
       });
-      // stickyEl.addClass("active");
+      stickyEl.addClass("active");
       if (sct > targetOST - 200) {
         stickyEl.css({
           position: "relative",
@@ -62,7 +62,7 @@ $(window).scroll(() => {
           width: "100%",
           // height: "1292px",
         });
-        // stickyEl.removeClass("active");
+        stickyEl.removeClass("active");
         target.css({
           paddingTop: 0,
           // paddingBottom: "200px",
@@ -86,7 +86,7 @@ $(window).scroll(function () {
           3000
         );
 
-        // toggle_lam.addClass("fulls");
+        toggle_lam.addClass("fulls");
       }, 3000);
     }
     if ($(window).scrollTop() > 0) {
@@ -103,6 +103,7 @@ $(window).scroll(function () {
       //     );
       //   }, 3000);
       // }
+      monitor_bg.addClass('big')
     }
     if (display.offset().top) {
       display_text.addClass("opacity");

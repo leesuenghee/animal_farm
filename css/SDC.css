@@ -1,0 +1,157 @@
+body {
+    background-color: var(--main-bg);
+    color: var(--text);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    font-family: "samsungOne_700";
+    font-size: 17px;
+  }
+
+  img{
+    width: 100%;
+
+}
+#fullpages{
+    position: relative;
+    width: 100%;
+}
+#fullpages div{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+#fullpages div::before{
+    content: "";
+    opacity: 0.5;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #000;
+}
+#fullpages:first-child div::before{
+    background: url('../img/CDN_sh/bg_2.png') no-repeat 0 0;
+    background-size: cover;
+    width: 100%;
+    /* height: 100vh; */
+    position: absolute;
+}
+#fullpages:last-child div::before{
+    background: url('../img/CDN_sh/bg_1.png') no-repeat 0 0;
+    background-size: cover;
+    width: 100%;
+    /* height: 100vh; */
+    position: absolute;
+}
+#fullpages span{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+/* vision */
+#vision span{
+    text-align: center;
+    line-height: 40px;
+}
+#vision span p{
+    margin-bottom: 27px;
+}
+#vision div{
+    position: relative;
+}
+#vision .bgs{
+    position: relative;
+    width: 100%;
+    height: 675px;
+}
+#vision .bgs::before{
+    content: '';
+    background: url('../img/CDN_sh/bg_3.png') no-repeat 0 0;
+    width: 100%;
+    background-size: cover;
+  
+    object-fit: cover;
+    height: 675px;
+    position: absolute;
+}
+#vision .bgs .bdi{
+    max-width: 1340px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 108px 0 108px 0;
+    position: relative;
+}
+#vision .bgs .bdi div{
+    width: 332px;
+    height: 441px;
+    border: 3px solid #fff;
+}
+#vision .bgs .bdi div h3{
+    font-size: 32px;
+    margin: 20px;
+}
+#vision .bgs .bdi div p{
+    line-height: 337px;
+    text-align: center;
+    font-size: 32px;
+}
+
+/* 핵심가치 */
+#font{
+    max-width: 1340px;
+    margin: 0 auto;
+}
+#font h3{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 135px;
+}
+
+#font ul{
+    /* flex-direction: column; */
+    /* gap: 80px; */
+    justify-content: space-evenly;
+
+}
+#font ul li{
+    text-align: center;
+}
+#font .icon_box{
+    width: 165px;
+    height: 165px;
+    border: 1px solid #fff;
+    margin: 0 auto 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    /* border-radius: 50%; */
+}
+#font li:hover .icon_box{
+    transform: rotate(45deg);
+    border-color: var(--point);
+    transition: 0.4s;
+}
+#font li:hover .icon_box span{
+    transform: rotate(-45deg);
+}
+#font li:hover .icon_box span i{
+    color: var(--point);
+}
+#font .icon_box span{
+    transition: transform 0.3s;
+}
+#font li .icon_box span i{
+    font-size: 35px;
+}
