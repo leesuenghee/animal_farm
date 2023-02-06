@@ -275,7 +275,7 @@ footer {
   background: var(--main-bg);
   color: var(--text);
   font-family: "samsungOne_400";
-  margin: 0 auto 81px;
+  margin: 0 auto;
 }
 footer .footer {
   margin: 0 auto;
@@ -304,7 +304,7 @@ footer .sns svg {
   height: 80%;
 }
 @media (max-width: 768px) {
-  footer {
+  footer .footer {
     position: relative;
     width: 580px;
     padding: 40px 0;
@@ -319,18 +319,18 @@ footer .sns svg {
   footer .footer-menu li {
     margin-bottom: 27px;
   }
-  footer > div {
+  footer .footer > div {
     flex-direction: column-reverse;
     position: absolute;
     left: 0;
     right: 0;
-    top: 180px;
+    top: 140px;
   }
-  footer > div.aic {
+  footer .footer > div.aic {
     align-content: space-between;
     align-items: flex-end;
   }
-  footer > div .copyright {
+  footer .footer > div .copyright {
     justify-content: space-between;
     position: absolute;
     right: 0;
@@ -340,7 +340,7 @@ footer .sns svg {
 }
 
 @media (max-width: 480px) {
-  footer {
+  footer .footer {
     width: 340px;
     padding: 20px 0;
   }
@@ -358,64 +358,168 @@ footer .sns svg {
     right: 0;
     top: 100px;
   }
-  footer .sns li {
+  footer .footer .sns li {
     transform: scale(0.6);
   }
-  footer .copyright:first-child {
+  footer .footer .copyright:first-child {
     white-space: pre-wrap;
   }
-  footer .sns {
+  footer .footer .sns {
     gap: 2px;
   }
-  footer > div .copyright {
+  footer .footer > div .copyright {
     justify-content: space-between;
     position: static;
     right: 0;
     left: 0;
     bottom: -27px;
   }
-  footer > div .copyright li:last-child {
+  footer .footer > div .copyright li:last-child {
     word-break: keep-all;
   }
 }
 
 /* 메인 */
-
-/* 메인 */
+.main-page {
+  font-family: "samsungOne_400";
+  color: var(--text);
+}
 .swiper {
   position: relative;
+  height: 890px;
 }
 .swiper-slide {
+  position: relative;
   width: 100%;
+  height: 100%;
+}
+.swiper-slide .slide1-text,
+.swiper-slide .slide4-text {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+.swiper-slide .slide2-text {
+  text-align: center;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.swiper-slide .slide3-text {
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+
+.swiper-slide > div h2 {
+  font-family: "samsungOne_700";
+  font-size: 48px;
+  margin-bottom: 54px;
+  line-height: auto;
+}
+.swiper-slide > div p {
+  font-family: "samsungOne_400";
+  line-height: 29px;
 }
 .swiper-slide img {
+  /* position: relative; */
   margin: 0;
   width: 100%;
   height: 100%;
 }
+.swiper-slide::before{
+  position: absolute;
+  content: '';
+  display: inline-block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--main-bg);
+  opacity: 0.3;
+} 
+
 .main-page .slick-dots {
   position: absolute;
   width: 100%;
+  height: 3px;
   bottom: 20%;
   margin: 0 auto;
   padding: 0 2%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  /* gap: 30px; */
-  background: var(--text);
+  background: #fff;
+  box-sizing: border-box;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 .main-page .slick-dots li {
-  width: 15%;
+  position: relative;
+  width: 10%;
+  height: 50px;
 }
 .main-page .slick-dots li button {
+  position: absolute;
   width: 100%;
-  height: 100%;
+  height: 3px;
+  top: 23px;
+  font-size: 24px;
   background: none;
   border: none;
-  /* text-indent: ; */
-  overflow: hidden;
+  /* text-indent: -9999em; */
+  /* overflow: hidden; */
+  padding: 0;
+}
+.main-page .slick-dots li button::after{
+  display: block;
+  color: #fff;
+  padding-top: 20px;
+  font-family: "samsungOne_400";
+}
+.main-page .slick-dots li:first-child button::after {
+  content: 'Samsung QD';
+}
+.main-page .slick-dots li:nth-child(2) button::after {
+  content: 'Foldable Display';
+
+}
+.main-page .slick-dots li:nth-child(3) button::after {
+  content: 'UPC 풀스크린';
+
+}
+.main-page .slick-dots li:last-child button::after {
+  content: 'Dsplay의 일상';
+
 }
 .main-page .slick-dots li.slick-active button {
   background: var(--point);
+}
+
+@media (max-width:768px){
+  .main-page .slick-dots li {
+    width: 20%;
+  }
+  .main-page .slick-dots li button {
+    font-size: 20px;
+  }
+  .swiper-slide > div {
+    width: 100%;
+  }
+  .swiper-slide > div h2 {
+    font-size: 40px;
+  }
+  .swiper-slide > div p {
+    font-size: 20px;
+  }
+  .swiper-slide .slide1-text{
+    text-align: center;
+    left: 0;
+    top: 50%;
+  }
+  .swiper-slide .slide1-text h2 {
+    font-size: 40px;
+  }
 }

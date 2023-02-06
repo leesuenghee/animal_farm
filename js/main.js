@@ -26,3 +26,9 @@ $(".swiper").slick({
   arrows: false,
   dots: true,
 });
+
+
+let slideMenu = $('.slick-dots li button');
+slideMenu.each(function(){
+  slideMenu.text('');
+})
