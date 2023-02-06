@@ -71,6 +71,10 @@
   width: 90%;
 }
 
+body {
+  background: var(--main-bg);
+}
+
 /* HEADER */
 header {
   font-family: "samsungOne_400";
@@ -108,7 +112,7 @@ header nav .pc_gnb > ul:after {
   left: 0;
   right: 0;
   height: 48px;
-  background: rgba(46,46,46,.5);
+  background: rgba(46, 46, 46, 0.5);
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -372,4 +376,28 @@ footer .sns svg {
   footer > div .copyright li:last-child {
     word-break: keep-all;
   }
+}
+
+/* 메인 */
+.main-page {
+}
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
