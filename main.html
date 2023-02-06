@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>삼성디스플레이</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="/css/reset.css" />
   <link rel="stylesheet" href="/css/common.css" />
 </head>
@@ -84,24 +85,19 @@
     </nav>
   </header>
   <main class="main-page">
-    <swiper-container class="mySwiper" init="false">
-      <swiper-slide>
-        <div class="main-desc">
-          <h2>Take the Quantum Ceap.</h2>
-          <p>D-Display가 열어갈 새로운 세상을 만나보세요.</p>
-        </div>
-        <img src="/img/header_img/main1.png" alt="">
-      </swiper-slide>
-      <swiper-slide>
-        <img src="/img/header_img/main2.png" alt="">
-      </swiper-slide>
-      <swiper-slide>
-        <img src="/img/header_img/main3.png" alt="">
-      </swiper-slide>
-      <swiper-slide>
-        <img src="/img/header_img/main4.png" alt="">
-      </swiper-slide>
-    </swiper-container>
+    <div class="swiper">
+      <div class="swiper-slide">
+        <img src="img/header_img/main1.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="img/header_img/main2.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="img/header_img/main3.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="img/header_img/main4.png" alt="">
+      </div>
     </div>
   </main>
   <footer>
@@ -150,6 +146,8 @@
   </footer>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
