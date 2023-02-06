@@ -107,6 +107,17 @@ header {
   width: 420px;
   padding: 27px 40px;
 }
+.mapwrap {
+  position: relative;
+}
+.mapwrap .popup {
+  background: var(--sub-bg1);
+  position: absolute;
+  border-radius: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 
 /* 반응형 */
 @media (max-width: 768px) {
