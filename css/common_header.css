@@ -98,14 +98,14 @@ header nav .pc_gnb > ul {
   gap: 80px;
   flex-wrap: no-wrap;
 }
-header nav .pc_gnb ul:after {
-  content:'';
+header nav .pc_gnb > ul:after {
+  content: "";
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
   height: 48px;
-  background: #2E2E2E;
+  background: rgba(46,46,46,.5);
   opacity: 0;
   transition: opacity 0.3s;
 }
