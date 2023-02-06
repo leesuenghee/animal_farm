@@ -3,7 +3,7 @@ body {
 }
 main {
     color: #fff;
-    line-height: 27px;
+    line-height: 40px;
     text-align: center;
 }
 /* Main BANNER */
@@ -16,6 +16,7 @@ main {
 .sc_banner h4 {
     font-family: "samsungOne_700";
     line-height: 40px;
+    font-weight: bold;
 }
 .sc_banner {
     position: relative;
@@ -30,7 +31,15 @@ main {
     width: 100%;
     object-fit: cover;
     border-radius: 0;
+    position: relative;
 }
+/* .sc_banner_wrapper > img:after {
+    content: '';
+    background: rgba(0,0,0,.7);
+    position: absolute;
+    left: 0;top: 0;bottom: 0;right: 0;
+    z-index: 3;
+} */
 .sc_banner_wrapper > img.scale {
     width: 1300px;
     height: 400px;
@@ -39,20 +48,10 @@ main {
     border-radius: 30px;
 }
 
-.sc_banner_wrapper > img:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    border-radius: 0;
-    background: rgba(0,0,0,.7);
-}
-.sc_banner > img.scale:after {
+/* .sc_banner > img.scale:after {
     border-radius: 30px;
     background: rgba(0,0,0,.25);
-}
+} */
 .sc_title_wrapper {
     gap: 100px;
     flex-direction: column;
@@ -62,7 +61,8 @@ main {
     transform: translate(-50%,-50%);
     white-space: nowrap;
     transition: 0.7s;
-    margin-top: -260px;
+    margin-top: -300px;
+    z-index: 5;
 }
 
 .sc_title_wrapper.active {
@@ -73,7 +73,7 @@ main {
 /* SECTION1 함께가요 미래로 */
 .social_s1 p {
     line-height: 40px;
-    padding: 100px 0 230px;
+    padding: 150px 0 230px;
 }
 
 /* SECTION2 무지개 */
@@ -120,9 +120,11 @@ main {
 .social_s2 figure {
     width: 580px;
     height: 320px;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
 }
 .social_s2 figure img {
-    border-radius: 30px;
     width: 100%;
     height: 100%;
 }
@@ -133,7 +135,7 @@ main {
 }
 .social_s3 .s3_title_wrapper {
     text-align: left;
-    background: url(../img/social/social_s3_bg.jpg) no-repeat center center/cover;
+    background: url(../img/social/social_s3_bg2.jpg) no-repeat center center/cover;
     flex-direction: column;
     width: 40%;
     padding: 120px;
@@ -239,6 +241,39 @@ main {
 /* SECTION4 나눔경영 */
 .social_s4 {
     background: url(../img/social/social_s4_bg2.jpg) no-repeat 50% 0/cover;
+    position: relative;
+    width: 100%;
+    height: 2596px;
+}
+.s4_contents_wrapper {
+    padding: 328px 0 808px 127px;
+    position: absolute;
+}
+.s4_contents_wrapper figure {
+    width: 628px;
+    height: 351px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+.s4_contents_wrapper figure img {
+    width: 100%;
+    height: 100%;
+}
+.s4_contents_wrapper article {
+    text-align-last: left;
+}
+.s4_contents_wrapper article:last-of-type {
+    padding-left: 583px;
+    box-sizing: border-box;
+}
+.s4_contents_wrapper article h4 {
+    font-weight: bold;
+    color: var(--point);
+    padding: 80px 0 40px 30px;
+}
+.social_s4 .s4_title_wrapper {
+    position: absolute;
 }
 .social_s4 .s4_slidewrapper img {
     width: 100%;
@@ -250,6 +285,7 @@ main {
     position: relative;
     width: 450px;
     height: 250px;
+    overflow: hidden;
 }
 .s4_slidewrapper figcaption {
     font-family: "samsungOne_700";
@@ -305,8 +341,99 @@ main {
 }
 .social_s5 .s5_wrapper {
     padding: 120px 0 400px;
+    width: 90%;
+    max-width: 1585px;
+    position: relative;
+    font-family: "samsungsharpsans_bold";
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 275px 275px 178px 129px 178px 275px 275px;
+    grid-template-rows: 150px 150px 107px 95px 107px 175px 27px 27px 85px;
+    margin: 0 auto;
+}
+.social_s5 .s5_wrapper .s5_map {
+    width: 1035px;
+    height: 640px;
+    grid-column: 2/-2;
+    grid-row: 2/ -4;
+}
+.social_s5 .s5_wrapper .s5_map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.social_s5 .s5_wrapper .s5_map_title {
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+.social_s5 .s5_wrapper > span:first-of-type {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+.social_s5 .s5_wrapper > span:last-of-type {
+    grid-column: -2/-3;
+    grid-row: -2/-3;
+}
+.social_s5 .s5_wrapper > figure:nth-of-type(2) {
+    grid-column: -1/-2;
+    grid-row: 1/2;
+}
+.social_s5 .s5_wrapper > figure:nth-of-type(3) {
+    grid-row: -3/-2;
+    grid-column: 1/2;
+}
+.social_s5 .s5_wrapper > figure ~ figure{
+    width: 500px;
+    height: 290px;
+    border-radius: 30px;
+    overflow: hidden;
+    object-fit: cover;
+    left: 0;
+    bottom: 0;
+    position: relative;
 }
 
+.social_s2 figure:after,
+.s4_contents_wrapper figure:after,
+.social_s5 > figure ~ figure:after {
+    content: '';
+    background: rgba(0,0,0,.15);
+    position: absolute;
+    left: 0;top: 0;bottom: 0;right: 0;
+}
+.social_s5 > figure > img {
+    width: 100%;
+    height: 100%;
+}
+
+.social_s5 .s5_wrapper em,
+.social_s5 .s5_wrapper span,
+.social_s5 .s5_wrapper b{
+    font-family: "samsungsharpsans_bold";
+    letter-spacing: 0.1em;
+}
+.social_s5 .s5_wrapper .s5_map_title {
+    padding: 35px 0 0 4px;
+    flex-direction: column;
+    gap: 5px;
+}
+.social_s5 .s5_wrapper .s5_map_title b {
+    color: var(--sub-bg2);
+}
+.social_s5 .s5_wrapper .s5_map_title b span {
+    color: #fff;
+}
+/* .social_s5 .s5_wrapper figcaption:nth-of-type(2) > span{
+    left: 260px;
+    top: 183px;
+}
+.social_s5 .s5_wrapper figcaption:last-of-type > span {
+    right: 270px;
+    bottom: -38px;
+} */
+.social_s5 .s5_wrapper em {
+    color: var(--point);
+}
 
 
 /* 반응형 */
