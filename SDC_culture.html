@@ -1,258 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>삼성디스플레이 | SDC_culture</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.15/fullpage.min.css"
+      integrity="sha512-FKlWnaJrtBEqH+gNy8kvp+/61S+8iOKb5tG+EKCQ3Fc3iUYr9MvnywpkZBcuNKrxQxlnZYpNwDgkZ2atX7wVVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>삼성디스플레이 | SDC_culture</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.15/fullpage.min.css"
-    integrity="sha512-FKlWnaJrtBEqH+gNy8kvp+/61S+8iOKb5tG+EKCQ3Fc3iUYr9MvnywpkZBcuNKrxQxlnZYpNwDgkZ2atX7wVVg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/SDC.css" />
+  </head>
 
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/common.css" />
-  <link rel="stylesheet" href="./css/SDC.css">
-</head>
-
-<body>
-  <header>
-    <nav class="container d-flex jcsb aic">
-      <h1 class="logo"><a href="index.html"><span>samsung display</span></a></h1>
-      <div class="pc_gnb">
-        <ul class="d-flex jcc aic">
-          <li>
-            <a href="">기업정보 Seunghee</a>
-            <ul class="d-flex">
-              <li><a href="overview.html">기업개요</a></li>
-              <li><a href="SDC_culture.html">SDC culture</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="">기업정보 Minji</a>
-            <ul class="d-flex">
-              <li><a href="history.html">연혁</a></li>
-              <li><a href="map.html">사업장 정보</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="">제품기술 Junhyeok</a>
-            <ul>
-              <li><a href="">QD-OLED</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="">지속가능경영 Nakyoung</a>
-            <ul>
-              <li><a href="social.html">사회공헌</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <button class="toggleBtn">
-        <i class="fa-solid fa-bars"></i>
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-      <div class="aside d-flex aic">
-        <ul class="d-flex jcc aic">
-          <li>
-            <a href="">기업정보 Seunghee</a>
-            <ul class="d-flex">
-              <li><a href="overview.html">기업개요</a></li>
-              <li><a href="SDC_culture.html">SDC culture</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="">기업정보 Minji</a>
-            <ul class="d-flex">
-              <li><a href="history.html">연혁</a></li>
-              <li><a href="map.html">사업장 정보</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="">제품기술 Junhyeok</a>
-            <ul>
-              <li><a href="">QD-OLED</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="">지속가능경영 Nakyoung</a>
-            <ul>
-              <li><a href="social.html">사회공헌</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <div id="fullpage">
-    <section id="fullpages">
-      <div>
-        <!-- <img src="./img/CDN_sh/bg_2.png" alt=""> -->
-        <span>
-          <h1 class="ft32">미션</h1>
-          <p>기술과 사람을 더욱 가치있게 연결하는 최고의 디스플레이를 만듭니다. <br>디스플레이는 사람과 기술을 연결하는 창(窓)으로, 삼성디스플레이는 최고의 디스플레이를 통해 최고의 연결을 만듭니다.
-          </p>
-        </span>
-      </div>
-    </section>
-    <section id="fullpages">
-      <div>
-        <!-- <img src="./img/CDN_sh/bg_1.png" alt=""> -->
-        <span>
-          <h1 class="ft32">SDC Culture</h1>
-          <p>삼성디스플레이는 누구도 따라올 수 없는 탁월함을 추구하며 디스플레이 업계를 선도하는 기업입니다.</p>
-        </span>
-      </div>
-    </section>
-  </div>
-  <section id="vision" class="pd_ow">
-    <div>
-      <span>
-        <h2 class="ft32">비전</h2>
-        <p>업역(DOMAIN)을 명시하는 동시에 미래지향성을 강조하며,<br>
-          상상 속 그리고 공상영화에서만 가능하다고 생각했던 디스플레이를 바로 우리가 만든다는 의미를 지니고 있습니다.</p>
-      </span>
-      <div class="bgs">
-        <div class="bdi d-flex jcc aic">
-          <div class="">
-            <h3>B</h3>
-            <p>Beyond</p>
-          </div>
-          <div>
-            <h3>D</h3>
-            <p>Display</p>
-          </div>
-          <div>
-            <h3>I</h3>
-            <p>Imagination</p>
-          </div>
+  <body>
+    <header>
+      <nav class="container d-flex jcsb aic">
+        <h1 class="logo">
+          <a href="index.html"><span>samsung display</span></a>
+        </h1>
+        <div class="pc_gnb">
+          <ul class="d-flex jcc aic">
+            <li>
+              <a href="">기업정보 Seunghee</a>
+              <ul class="d-flex">
+                <li><a href="overview.html">기업개요</a></li>
+                <li><a href="SDC_culture.html">SDC culture</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">기업정보 Minji</a>
+              <ul class="d-flex">
+                <li><a href="history.html">연혁</a></li>
+                <li><a href="map.html">사업장 정보</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">제품기술 Junhyeok</a>
+              <ul>
+                <li><a href="">QD-OLED</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">지속가능경영 Nakyoung</a>
+              <ul>
+                <li><a href="social.html">사회공헌</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
-      </div>
+        <button class="toggleBtn">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="aside d-flex aic">
+          <ul class="d-flex jcc aic">
+            <li>
+              <a href="">기업정보 Seunghee</a>
+              <ul class="d-flex">
+                <li><a href="overview.html">기업개요</a></li>
+                <li><a href="SDC_culture.html">SDC culture</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">기업정보 Minji</a>
+              <ul class="d-flex">
+                <li><a href="history.html">연혁</a></li>
+                <li><a href="map.html">사업장 정보</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">제품기술 Junhyeok</a>
+              <ul>
+                <li><a href="">QD-OLED</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">지속가능경영 Nakyoung</a>
+              <ul>
+                <li><a href="social.html">사회공헌</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div id="fullpage">
+      <section id="fullpages">
+        <div>
+          <!-- <img src="./img/CDN_sh/bg_2.png" alt=""> -->
+          <span>
+            <h1 class="ft32">미션</h1>
+            <p>
+              기술과 사람을 더욱 가치있게 연결하는 최고의 디스플레이를 만듭니다.
+              <br />디스플레이는 사람과 기술을 연결하는 창(窓)으로,
+              삼성디스플레이는 최고의 디스플레이를 통해 최고의 연결을 만듭니다.
+            </p>
+          </span>
+        </div>
+      </section>
+      <section id="fullpages">
+        <div>
+          <!-- <img src="./img/CDN_sh/bg_1.png" alt=""> -->
+          <span>
+            <h1 class="ft32">SDC Culture</h1>
+            <p>
+              삼성디스플레이는 누구도 따라올 수 없는 탁월함을 추구하며
+              디스플레이 업계를 선도하는 기업입니다.
+            </p>
+          </span>
+        </div>
+      </section>
     </div>
-  </section>
-  <section class="pd_ow">
-    <div>
-      <h3>핵심가치</h3>
+    <section id="vision" class="pd_ow">
       <div>
         <span>
-          <h4>격이 다른 플레이 하자</h4>
-        </span>
-        <div>
-          <p>'넘볼 수 없는 차이를 만든다.'
-            Display 업계를 선도하기 위해서는
-            적당한 플레이는 어울리지 않습니다.
-            스스로 높은 기준을 세우고, 격이 다른 플레이를 해야 합니다
+          <h2 class="ft32">비전</h2>
+          <p>
+            업역(DOMAIN)을 명시하는 동시에 미래지향성을 강조하며,<br />
+            상상 속 그리고 공상영화에서만 가능하다고 생각했던 디스플레이를 바로
+            우리가 만든다는 의미를 지니고 있습니다.
           </p>
+        </span>
+        <div class="bgs">
+          <div class="bdi d-flex jcc aic">
+            <div class="">
+              <h3>B</h3>
+              <p>Beyond</p>
+            </div>
+            <div>
+              <h3>D</h3>
+              <p>Display</p>
+            </div>
+            <div>
+              <h3>I</h3>
+              <p>Imagination</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <span>
-          <h4>새로운 시도 추구하자</h4>
-        </span>
-        <div>
-          <p>우리는 시장에서 경쟁하는 것이지,
-            내부에서 경쟁하는 것이 아닙니다.
-            개인과 조직의 경계를 낮추어
-            협업할 때 함께 성장할 수 있습니다.
-            그것이 「Teamwork」이며,
-            우리가 말하는 ONE SDC 입니다
-          </p>
+    </section>
+    <section id="value">
+      <div class="values">
+        <div class="circle">
+          <div>
+            <h3>핵심가치</h3>
+          </div>
         </div>
-      </div>
-      <div>
-        <span>
-          <h4>경계를 낮추자</h4>
-        </span>
-        <div>
-          <p>초격차를 만들기 위해 항상 새로운
-            것에 도전하는 자세를 갖춰야 합니다.
-            우리의 도전은 남들과 달라야 하고,
-            상상할 수 없는 미지의 영역에
+        <div class="value play d-flex aic jcc">
+          <p>
+            '넘볼 수 없는 차이를 만든다.' Display 업계를 선도하기 위해서는
+            적당한 플레이는 어울리지 않습니다. 스스로 높은 기준을 세우고, 격이
+            다른 플레이를 해야 합니다
+          </p>
+          <div>
+            <h4>격이 다른 플레이 하자</h4>
+          </div>
+        </div>
+
+        <div class="value new d-flex aic">
+          <p>
+            우리는 시장에서 경쟁하는 것이지, 내부에서 경쟁하는 것이 아닙니다.
+            개인과 조직의 경계를 낮추어 협업할 때 함께 성장할 수 있습니다.
+            그것이 「Teamwork」이며, 우리가 말하는 ONE SDC 입니다
+          </p>
+          <div>
+            <h4>새로운 시도 추구하자</h4>
+          </div>
+        </div>
+
+        <div class="value down d-flex aic">
+          <p>
+            초격차를 만들기 위해 항상 새로운 것에 도전하는 자세를 갖춰야 합니다.
+            우리의 도전은 남들과 달라야 하고, 상상할 수 없는 미지의 영역에
             도전하는 것은 바로 우리의 몫입니다
           </p>
+          <div>
+            <h4>경계를 낮추자</h4>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="font" class="pd_ow">
-    <h3>핵심가치를 실천하기 위해 삼성디스플레이人이 일하는 방식입니다.</h3>
-    <ul class="d-flex aic">
-      <li>
-        <span class="icon_box">
-          <span><i class="fa-solid fa-hand-holding-heart"></i></span>
-        </span>
-        <h4>존중하고, 인정하며 함께 협업합니다.</h4>
-      </li>
-      <li>
-        <span class="icon_box">
-          <span><i class="fa-solid fa-handshake-simple"></i></span>
-        </span>
-        <h4>공유하고 이해합니다.</h4>
-      </li>
-      <li>
-        <span class="icon_box">
-          <span><i class="fa-regular fa-lightbulb"></i></span>
-        </span>
-        <h4>실패에서 배우며, 끊임없이 도전합니다.</h4>
-      </li>
-      <li>
-        <span class="icon_box">
-          <span><i class="fa-solid fa-bullhorn"></i></span>
-        </span>
-        <h4>자신있게 주장하고, 경청합니다.</h4>
-      </li>
-      <li></li>
-    </ul>
-  </section>
-  <footer>
-    <div class="footer">
-      <ul class="d-flex footer-menu jcsb">
-        <li><a href="">윤리경영</a></li>
-        <li><a href="">천안 아산 인프라</a></li>
-        <li><a href="">사외내방신청</a></li>
-        <li><a href="">협력회사 Voice</a></li>
-        <li><a href="">신규거래제안(오픈소싱)</a></li>
-        <li><a href="">개인정보처리방침</a></li>
-        <li><a href="">B2B대금결제안내</a></li>
-        <li><a href="">보안신고센터</a></li>
-        <li><a href="">공정위 4대 실천사항</a></li>
-        <li><a href="">특허/상표</a></li>
-        <li><a href="">업데이트 이력</a></li>
+    </section>
+    <section id="font">
+      <h3>핵심가치를 실천하기 위해 삼성디스플레이人이 일하는 방식입니다.</h3>
+      <ul class="d-flex aic">
+        <li>
+          <span class="icon_box">
+            <span><i class="fa-solid fa-hand-holding-heart"></i></span>
+          </span>
+          <h4>존중하고, 인정하며 함께 협업합니다.</h4>
+        </li>
+        <li>
+          <span class="icon_box">
+            <span><i class="fa-solid fa-handshake-simple"></i></span>
+          </span>
+          <h4>공유하고 이해합니다.</h4>
+        </li>
+        <li>
+          <span class="icon_box">
+            <span><i class="fa-regular fa-lightbulb"></i></span>
+          </span>
+          <h4>실패에서 배우며, 끊임없이 도전합니다.</h4>
+        </li>
+        <li>
+          <span class="icon_box">
+            <span><i class="fa-solid fa-bullhorn"></i></span>
+          </span>
+          <h4>자신있게 주장하고, 경청합니다.</h4>
+        </li>
+        <li></li>
       </ul>
-      <div class="d-flex jcsb aic">
-        <ul class="d-flex copyright">
-          <li>Copyright &copy; SAMSUNG DISPLAY All rights reserved.</li>
-          <li>대표번호 : 031-5181-1114</li>
+    </section>
+    <footer>
+      <div class="footer">
+        <ul class="d-flex footer-menu jcsb">
+          <li><a href="">윤리경영</a></li>
+          <li><a href="">천안 아산 인프라</a></li>
+          <li><a href="">사외내방신청</a></li>
+          <li><a href="">협력회사 Voice</a></li>
+          <li><a href="">신규거래제안(오픈소싱)</a></li>
+          <li><a href="">개인정보처리방침</a></li>
+          <li><a href="">B2B대금결제안내</a></li>
+          <li><a href="">보안신고센터</a></li>
+          <li><a href="">공정위 4대 실천사항</a></li>
+          <li><a href="">특허/상표</a></li>
+          <li><a href="">업데이트 이력</a></li>
         </ul>
-        <ul class="d-flex aic sns">
-          <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
-          <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
-          <li>
-            <a href=""><svg width="41" height="47" viewBox="0 0 41 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M5.85714 5.31012C5.05179 5.31012 4.39286 5.97106 4.39286 6.77887V36.1539C4.39286 36.9617 5.05179 37.6226 5.85714 37.6226H26.3571V30.2789C26.3571 28.6541 27.6658 27.3414 29.2857 27.3414H36.6071V6.77887C36.6071 5.97106 35.9482 5.31012 35.1429 5.31012H5.85714ZM26.3571 42.0289H5.85714C2.62656 42.0289 0 39.3943 0 36.1539V6.77887C0 3.53844 2.62656 0.90387 5.85714 0.90387H35.1429C38.3734 0.90387 41 3.53844 41 6.77887V27.3414V27.8463C41 29.4068 40.3868 30.9031 39.2886 32.0047L31.0062 40.3123C29.908 41.4138 28.4163 42.0289 26.8605 42.0289H26.3571Z"
-                  fill="white" />
-                <g clip-path="url(#clip0_270_7)">
+        <div class="d-flex jcsb aic">
+          <ul class="d-flex copyright">
+            <li>Copyright &copy; SAMSUNG DISPLAY All rights reserved.</li>
+            <li>대표번호 : 031-5181-1114</li>
+          </ul>
+          <ul class="d-flex aic sns">
+            <li>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href=""
+                ><svg
+                  width="41"
+                  height="47"
+                  viewBox="0 0 41 47"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
-                    d="M15.888 14.9672C16.2307 14.8373 16.6139 14.9474 16.846 15.2383L23.9541 24.1666V15.8174C23.9541 15.3174 24.34 14.9135 24.8177 14.9135C25.2953 14.9135 25.6812 15.3174 25.6812 15.8174V26.6635C25.6812 27.0448 25.4546 27.3838 25.1118 27.5137C24.7691 27.6436 24.3859 27.5335 24.1538 27.2425L17.0457 18.3142V26.6635C17.0457 27.1635 16.6598 27.5674 16.1822 27.5674C15.7045 27.5674 15.3186 27.1635 15.3186 26.6635V15.8174C15.3186 15.4361 15.5453 15.0971 15.888 14.9672Z"
-                    fill="white" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_270_7">
-                    <rect width="10.3626" height="14.4615" fill="white" transform="translate(15.3186 14.0096)" />
-                  </clipPath>
-                </defs>
-              </svg></a>
-          </li>
-        </ul>
+                    d="M5.85714 5.31012C5.05179 5.31012 4.39286 5.97106 4.39286 6.77887V36.1539C4.39286 36.9617 5.05179 37.6226 5.85714 37.6226H26.3571V30.2789C26.3571 28.6541 27.6658 27.3414 29.2857 27.3414H36.6071V6.77887C36.6071 5.97106 35.9482 5.31012 35.1429 5.31012H5.85714ZM26.3571 42.0289H5.85714C2.62656 42.0289 0 39.3943 0 36.1539V6.77887C0 3.53844 2.62656 0.90387 5.85714 0.90387H35.1429C38.3734 0.90387 41 3.53844 41 6.77887V27.3414V27.8463C41 29.4068 40.3868 30.9031 39.2886 32.0047L31.0062 40.3123C29.908 41.4138 28.4163 42.0289 26.8605 42.0289H26.3571Z"
+                    fill="white"
+                  />
+                  <g clip-path="url(#clip0_270_7)">
+                    <path
+                      d="M15.888 14.9672C16.2307 14.8373 16.6139 14.9474 16.846 15.2383L23.9541 24.1666V15.8174C23.9541 15.3174 24.34 14.9135 24.8177 14.9135C25.2953 14.9135 25.6812 15.3174 25.6812 15.8174V26.6635C25.6812 27.0448 25.4546 27.3838 25.1118 27.5137C24.7691 27.6436 24.3859 27.5335 24.1538 27.2425L17.0457 18.3142V26.6635C17.0457 27.1635 16.6598 27.5674 16.1822 27.5674C15.7045 27.5674 15.3186 27.1635 15.3186 26.6635V15.8174C15.3186 15.4361 15.5453 15.0971 15.888 14.9672Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_270_7">
+                      <rect
+                        width="10.3626"
+                        height="14.4615"
+                        fill="white"
+                        transform="translate(15.3186 14.0096)"
+                      />
+                    </clipPath>
+                  </defs></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>

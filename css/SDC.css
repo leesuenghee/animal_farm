@@ -1,157 +1,423 @@
 body {
-    background-color: var(--main-bg);
-    color: var(--text);
+  background-color: var(--main-bg);
+  color: var(--text);
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: "samsungOne_700";
+  font-size: 17px;
+}
+
+img {
+  width: 100%;
+}
+#fullpages {
+  position: relative;
+  width: 100%;
+}
+#fullpages div {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+#fullpages div::before {
+  content: "";
+  opacity: 0.5;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #000;
+}
+#fullpages:first-child div::before {
+  background: url("../img/CDN_sh/bg_2.png") no-repeat 0 0;
+  background-size: cover;
+  width: 100%;
+  /* height: 100vh; */
+  position: absolute;
+  background-position: center;
+}
+#fullpages:last-child div::before {
+  background: url("../img/CDN_sh/bg_1.png") no-repeat 0 0;
+  background-size: cover;
+  width: 100%;
+  /* height: 100vh; */
+  position: absolute;
+  background-position: center;
+}
+#fullpages span {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+/* vision */
+#vision span {
+  text-align: center;
+  line-height: 40px;
+}
+#vision span p {
+  margin-bottom: 27px;
+}
+#vision div {
+  position: relative;
+}
+#vision .bgs {
+  position: relative;
+  width: 100%;
+  height: 675px;
+}
+#vision .bgs::before {
+  content: "";
+  background: url("../img/CDN_sh/bg_3.png") no-repeat 0 0;
+  width: 100%;
+  background-size: cover;
+
+  object-fit: cover;
+  height: 675px;
+  position: absolute;
+}
+#vision .bgs .bdi {
+  max-width: 1340px;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 108px 0 108px 0;
+  position: relative;
+}
+#vision .bgs .bdi div {
+  width: 332px;
+  height: 441px;
+  border: 3px solid #fff;
+}
+#vision .bgs .bdi div h3 {
+  font-size: 32px;
+  margin: 20px;
+}
+#vision .bgs .bdi div p {
+  line-height: 337px;
+  text-align: center;
+  font-size: 32px;
+}
+/* 핵심가치 */
+#value {
+  max-width: 1340px;
+  margin: 0 auto;
+}
+#value .values {
+  position: relative;
+  width: 100%;
+  height: 1080px;
+}
+#value .values .circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  right: 50%;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+#value .values .circle div {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border: 2px dotted #fff;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: circles 8s linear infinite;
+}
+
+@keyframes circles {
+  100% {
+    transform: rotate(360deg);
   }
+}
+
+#value .values .circle div h3 {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 0;
+  right: 0;
+  animation: not_circles 8s linear infinite;
+}
+
+@keyframes not_circles {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+#value .value p {
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  line-height: 40px;
+  padding: 20px;
+  border-radius: 20px;
+}
+#value .value div {
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+}
+
+#value .value div h4 {
+  text-align: center;
+  line-height: 50px;
+}
+
+/* play */
+
+#value .play {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  flex-direction: column;
+  gap: 108px;
+}
+
+#value .play p {
+  border: 1px solid #5057af;
+}
+
+#value .play div {
+  background: #5057af;
+  margin: 0 auto;
+}
+
+/* new */
+#value .new {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 35%;
+  justify-content: flex-start;
+  gap: 108px;
+}
+#value .new div {
+  background: #03509f;
+}
+
+#value .new p {
+  border: 1px solid #03509f;
+}
+
+#value .down {
+  width: 100%;
+  position: absolute;
+  flex-direction: row-reverse;
+  bottom: 35%;
+  right: 0;
+  gap: 108px;
+}
+#value .down div {
+  background: #a962c2;
+}
+#value .down p {
+  border: 1px solid #a962c2;
+}
+
+/* 일하는 방식 */
+#font {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding-bottom: 189px;
+}
+#font h3 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 135px;
+}
+
+#font ul {
+  justify-content: space-evenly;
+}
+#font ul li {
+  text-align: center;
+}
+#font .icon_box {
+  width: 165px;
+  height: 165px;
+  border: 1px solid #fff;
+  margin: 0 auto 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+#font li:hover .icon_box {
+  transform: rotate(45deg);
+  border-color: var(--point);
+  transition: 0.4s;
+}
+#font li:hover .icon_box span {
+  transform: rotate(-45deg);
+}
+#font li:hover .icon_box span i {
+  color: var(--point);
+}
+#font .icon_box span {
+  transition: transform 0.3s;
+}
+#font li .icon_box span i {
+  font-size: 35px;
+}
+
+@media (max-width: 768px) {
   h1,
   h2,
   h3,
   h4,
   p {
     font-family: "samsungOne_700";
-    font-size: 17px;
+    font-size: 15px;
+  }
+  #fullpages span {
+    max-width: 584px;
+  }
+  #fullpages span h1 {
+    font-size: 24px;
+  }
+  #vision span p {
+    max-width: 584px;
+    margin: 0 auto;
+    padding-bottom: 27px;
+  }
+  #value {
+    width: 584px;
+  }
+  #vision .bgs {
+    height: auto;
+  }
+  #vision .bgs::before {
+    height: 886px;
+  }
+  #vision .bgs .bdi {
+    max-width: 584px;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  #vision .bgs .bdi div {
+    width: 250px;
+    height: 325px;
+  }
+  #vision .bgs .bdi div p {
+    line-height: 162px;
+    font-size: 20px;
+  }
+  #vision .bgs .bdi div h3 {
+    font-size: 24px;
+  }
+  #value .values {
+    height: 900px;
   }
 
-  img{
-    width: 100%;
-
-}
-#fullpages{
-    position: relative;
-    width: 100%;
-}
-#fullpages div{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
-#fullpages div::before{
-    content: "";
-    opacity: 0.5;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background-color: #000;
-}
-#fullpages:first-child div::before{
-    background: url('../img/CDN_sh/bg_2.png') no-repeat 0 0;
-    background-size: cover;
-    width: 100%;
-    /* height: 100vh; */
-    position: absolute;
-}
-#fullpages:last-child div::before{
-    background: url('../img/CDN_sh/bg_1.png') no-repeat 0 0;
-    background-size: cover;
-    width: 100%;
-    /* height: 100vh; */
-    position: absolute;
-}
-#fullpages span{
-    width: 100%;
-    position: absolute;
-    top: 50%;
+  #value .values .circle div {
+    width: 180px;
+    height: 180px;
+  }
+  #value .value p {
+    height: 200px;
+    font-size: 14px;
+    padding: 10px;
+  }
+  #value .play {
+    width: 50%;
+    top: 10%;
+  }
+  #value .new,
+  #value .play,
+  #value .down {
+    gap: 30px;
+  }
+  #value .new {
+    top: 10%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    line-height: 40px;
-    font-weight: 700;
-}
-
-/* vision */
-#vision span{
-    text-align: center;
-    line-height: 40px;
-}
-#vision span p{
-    margin-bottom: 27px;
-}
-#vision div{
-    position: relative;
-}
-#vision .bgs{
-    position: relative;
-    width: 100%;
-    height: 675px;
-}
-#vision .bgs::before{
-    content: '';
-    background: url('../img/CDN_sh/bg_3.png') no-repeat 0 0;
-    width: 100%;
-    background-size: cover;
-  
-    object-fit: cover;
-    height: 675px;
-    position: absolute;
-}
-#vision .bgs .bdi{
-    max-width: 1340px;
-    margin: 0 auto;
+    flex-direction: column;
+    width: 50%;
+  }
+  #value .down {
+    bottom: 10%;
+    flex-direction: column-reverse;
+    right: 0;
+  }
+  #font {
+    margin: 0 92px 0 92px;
+  }
+  #font h3 {
+    font-size: 24px;
+  }
+  #font ul {
+    flex-wrap: wrap;
     gap: 20px;
-    padding: 108px 0 108px 0;
-    position: relative;
-}
-#vision .bgs .bdi div{
-    width: 332px;
-    height: 441px;
-    border: 3px solid #fff;
-}
-#vision .bgs .bdi div h3{
-    font-size: 32px;
-    margin: 20px;
-}
-#vision .bgs .bdi div p{
-    line-height: 337px;
-    text-align: center;
-    font-size: 32px;
+  }
+  #font ul li {
+    width: 217px;
+  }
+  #font ul li:nth-child(2) {
+    flex-grow: 1;
+  }
+  #font .icon_box {
+    width: 105px;
+    height: 105px;
+    margin: 0 auto 27px;
+  }
 }
 
-/* 핵심가치 */
-#font{
-    max-width: 1340px;
-    margin: 0 auto;
-}
-#font h3{
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 135px;
-}
+@media (max-width: 480px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    font-family: "samsungOne_700";
+    font-size: 13px;
+  }
+  #fullpages span {
+    max-width: 340px;
+  }
 
-#font ul{
-    /* flex-direction: column; */
-    /* gap: 80px; */
-    justify-content: space-evenly;
-
-}
-#font ul li{
-    text-align: center;
-}
-#font .icon_box{
-    width: 165px;
-    height: 165px;
-    border: 1px solid #fff;
-    margin: 0 auto 54px;
-    display: flex;
-    align-items: center;
+  #vision span h2 {
+    font-size: 20px;
+  }
+  #vision span p {
+    max-width: 340px;
+  }
+  #vision .bgs::before {
+    height: 671px;
+  }
+  #vision .bgs .bdi div {
+    width: 159px;
+    height: 227px;
+  }
+  #value {
+    max-width: 340px;
+  }
+  #value .values .circle {
+    display: none;
+  }
+  #value .values {
+  }
+  #value .value p {
+    width: 100%;
     justify-content: center;
-    transition: 0.3s;
-    /* border-radius: 50%; */
-}
-#font li:hover .icon_box{
-    transform: rotate(45deg);
-    border-color: var(--point);
-    transition: 0.4s;
-}
-#font li:hover .icon_box span{
-    transform: rotate(-45deg);
-}
-#font li:hover .icon_box span i{
-    color: var(--point);
-}
-#font .icon_box span{
-    transition: transform 0.3s;
-}
-#font li .icon_box span i{
-    font-size: 35px;
+    align-items: center;
+  }
+  #value .play {
+    top: 0;
+    max-width: 340px;
+    margin: 0 auto;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
 }

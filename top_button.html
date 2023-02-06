@@ -1,94 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<style>
-    body{
-        background-color: black;
-    }
-    div{
-        color: #fff;
-    }
-    .top_btn{
-        position: fixed;
-        background: none;
-        border: none;
-        position: relative;
-        float: right;
-        text-align: center;
-        right: 50px;
-    }
-    .top_btn img{
-        width: 120px;
-        animation: rotate_image 6s linear infinite;
-
-    }
-    .top_btn i{
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        left: 50%;
-        color: #fff;
-        transition: 0.5s;
-        font-size: 2em;
-    }
-    .top_btn i:hover{
-        color: #007eff;
-    }
-
-
-    @keyframes rotate_image {
-        100% {
-        transform: rotate(360deg);
-    }
-    }
-    @media (max-width:768px) {
-        .top_btn img{
-            width: 100px;
-        }
-        .top_btn i{
-            font-size: 1.5em;
-        }
-    }
-    @media (max-width:480px) {
-        .top_btn img{
-            width: 80px;
-            animation: none;
-        }
-        .top_btn i{
-            font-size: 1em;
-        }
-    }
-</style>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>top_btn</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <button class="top_btn">
-        <a href=""><img src="./img/TOP/TOP.png" alt=""><i class="fa-solid fa-arrow-up-long"></i></a>
+      <a href=""
+        ><img src="./img/TOP/TOP.png" alt="" /><i
+          class="fa-solid fa-arrow-up-long"
+        ></i
+      ></a>
     </button>
     <script
-    src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-    crossorigin="anonymous"
-  ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <script>
-    $(window).scroll(function(){
-    if($(window).scrollTop() > 300){
-        $('.top_btn').fadeIn();
-    }else{
-        $('.top_btn').fadeOut();
-    }
-});
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+      integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+          $(".top_btn").fadeIn();
+        } else {
+          $(".top_btn").fadeOut();
+        }
+      });
 
-$('.top_btn').click(function(e){
-    e.preventDefault();
-    $('html,body').animate({scrollTop:0},1000,"easeOutQuint")
-})
-
-   </script>
-</body>
+      $(".top_btn").click(function (e) {
+        e.preventDefault();
+        $("html,body").animate({ scrollTop: 0 }, 1000, "easeOutQuint");
+      });
+    </script>
+  </body>
 </html>

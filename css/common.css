@@ -401,3 +401,59 @@ swiper-slide img {
   height: 100%;
   object-fit: cover;
 }
+
+/* TOP 버튼 */
+body {
+  background-color: black;
+}
+div {
+  color: #fff;
+}
+.top_btn {
+  position: fixed;
+  background: none;
+  border: none;
+  position: relative;
+  float: right;
+  text-align: center;
+  right: 50px;
+}
+.top_btn img {
+  width: 120px;
+  animation: rotate_image 6s linear infinite;
+}
+.top_btn i {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  color: #fff;
+  transition: 0.5s;
+  font-size: 2em;
+}
+.top_btn i:hover {
+  color: #007eff;
+}
+
+@keyframes rotate_image {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 768px) {
+  .top_btn img {
+    width: 100px;
+  }
+  .top_btn i {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 480px) {
+  .top_btn img {
+    width: 80px;
+    animation: none;
+  }
+  .top_btn i {
+    font-size: 1em;
+  }
+}
