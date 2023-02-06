@@ -81,6 +81,7 @@ header {
   background: var(--main-bg);
   color: var(--text);
   position: relative;
+  z-index: 100;
 }
 header nav.container {
   height: 80px;
