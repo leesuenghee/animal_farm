@@ -1,7 +1,22 @@
-let aside = $('header .aside'),
-    button = $('header .toggleBtn');
+//헤더
+let aside = $("header .aside"),
+  button = $("header .toggleBtn");
 
-    button.click(function(){
-        aside.toggleClass('open');
-        $(this).toggleClass('active');
-    });
+button.click(function () {
+  aside.toggleClass("open");
+  $(this).toggleClass("active");
+});
+
+// 탑버튼
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 300) {
+    $(".top_btn").fadeIn();
+  } else {
+    $(".top_btn").fadeOut();
+  }
+});
+
+$(".top_btn").click(function (e) {
+  e.preventDefault();
+  $("html,body").animate({ scrollTop: 0 }, 1000, "easeOutQuint");
+});
