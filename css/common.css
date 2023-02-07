@@ -92,14 +92,14 @@ header nav.container {
   margin: 0 auto;
 }
 
-header .logo a span {
+.logo a span {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   overflow: hidden;
 }
-header .logo a:before {
+.logo a:before {
   content: "";
   width: 240px;
   height: 21px;
@@ -285,19 +285,28 @@ a {
 
 footer {
   background: var(--main-bg);
-  color: var(--text);
   font-family: "samsungOne_400";
   margin: 0 auto;
 }
 footer .footer {
   margin: 0 auto;
   padding: 81px 0;
-  width: 1340px;
+}
+footer .footer .logo {
+  margin-bottom: 27px;
 }
 footer .footer-menu {
   margin-bottom: 81px;
+  gap: 20px 10px;
+  flex-flow: row wrap;
 }
+footer .footer .footer-menu li {
 
+}
+footer .footer .footer-menu li:hover a {
+  color: var(--point);
+  transition: 0.2s ease-in;
+}
 footer .copyright,
 footer .sns {
   gap: 20px;
@@ -317,37 +326,29 @@ footer .sns svg {
 }
 @media (max-width: 768px) {
   footer .footer {
-    position: relative;
-    width: 580px;
     padding: 40px 0;
   }
   footer .footer-menu {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 30px;
+    display: none;
   }
 
-  footer .footer-menu li {
+  footer .footer-menu > li {
+    width: 100%;
     margin-bottom: 27px;
   }
+  
   footer .footer > div {
     flex-direction: column-reverse;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 140px;
+    gap:27px;
   }
   footer .footer > div.aic {
-    align-content: space-between;
+    justify-content: space-between;
     align-items: flex-end;
   }
   footer .footer > div .copyright {
     justify-content: space-between;
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: -27px;
+  }
+  footer .footer > div.sns {
   }
 }
 

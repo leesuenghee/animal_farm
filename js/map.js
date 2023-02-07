@@ -29,7 +29,6 @@ tabMenus.click(function (e) {
 
 let circle = $('.mapwrap svg circle'),
   maplistitem = $('.map_list .map_list_item'),
-  // maplistImg = maplistitem.find('img'),
   popup = $('.mapwrap .popup');
 
 circle.click(function(){
@@ -39,17 +38,17 @@ circle.click(function(){
     if(circleData === maplistitemData){
       //클론에 hide클래스의 유무로 숨기고 보이게
       let popupClone = popup.html($(this).clone());
-      // maplistImg.css({display:'block'});
-      popupClone.toggleClass('hide');
-      if($(window).width() > 780){
-        popupClone.find('img').css({display:'block'});
-      }// 780이상일때만 보이게
+        popupClone.toggleClass('hide');
+      // 윈도우 너비가 780이상일때만 보이게
+        if($(window).width() > 780){
+          popupClone.find('img').css({display:'block'});
+        }
+      //외부영역 클릭했을때 hide추가해서 숨기게
       $(document).mouseup(function (e){
         if(popup.has(e.target).length === 0){
           popup.addClass('hide');
         }
       });
-      //외부영역 클릭했을때 hide추가해서 숨기게
     }
   });
 });
