@@ -635,7 +635,9 @@ div {
     background:url(/img/header_img/tb-4.png) no-repeat;
   }
   .swiper-slide .slide4-text {
-    transform: none;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
   }
 }
 
@@ -663,11 +665,5 @@ div {
   .slide3 {
     background:url(/img/header_img/mb-3.png) no-repeat;
     background-position: center;
-  }
-  .swiper-slide .slide4-text {
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-  }
-  
+  }  
 }

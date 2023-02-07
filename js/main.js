@@ -26,6 +26,7 @@ $(".top_btn").click(function (e) {
 $(".swiper").slick({
   arrows: false,
   dots: true,
+  autoplay:true,
 });
 
 let slideMenu = $('.slick-dots li button');
