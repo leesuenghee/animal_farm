@@ -387,57 +387,6 @@ footer .sns svg {
   }
 }
 
-/* 메인 */
-.main-page {
-  font-family: "samsungOne_400";
-  color: var(--text);
-}
-.swiper {
-  position: relative;
-  height: 890px;
-}
-.swiper-slide {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.swiper-slide .slide1-text,
-.swiper-slide .slide4-text {
-  position: absolute;
-  top: 30%;
-  left: 5%;
-}
-.swiper-slide .slide2-text {
-  text-align: center;
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.swiper-slide .slide3-text {
-  text-align: center;
-  position: absolute;
-  top: 30%;
-  left: 5%;
-}
-
-.swiper-slide > div h2 {
-  font-family: "samsungOne_700";
-  font-size: 48px;
-  margin-bottom: 54px;
-  line-height: auto;
-}
-.swiper-slide > div p {
-  font-family: "samsungOne_400";
-  line-height: 29px;
-}
-.swiper-slide img {
-  /* position: relative; */
-  margin: 0;
-  width: 100%;
-  height: 100%;
-}
-
 /* TOP 버튼 */
 body {
   background-color: black;
@@ -494,6 +443,76 @@ div {
   }
 }
 
+
+/* 메인 */
+.main-page {
+  font-family: "samsungOne_400";
+  color: var(--text);
+}
+
+.slick-track {
+  height: 860px;
+}
+
+.swiper-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide1 {
+  background:url(/img/header_img/main1.png) no-repeat;
+  background-position: 73% center;
+}
+.slide2 {
+  background:url(/img/header_img/main2.png) no-repeat;
+  background-position: center center;
+}
+.slide3 {
+  background:url(/img/header_img/main3.png) no-repeat;
+  background-position: right center;
+}
+.slide4 {
+  background:url(/img/header_img/main4.png) no-repeat;
+  background-position: center center;
+}
+
+.swiper-slide .slide1-text,
+.swiper-slide .slide4-text {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+.swiper-slide .slide2-text {
+  text-align: center;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.swiper-slide .slide3-text {
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+
+.swiper-slide > div h2 {
+  font-family: "samsungOne_700";
+  font-size: 48px;
+  margin-bottom: 54px;
+  line-height: auto;
+}
+.swiper-slide > div p {
+  font-family: "samsungOne_400";
+  line-height: 29px;
+}
+.swiper-slide img {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .swiper-slide::before {
   position: absolute;
   content: "";
@@ -534,8 +553,6 @@ div {
   font-size: 24px;
   background: none;
   border: none;
-  /* text-indent: -9999em; */
-  /* overflow: hidden; */
   padding: 0;
 }
 .main-page .slick-dots li button::after {
