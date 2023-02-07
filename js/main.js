@@ -21,12 +21,12 @@ $(".top_btn").click(function (e) {
   $("html,body").animate({ scrollTop: 0 }, 1000, "easeOutQuint");
 });
 
+
 //메인 슬라이드
 $(".swiper").slick({
   arrows: false,
   dots: true,
 });
-
 
 let slideMenu = $('.slick-dots li button');
 slideMenu.each(function(){

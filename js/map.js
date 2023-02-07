@@ -1,3 +1,5 @@
+$("#tabs").tabs();
+
 let submenu = $('#tabs .map_submenu');
 let tabMenus = submenu.find('a');
 
@@ -21,10 +23,6 @@ tabMenus.click(function (e) {
   //탭 상단으로 천천히 이동
 });
 
-
-
-
-
 //circle을 클릭했을때
 //circle의 data-country값 = maplistitem의 data-country값
 //popup에 maplistitem을 복사
@@ -41,6 +39,8 @@ circle.click(function(){
       //클론에 hide클래스의 유무로 숨기고 보이게
       let popupClone = popup.html($(this).clone());
       popupClone.toggleClass('hide');
+      //
+      popupClone.append('<img src=""');
       //외부영역 클릭했을때 hide추가해서 숨기게
       $(document).mouseup(function (e){
         if(popup.has(e.target).length === 0){
