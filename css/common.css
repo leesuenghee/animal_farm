@@ -22,6 +22,9 @@
 }
 /* 폰트사이즈 */
 /* PC */
+.ft42{
+  font-size: 42px;
+}
 .ft32 {
   font-size: 32px;
 }

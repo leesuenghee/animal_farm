@@ -5,25 +5,24 @@ body {
 h1,
 h2,
 h3,
-h4,
-p {
+h4{
   font-family: "samsungOne_700";
-  font-size: 17px;
+  margin-bottom: 27px;
+}
+p {
+  font-family: "samsungsharpsans_medium";
 }
 
-img {
-  width: 100%;
-}
 #fullpages {
   position: relative;
   width: 100%;
 }
-#fullpages div {
+#fullpages .images {
   width: 100%;
   height: 100vh;
   position: relative;
 }
-#fullpages div::before {
+#fullpages .images::before {
   content: "";
   opacity: 0.5;
   position: absolute;
@@ -41,7 +40,7 @@ img {
   position: absolute;
   background-position: center;
 }
-#fullpages:last-child div::before {
+#fullpages:nth-child(2) div::before {
   background: url("../img/CDN_sh/bg_1.png") no-repeat 0 0;
   background-size: cover;
   width: 100%;
@@ -49,7 +48,7 @@ img {
   position: absolute;
   background-position: center;
 }
-#fullpages span {
+#fullpages .fonts {
   width: 100%;
   position: absolute;
   top: 50%;
@@ -57,15 +56,20 @@ img {
   transform: translate(-50%, -50%);
   text-align: center;
   line-height: 40px;
-  font-weight: 700;
+}
+#fullpages .fonts h1{
+  margin-bottom: 27px;
 }
 
 /* vision */
-#vision span {
+#vision{
+  height: 100vh;
+}
+#vision .visionFont {
   text-align: center;
   line-height: 40px;
 }
-#vision span p {
+#vision .visionFont p {
   margin-bottom: 27px;
 }
 #vision div {
@@ -115,14 +119,14 @@ img {
 #value .values {
   position: relative;
   width: 100%;
-  height: 1080px;
+  height: 100vh;
 }
 #value .values .circle {
   position: absolute;
   transform: translate(-50%, -50%);
   right: 50%;
   left: 50%;
-  top: 50%;
+  top: 60%;
   width: 100%;
   text-align: center;
 }
@@ -149,6 +153,7 @@ img {
   left: 0;
   right: 0;
   animation: not_circles 8s linear infinite;
+  font-size: 20px;
 }
 
 @keyframes not_circles {
@@ -184,6 +189,7 @@ img {
   top: 0;
   flex-direction: column;
   gap: 108px;
+  margin-top: 27px;
 }
 
 #value .play p {
@@ -200,7 +206,7 @@ img {
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 35%;
+  bottom: 24%;
   justify-content: flex-start;
   gap: 108px;
 }
@@ -216,7 +222,7 @@ img {
   width: 100%;
   position: absolute;
   flex-direction: row-reverse;
-  bottom: 35%;
+  bottom: 24%;
   right: 0;
   gap: 108px;
 }
@@ -274,24 +280,24 @@ img {
 }
 
 @media (max-width: 768px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  p {
-    font-family: "samsungOne_700";
-    font-size: 15px;
-  }
-  #fullpages span {
+  #fullpages .fonts {
     max-width: 584px;
   }
-  #fullpages span h1 {
+  #fullpages .fonts h1 {
     font-size: 24px;
   }
-  #vision span p {
+  #fullpages .fonts p{
+    font-size: 18px;
+    line-height: 27px;
+  }
+  #vision .visionFont h2{
+    font-size: 24px;
+  }
+  #vision .visionFont p {
     max-width: 584px;
     margin: 0 auto;
     padding-bottom: 27px;
+    font-size: 18px;
   }
   #value {
     width: 584px;
@@ -316,12 +322,14 @@ img {
     font-size: 20px;
   }
   #vision .bgs .bdi div h3 {
-    font-size: 24px;
+    font-size: 20px;
   }
   #value .values {
-    height: 900px;
+    height: 100vh;
   }
-
+  #value .values .circle{
+    top: 50%;
+  }
   #value .values .circle div {
     width: 180px;
     height: 180px;
@@ -334,6 +342,7 @@ img {
   #value .play {
     width: 50%;
     top: 10%;
+    margin: 0;
   }
   #value .new,
   #value .play,
@@ -356,6 +365,7 @@ img {
   }
   #font h3 {
     font-size: 24px;
+    line-height: 40px;
   }
   #font ul {
     flex-wrap: wrap;
@@ -363,9 +373,6 @@ img {
   }
   #font ul li {
     width: 217px;
-  }
-  #font ul li:nth-child(2) {
-    flex-grow: 1;
   }
   #font .icon_box {
     width: 105px;
@@ -375,23 +382,23 @@ img {
 }
 
 @media (max-width: 480px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  p {
-    font-family: "samsungOne_700";
+  #fullpages .fonts h1{
+    font-size: 16px;
+  }
+  #fullpages .fonts p{
     font-size: 13px;
   }
-  #fullpages span {
+  #fullpages .fonts {
     max-width: 340px;
   }
 
-  #vision span h2 {
+  
+  #vision .visionFont h2 {
     font-size: 20px;
   }
-  #vision span p {
+  #vision .visionFont p {
     max-width: 340px;
+    font-size: 13px;
   }
   #vision .bgs::before {
     height: 671px;
@@ -407,11 +414,21 @@ img {
     display: none;
   }
   #value .values {
+    height: 1080px;
+  }
+  #vision .bgs .bdi div p {
+    line-height: 113px;
+    font-size: 18px;
+  }
+  #vision .bgs .bdi div h3 {
+    font-size: 18px;
   }
   #value .value p {
     width: 100%;
     justify-content: center;
     align-items: center;
+    height: 160px;
+    font-size: 13px;
   }
   #value .play {
     top: 0;
@@ -419,5 +436,11 @@ img {
     margin: 0 auto;
     width: 100%;
     flex-direction: column-reverse;
+  }
+  #value .new{
+    left: 0;
+    flex-direction: column-reverse;
+    bottom: 45%;
+    width: 100%;
   }
 }
