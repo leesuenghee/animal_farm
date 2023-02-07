@@ -1,4 +1,6 @@
-let imgs = $('p[class*="animate__"],h1[class*="animate__"]');
+let imgs = $(
+  'p[class*="animate__"],h1[class*="animate__"],h2[class*="animate__"]'
+);
 
 let target = $("#toggle .contents");
 let targetOST = target.offset().top;
@@ -19,6 +21,7 @@ let display_text = display.find("span");
 
 $(window).scroll(() => {
   imgs.each(function () {
+    $(this).css({ visiblity: "hidden" });
     if ($(this).offset().top - 500 < $(window).scrollTop()) {
       let effect = $(this).attr("data-effect");
       $(this).css({ visiblity: "visible" });
@@ -32,35 +35,11 @@ $(window).scroll(() => {
 $(window).scroll(() => {
   let sct = $(window).scrollTop();
   if ($(window).width() > 480) {
-    if (sct > stickyEl.offset().top - 500) {
-      stickyEl.css({
-        position: "fixed",
-        top: "500px",
-        width: stickyWidth + "px",
-      });
+    if (sct > stickyEl.offset().top - 300) {
       stickyEl.addClass("active");
-      if (sct > targetOST - 200) {
-        stickyEl.css({
-          position: "relative",
-          top: "auto",
-          width: "100%",
-        });
-        stickyEl.css({
-          paddingBottom: 0,
-        });
-      } else {
-        stickyEl.css({
-          position: "relative",
-          top: "auto",
-          width: "100%",
-        });
-        stickyEl.removeClass("active");
-        target.css({
-          paddingTop: 0,
-        });
-      }
+    } else {
+      stickyEl.removeClass("active");
     }
-    expint = true;
   }
 });
 
