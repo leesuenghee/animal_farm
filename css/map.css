@@ -108,6 +108,9 @@ header {
   display: block;
   line-height: 27px;
 }
+.map_list_item span:last-child {
+  margin-bottom: 27px;
+}
 
 #tabs-3 .map_list_item {
   width: 420px;
@@ -125,7 +128,13 @@ header {
   transform: translateX(-50%);
   padding: 5px;
 }
+.mapwrap .popup span:last-of-type{
+  margin-bottom: 27px;
+}
 .mapwrap .popup.hide {
+  display: none;
+}
+.map_list_item > img {
   display: none;
 }
 #tabs-2 .map_main .mapwrap svg #spot circle,
