@@ -296,12 +296,20 @@ footer .footer .logo {
   margin-bottom: 27px;
 }
 footer .footer-menu {
-  margin-bottom: 81px;
   gap: 20px 10px;
   flex-flow: row wrap;
 }
-footer .footer .footer-menu li {
-
+footer .footer-line {
+  width: 100%;
+  height: 2px;
+  background: var(--text);
+  margin: 30px 0;
+}
+footer .footer .footer-line {
+  display: block;
+}
+footer .footer > div > .footer-line {
+  display: none;
 }
 footer .footer .footer-menu li:hover a {
   color: var(--point);
@@ -309,11 +317,7 @@ footer .footer .footer-menu li:hover a {
 }
 footer .copyright,
 footer .sns {
-  gap: 20px;
-}
-
-footer .sns {
-  font-size: 0;
+  gap: 10px;
 }
 
 footer .sns .fa-brands {
@@ -328,6 +332,9 @@ footer .sns svg {
   footer .footer {
     padding: 40px 0;
   }
+  footer .footer .logo {
+    margin-bottom: 10px;
+  }
   footer .footer-menu {
     display: none;
   }
@@ -339,16 +346,21 @@ footer .sns svg {
   
   footer .footer > div {
     flex-direction: column-reverse;
-    gap:27px;
   }
-  footer .footer > div.aic {
-    justify-content: space-between;
-    align-items: flex-end;
+  footer .footer-line {
+    margin: 20px 0;
+  }
+  footer .footer > .footer-line {
+    display: none;
+  }
+  footer .footer > div > .footer-line {
+    display: block;
   }
   footer .footer > div .copyright {
     justify-content: space-between;
   }
-  footer .footer > div.sns {
+  footer .footer > div .sns {
+    margin-left: auto;
   }
 }
 
@@ -386,6 +398,7 @@ footer .sns svg {
     right: 0;
     left: 0;
     bottom: -27px;
+    gap:65px;
   }
   footer .footer > div .copyright li:last-child {
     word-break: keep-all;
