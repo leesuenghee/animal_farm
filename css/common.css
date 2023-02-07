@@ -105,6 +105,8 @@ header .logo a:before {
 header nav .pc_gnb > ul {
   gap: 80px;
   flex-wrap: no-wrap;
+  padding-top: 40px;
+  box-sizing: border-box;
 }
 header nav .pc_gnb > ul:after {
   content: "";
@@ -122,9 +124,14 @@ header nav .pc_gnb ul:hover:after {
 }
 header nav .pc_gnb ul > li {
   position: relative;
+  padding-bottom: 37px;
+  box-sizing: border-box;
+  white-space: nowrap;
 }
 header nav .pc_gnb ul > li > ul {
-  margin-top: 27px;
+  margin-top: -18px;
+  padding-top: 8px;
+  box-sizing: border-box;
   position: absolute;
   top: calc(100% + 12px);
   left: 50%;
@@ -133,11 +140,12 @@ header nav .pc_gnb ul > li > ul {
   z-index: 5;
   flex-wrap: nowrap;
   white-space: nowrap;
+  visibility: hidden;
 }
 header nav .pc_gnb ul > li:hover > ul {
   /* display: block; */
   opacity: 1;
-  /* visibility: visible; */
+  visibility: visible;
 }
 header nav .pc_gnb ul ul li a {
   font-size: 15px;
