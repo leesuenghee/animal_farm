@@ -146,7 +146,6 @@ p {
   width: 68%;
   margin: 0 auto;
 }
-<<<<<<< Updated upstream
 #monitor div img:first-child {
   position: absolute;
   top: 40%;
@@ -223,15 +222,14 @@ p {
   top: 50%;
   right: 50%;
   left: 50%;
-=======
-#toggle .content{
+}
+#toggle .content {
   display: flex;
   flex-direction: column;
 }
-#toggle .ts{
+#toggle .ts {
   display: flex;
   justify-content: center;
-  
 }
 #toggle .ts:nth-child(2) {
   width: 100%;
@@ -256,11 +254,9 @@ p {
   position: absolute;
   /* top: 20%; */
   /* left: 0; */
->>>>>>> Stashed changes
   text-align: center;
   transform: translate(-50%, -50%);
   line-height: 40px;
-<<<<<<< Updated upstream
   opacity: 0;
 }
 #display h4,
@@ -392,7 +388,4 @@ p {
     width: 80%;
     margin: 0 auto;
   }
-=======
-  
->>>>>>> Stashed changes
 }

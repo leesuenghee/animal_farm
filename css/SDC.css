@@ -5,12 +5,25 @@ body {
 h1,
 h2,
 h3,
-h4{
+h4 {
   font-family: "samsungOne_700";
   margin-bottom: 27px;
 }
 p {
   font-family: "samsungsharpsans_medium";
+}
+.container {
+  max-width: 100vw;
+  width: 80%;
+}
+header nav {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
 #fullpages {
@@ -57,20 +70,21 @@ p {
   text-align: center;
   line-height: 40px;
 }
-#fullpages .fonts h1{
+#fullpages .fonts h1 {
   margin-bottom: 27px;
 }
 
 /* vision */
-#vision{
+#vision {
   height: 100vh;
+  padding-top: 81px;
 }
 #vision .visionFont {
   text-align: center;
   line-height: 40px;
 }
 #vision .visionFont p {
-  margin-bottom: 27px;
+  margin-bottom: 20px;
 }
 #vision div {
   position: relative;
@@ -126,7 +140,7 @@ p {
   transform: translate(-50%, -50%);
   right: 50%;
   left: 50%;
-  top: 60%;
+  top: 70%;
   width: 100%;
   text-align: center;
 }
@@ -153,7 +167,7 @@ p {
   left: 0;
   right: 0;
   animation: not_circles 8s linear infinite;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 @keyframes not_circles {
@@ -186,10 +200,9 @@ p {
 #value .play {
   width: 100%;
   position: absolute;
-  top: 0;
+  top: 15%;
   flex-direction: column;
-  gap: 108px;
-  margin-top: 27px;
+  gap: 81px;
 }
 
 #value .play p {
@@ -206,9 +219,9 @@ p {
   width: 100%;
   position: absolute;
   left: 0;
-  bottom: 24%;
+  bottom: 15%;
   justify-content: flex-start;
-  gap: 108px;
+  gap: 81px;
 }
 #value .new div {
   background: #03509f;
@@ -222,9 +235,9 @@ p {
   width: 100%;
   position: absolute;
   flex-direction: row-reverse;
-  bottom: 24%;
+  bottom: 15%;
   right: 0;
-  gap: 108px;
+  gap: 81px;
 }
 #value .down div {
   background: #a962c2;
@@ -286,11 +299,11 @@ p {
   #fullpages .fonts h1 {
     font-size: 24px;
   }
-  #fullpages .fonts p{
+  #fullpages .fonts p {
     font-size: 18px;
     line-height: 27px;
   }
-  #vision .visionFont h2{
+  #vision .visionFont h2 {
     font-size: 24px;
   }
   #vision .visionFont p {
@@ -327,7 +340,7 @@ p {
   #value .values {
     height: 100vh;
   }
-  #value .values .circle{
+  #value .values .circle {
     top: 50%;
   }
   #value .values .circle div {
@@ -362,6 +375,7 @@ p {
   }
   #font {
     margin: 0 92px 0 92px;
+    max-width: 584px;
   }
   #font h3 {
     font-size: 24px;
@@ -382,17 +396,16 @@ p {
 }
 
 @media (max-width: 480px) {
-  #fullpages .fonts h1{
+  #fullpages .fonts h1 {
     font-size: 16px;
   }
-  #fullpages .fonts p{
+  #fullpages .fonts p {
     font-size: 13px;
   }
   #fullpages .fonts {
     max-width: 340px;
   }
 
-  
   #vision .visionFont h2 {
     font-size: 20px;
   }
@@ -437,7 +450,7 @@ p {
     width: 100%;
     flex-direction: column-reverse;
   }
-  #value .new{
+  #value .new {
     left: 0;
     flex-direction: column-reverse;
     bottom: 45%;
