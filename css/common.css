@@ -466,7 +466,7 @@ div {
 
 .slide1 {
   background:url(/img/header_img/main1.png) no-repeat;
-  background-position: 73% center;
+  background-position: 73% bottom ;
 }
 .slide2 {
   background:url(/img/header_img/main2.png) no-repeat;
@@ -605,4 +605,14 @@ div {
   .swiper-slide .slide1-text h2 {
     font-size: 40px;
   }
+<<<<<<< Updated upstream
 }
+=======
+  .slide3 {
+    background:url(/img/header_img/header_tb3.png) no-repeat;
+  }
+  .slide4 {
+    background:url(/img/header_img/header_tb4-1.png) no-repeat;
+  }
+}
+>>>>>>> Stashed changes
