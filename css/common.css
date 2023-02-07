@@ -486,6 +486,7 @@ div {
   position: absolute;
   top: 30%;
   left: 5%;
+  transform: translateX(-5%);
 }
 .swiper-slide .slide2-text {
   text-align: center;
@@ -499,6 +500,7 @@ div {
   position: absolute;
   top: 30%;
   left: 5%;
+  transform: translateX(-5%);
 }
 
 .swiper-slide > div h2 {
@@ -506,6 +508,7 @@ div {
   font-size: 48px;
   margin-bottom: 54px;
   line-height: auto;
+  font-weight: 700;
 }
 .swiper-slide > div p {
   font-family: "samsungOne_400";
@@ -597,18 +600,74 @@ div {
   .swiper-slide > div p {
     font-size: 20px;
   }
+
+  .slide1 {
+    background:url(/img/header_img/tb-1.png) no-repeat;
+    background-position: center;
+  }
   .swiper-slide .slide1-text {
     text-align: center;
-    left: 0;
-    top: 50%;
+    /* left: 0; */
+    top: 55%;
   }
   .swiper-slide .slide1-text h2 {
     font-size: 40px;
   }
+  .swiper-slide .slide2-text {
+    top: 10%;
+  }
+  .slide2 {
+    background:url(/img/header_img/tb-2.png) no-repeat;
+    background-position: center;
+  }
   .slide3 {
-    background:url(/img/header_img/header_tb3.png) no-repeat;
+    background:url(/img/header_img/tb-3.png) no-repeat;
+  }
+  .slide3 .slide3-text {
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .slide3 .slide3-text > h2 {
+    font-size: 32px;
   }
   .slide4 {
-    background:url(/img/header_img/header_tb4-1.png) no-repeat;
+    background:url(/img/header_img/tb-4.png) no-repeat;
   }
+  .swiper-slide .slide4-text {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-page .slick-dots li button {
+    font-size: 15px;
+  }
+  .swiper-slide > div h2 {
+    font-size: 24px;
+  }
+  .swiper-slide > div p {
+    font-size: 16px;
+  }
+  .swiper-slide > .slid3 p {
+    font-size: 14px;
+  }
+  .slide1 {
+    background:url(/img/header_img/mb-1.png) no-repeat;
+    background-position: center;
+  }
+  .slide2 {
+    background:url(/img/header_img/mb-2.png) no-repeat;
+    background-position: center;
+  }
+  .slide3 {
+    background:url(/img/header_img/mb-3.png) no-repeat;
+    background-position: center;
+  }
+  .swiper-slide .slide4-text {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  
 }
