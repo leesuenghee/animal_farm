@@ -22,7 +22,7 @@
 }
 /* 폰트사이즈 */
 /* PC */
-.ft42{
+.ft42 {
   font-size: 42px;
 }
 .ft32 {
@@ -343,7 +343,7 @@ footer .sns svg {
     width: 100%;
     margin-bottom: 27px;
   }
-  
+
   footer .footer > div {
     flex-direction: column-reverse;
   }
@@ -398,7 +398,7 @@ footer .sns svg {
     right: 0;
     left: 0;
     bottom: -27px;
-    gap:65px;
+    gap: 65px;
   }
   footer .footer > div .copyright li:last-child {
     word-break: keep-all;
@@ -414,12 +414,11 @@ div {
 }
 .top_btn {
   position: fixed;
+  right: 7%;
+  bottom: 15%;
   background: none;
   border: none;
-  position: relative;
-  float: right;
   text-align: center;
-  right: 50px;
 }
 .top_btn img {
   width: 120px;
@@ -461,7 +460,6 @@ div {
   }
 }
 
-
 /* 메인 */
 .main-page {
   font-family: "samsungOne_400";
@@ -479,19 +477,19 @@ div {
 }
 
 .slide1 {
-  background:url(/img/header_img/main1.png) no-repeat;
-  background-position: 73% bottom ;
+  background: url(/img/header_img/main1.png) no-repeat;
+  background-position: 73% bottom;
 }
 .slide2 {
-  background:url(/img/header_img/main2.png) no-repeat;
+  background: url(/img/header_img/main2.png) no-repeat;
   background-position: center center;
 }
 .slide3 {
-  background:url(/img/header_img/main3.png) no-repeat;
+  background: url(/img/header_img/main3.png) no-repeat;
   background-position: right center;
 }
 .slide4 {
-  background:url(/img/header_img/main4.png) no-repeat;
+  background: url(/img/header_img/main4.png) no-repeat;
   background-position: center center;
 }
 
@@ -616,7 +614,7 @@ div {
   }
 
   .slide1 {
-    background:url(/img/header_img/tb-1.png) no-repeat;
+    background: url(/img/header_img/tb-1.png) no-repeat;
     background-position: center;
   }
   .swiper-slide .slide1-text {
@@ -631,11 +629,11 @@ div {
     top: 10%;
   }
   .slide2 {
-    background:url(/img/header_img/tb-2.png) no-repeat;
+    background: url(/img/header_img/tb-2.png) no-repeat;
     background-position: center;
   }
   .slide3 {
-    background:url(/img/header_img/tb-3.png) no-repeat;
+    background: url(/img/header_img/tb-3.png) no-repeat;
   }
   .slide3 .slide3-text {
     top: 55%;
@@ -646,7 +644,7 @@ div {
     font-size: 32px;
   }
   .slide4 {
-    background:url(/img/header_img/tb-4.png) no-repeat;
+    background: url(/img/header_img/tb-4.png) no-repeat;
   }
   .swiper-slide .slide4-text {
     left: 50%;
@@ -669,15 +667,15 @@ div {
     font-size: 14px;
   }
   .slide1 {
-    background:url(/img/header_img/mb-1.png) no-repeat;
+    background: url(/img/header_img/mb-1.png) no-repeat;
     background-position: center;
   }
   .slide2 {
-    background:url(/img/header_img/mb-2.png) no-repeat;
+    background: url(/img/header_img/mb-2.png) no-repeat;
     background-position: center;
   }
   .slide3 {
-    background:url(/img/header_img/mb-3.png) no-repeat;
+    background: url(/img/header_img/mb-3.png) no-repeat;
     background-position: center;
-  }  
+  }
 }

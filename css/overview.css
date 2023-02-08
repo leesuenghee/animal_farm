@@ -22,8 +22,12 @@ p {
   margin: 0 auto;
   transition: width 0.4s;
 }
+/* full */
 #pearl .bgs.full {
   width: 100%;
+}
+#pearl .bgs.full .bgss p {
+  opacity: 1;
 }
 
 #pearl .bgs .bgss {
@@ -43,6 +47,8 @@ p {
   text-align: left;
   line-height: 40px;
   font-family: "samsungOne_400";
+  opacity: 0;
+  transition: 0.5s;
 }
 
 /* section2 */
@@ -82,7 +88,7 @@ p {
   bottom: 0;
 }
 #toggle .contents {
-  position: sticky;
+  /* position: sticky; */
   top: 0;
   /* overflow: hidden; */
   height: 100vh;
@@ -129,14 +135,18 @@ p {
   top: 50%;
   right: 0;
 }
+#toggle .contents .content1 {
+  position: sticky;
+}
 #toggle .contents .content2 {
   /* overflow: hidden; */
   transform: translateY(100%);
 }
 /* active */
 #toggle .contents .content1.active {
-  transition: 3s 1s;
+  transition: 3s;
   opacity: 0;
+  /* display: none; */
 }
 #toggle .contents .content2.active {
   transform: translateY(0);
@@ -176,7 +186,7 @@ p {
   z-index: -1;
   object-fit: cover;
   width: 55%;
-  transition: 3s;
+  transition: 3s 4s;
 }
 #monitor div.big img:first-child {
   width: 100%;
@@ -217,8 +227,8 @@ p {
 }
 #earth .bg2 h2 {
   position: absolute;
-  left: 50%;
-  right: 50%;
+  /* left: 50%;
+  right: 50%; */
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -285,9 +295,12 @@ p {
     border-radius: 30%;
     position: relative;
   }
+  /* fulls */
   #toggle .contents .content2.fulls {
     width: 100%;
     border-radius: none;
+  }
+  #pearl .bgs .bgss p {
   }
   #toggle .contents .content2.active {
     transform: translateY(-100%);
@@ -312,7 +325,7 @@ p {
     opacity: 0.8;
   }
   #earth .bg2 h2 {
-    max-width: 340px;
+    /* max-width: 340px; */
   }
   #display div img {
     width: 40%;
@@ -374,7 +387,7 @@ p {
   }
 
   #earth .bg2 h2 {
-    width: 80%;
+    /* width: 80%; */
     line-height: 27px;
   }
   #toggle .contents .content2 span p:last-child {

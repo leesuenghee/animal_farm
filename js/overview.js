@@ -51,6 +51,7 @@ $(window).scroll(function () {
         toggle_lam.addClass("fulls");
       }, 4000);
     }
+    // 헤더 이미지 애니메이션 효과
     if ($(window).scrollTop() > 0) {
       pearl.addClass("full");
     }
