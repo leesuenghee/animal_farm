@@ -9,7 +9,7 @@ let stickyWidth = target.width();
 let expint = false;
 
 let toggle_lam = $("#toggle .contents .content2");
-let toggle_ams = $("#toggle .contents .content2 img");
+// let toggle_ams = $("#toggle .contents .content2 img");
 
 let pearl = $("#pearl .bgs");
 let monitor_bg = $("#monitor div");
@@ -40,25 +40,29 @@ $(window).scroll(() => {
     } else {
       stickyEl.removeClass("active");
     }
+  } else {
+    stickyEl.removeClass("active");
   }
 });
 
 //480px 이상 애니메이션
 $(window).scroll(function () {
   if ($(window).width() > 480) {
-    if (toggle_ams.offset().top) {
+    if ($(window).scrollTop() > toggle_lam.offset().top - 300) {
       setTimeout(function () {
         toggle_lam.addClass("fulls");
-      }, 4000);
+      }, 1000);
+    } else {
+      toggle_lam.removeClass("fulls");
     }
     // 헤더 이미지 애니메이션 효과
     if ($(window).scrollTop() > 0) {
       pearl.addClass("full");
     }
-    if (monitor.offset().top - 500) {
+    if ($(window).scrollTop() > monitor.offset().top - 200) {
       monitor_bg.addClass("big");
     }
-    if (display.offset().top) {
+    if ($(window).scrollTop() > display.offset().top) {
       display_text.addClass("opacity");
       displays.addClass("opacity");
     }

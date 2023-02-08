@@ -76,7 +76,7 @@ p {
   height: 200vh;
   /* max-width: 1340px; */
   margin: 0 auto;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 #toggle .content {
   display: flex;
@@ -88,7 +88,7 @@ p {
   bottom: 0;
 }
 #toggle .contents {
-  /* position: sticky; */
+  position: sticky;
   top: 0;
   /* overflow: hidden; */
   height: 100vh;
@@ -98,7 +98,7 @@ p {
   position: relative;
   width: 100%;
 }
-#toggle .contents .content2 img,
+
 #toggle .contents .content1 img {
   width: 20%;
   height: 50vh;
@@ -108,16 +108,15 @@ p {
   left: 50%;
   transform: translateX(-50%);
 }
-#toggle .contents .content2.fulls img {
-  width: 100vw;
-  border-radius: 0;
-  height: auto;
-  transition: 2s;
-  height: 100vh;
+#toggle .contents .content2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 #toggle .contents .content2,
 #toggle .contents .content1 {
-  height: 50vh;
+  height: 100vh;
+  transition: 3s;
 }
 #toggle .contents .content2 .fonts,
 #toggle .contents .content1 .fonts {
@@ -133,26 +132,45 @@ p {
 #toggle .contents .content2 .fonts p:first-child {
   position: absolute;
   top: 50%;
-  right: 0;
+  /* right: 0; */
 }
-#toggle .contents .content1 {
+/* #toggle .contents .content1 {
   position: sticky;
-}
+  top: 0;
+} */
 #toggle .contents .content2 {
-  /* overflow: hidden; */
   transform: translateY(100%);
+  width: 20%;
+  height: 50vh;
+  overflow: hidden;
+  border-radius: 300px;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  opacity: 0;
 }
+
 /* active */
 #toggle .contents .content1.active {
-  transition: 3s;
+  /* transition: 3s; */
+  transition: 2s;
   opacity: 0;
   /* display: none; */
 }
 #toggle .contents .content2.active {
   transform: translateY(0);
-  transition: 4s;
   opacity: 1;
+  transition: 2s 1s;
   /* overflow: hidden; */
+}
+#toggle .contents .content2.fulls {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+
+  transition: 2s;
 }
 #toggle .contents .content2.active .fonts p:last-child {
   display: none;
@@ -165,36 +183,42 @@ p {
   display: inline-block;
   position: absolute;
   left: 0;
-  top: 100%;
+  top: 50%;
+  right: 0;
   width: 100vw;
-  transition: 5s;
+  /* transition: 5s; */
 }
 #monitor div {
   position: relative;
   width: 100%;
+  height: 100vh;
 }
 #monitor div img:nth-child(2) {
   width: 68%;
   margin: 0 auto;
+  display: flex;
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 #monitor div img:first-child {
   position: absolute;
-  top: 40%;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%, -50%);
   z-index: -1;
   object-fit: cover;
   width: 55%;
-  transition: 3s 4s;
+  height: 70%;
+  transition: 2s;
 }
 #monitor div.big img:first-child {
   width: 100%;
+  height: 100vh;
 }
 #monitor p:last-child {
   width: 100%;
   position: absolute;
-  top: 40%;
+  top: 45%;
   text-align: center;
   /* font-weight: 700; */
   font-size: 18px;
@@ -230,7 +254,7 @@ p {
   /* left: 50%;
   right: 50%; */
   top: 50%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   width: 100%;
   text-align: center;
   line-height: 40px;
@@ -257,9 +281,13 @@ p {
   text-align: center;
 }
 
-#display h4,
+#display h3,
 #display p {
   font-size: 40px;
+  font-family: "samsungOne_700";
+}
+#display h3 {
+  margin-bottom: 40px;
 }
 
 /* opacity */
@@ -267,10 +295,6 @@ p {
   opacity: 0.6;
   transition: 0.7s;
 }
-/* #display span.opacity {
-  opacity: 1;
-  transition: 0.4s;
-} */
 
 @media (max-width: 768px) {
   h1,
@@ -280,31 +304,30 @@ p {
   p {
     font-family: "samsungOne_400";
     font-size: 14px;
-    /* font-weight: 700; */
   }
   #pearl .bgs .bgss p {
     line-height: 27px;
     width: 340px;
   }
-  #toggle .contents {
+  #toggle .contents .content2 img {
     width: 100%;
+    height: 30vh;
   }
-  #toggle .contents .content2 img,
   #toggle .contents .content1 img {
-    width: 40%;
+    width: 180px;
+    height: 268px;
     border-radius: 30%;
     position: relative;
   }
   /* fulls */
-  #toggle .contents .content2.fulls {
+  #toggle .contents .content2.fulls img {
     width: 100%;
-    border-radius: none;
+    border-radius: 0;
+    height: 100vh;
   }
-  #pearl .bgs .bgss p {
-  }
-  #toggle .contents .content2.active {
+  /* #toggle .contents .content2.active {
     transform: translateY(-100%);
-  }
+  } */
   #toggle .contents .content2 span {
     width: 100%;
   }
@@ -360,6 +383,9 @@ p {
   #pearl .bgs {
     width: 100%;
   }
+  #pearl .bgs .bgss p {
+    opacity: 1;
+  }
   #monitors div h1 {
     line-height: 27px;
   }
@@ -372,18 +398,44 @@ p {
   #monitor p:last-child {
     font-size: 11px;
   }
+  #toggle {
+    height: auto;
+  }
+  #toggle .contents .content1 .fonts {
+    right: 0;
+    z-index: 1;
+  }
+  #toggle .contents .content2 {
+    height: 100vh;
+    opacity: 1;
+    transform: translateY(0);
+    width: 100%;
+    overflow: visible;
+  }
+  #toggle .contents .content2 .fonts p:first-child {
+    right: 15%;
+  }
+  #toggle .contents .content2 .fonts p:last-child {
+    bottom: 30%;
+    position: absolute;
+    width: 70%;
+    left: 15%;
+  }
   #toggle .contents .content2 img {
-    height: 40vh;
+    /* border-radius: 30%; */
+    height: 100vh;
+    width: 100%;
   }
   #toggle .contents {
-    height: 600px;
+    height: 100vh;
+    position: relative;
+  }
+  #monitor {
+    padding: 0;
   }
   #monitor div img:first-child {
     width: 100%;
-    height: 575px;
-  }
-  #monitor p:last-child {
-    font-size: 13px;
+    height: 100vh;
   }
 
   #earth .bg2 h2 {
@@ -393,5 +445,16 @@ p {
   #toggle .contents .content2 span p:last-child {
     width: 80%;
     margin: 0 auto;
+  }
+  #display div {
+    opacity: 0.8;
+  }
+  #display h3,
+  #display p {
+    font-size: 20px;
+    font-family: "samsungOne_700";
+  }
+  #display h3 {
+    margin-bottom: 27px;
   }
 }
