@@ -13,21 +13,13 @@ AOS.init();
 
 $(window).scroll(()=>{
     if($(this).scrollTop() > 0){
-        scb.find('img').addClass('scale');
+        scb.find('figure').addClass('scale');
         sctw.addClass('active');
     }else {
-        scb.find('img').removeClass('scale');
+        scb.find('figure').removeClass('scale');
         sctw.removeClass('active');
     }
 });
-
-// /* SECTION1 함께가요 미래로 */
-// $(window).scroll(()=>{
-//     if($(this).scrollTop() > sc1.offset().top - 100){
-//         sc1.find('img').addClass()
-//     }
-// });
-
 
 
 /* SECTION3 지역사회활동 */
@@ -39,9 +31,6 @@ let s3SlideWrap = $('.s3_slidewrapper'),
     prevBtn =  s3SlideWrap.find('> a').filter(':first-of-type'),
     nextBtn =  s3SlideWrap.find('> a').filter(':last-of-type');
 
-    // s3Slides.each(function(idx){
-    //     $(this).css({left:`${idx*100}%`}); 
-    // });
 
     s3Slide.each(function(i){
         $(this).css({left:`${i*100}%`});
@@ -50,7 +39,6 @@ let s3SlideWrap = $('.s3_slidewrapper'),
     prevBtn.click((e)=>{
         e.preventDefault();
         if(s3CurrentIdx === 0){
-            // s3CurrentIdx = s3Slides.length - 1;
             s3Slides.css({left:-s3Slide.length*100+'%'});
             s3CurrentIdx = s3Slide.length -1;
         }
@@ -59,7 +47,6 @@ let s3SlideWrap = $('.s3_slidewrapper'),
     nextBtn.click((e)=>{
         e.preventDefault();
         if(s3CurrentIdx === s3Slide.length - 1){
-            // s3CurrentIdx = s3Slides.length - 1;
             s3Slides.css({left:'0%'});
             s3CurrentIdx = 0;
         }
@@ -73,30 +60,10 @@ let s3SlideWrap = $('.s3_slidewrapper'),
         s3GotoSlide(idx);
     });
 
-    // function s3MoveSlide(){
-
-    //     let nextIdx = (s3CurrentIdx + 1)%s3Slides.length;
-    //     s3Slides.eq(s3CurrentIdx).fadeOut();
-    //     s3Slides.eq(nextIdx).fadeIn();
-    //     s3Slides.css({zIndex:5});
-    //     s3CurrentIdx = nextIdx;
-
-    //     // let currentSlide = s3Slides.eq(s3CurrentIdx);
-    //     // let nextSlide = s3Slides.eq(i);
-        
-    //     // nextSlide.css({left:'100%'}).animate({left:'0%'},300);
-
-    //     // currentSlide.animate({left:'-100%'},300);
-        
-    //     s3Pager.removeClass('active');
-    //     s3Pager.eq(s3CurrentIdx).addClass('active');
-        
-    // }
 
     function s3GotoSlide(i){                     
         s3Slides.stop().animate({left:`${-i*100}%`},500);
         s3CurrentIdx = i;
-        // slideUpdate();
     }
 
 /* SECTION4 나눔경영 */
@@ -106,16 +73,32 @@ let sc4tWrap = sc4.find('.s4_title_wrapper'),
 
 // $(window).scroll(()=>{
 //     if($(this).scrollTop() >= sc4.offset().top){
-//         sc4tWrap.css({position:'fixed'});
+//         sc4tWrap.css({position:'sticky'});
 //     }else if($(this).scrollTop() >= sc4cWrap.offset().bottom){
 //         sc4.css({position:'relative'});
 //     }
 // });
 
 
-$('.s4_slides').bxSlider({
-    infiniteLoop: true,
-    responsive: true,
-    touchEnabled,
-
-});
+var swiper = new Swiper(".s4_slides", {
+    slidesPerView: 4,
+    centeredSlides: false,
+    slidesPerGroupSkip: 1,
+    grabCursor: true,
+    keyboard: {
+      enabled: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
