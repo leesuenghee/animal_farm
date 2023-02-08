@@ -1,5 +1,19 @@
-a {
-  color: var(--text);
+.st0 {
+  display: none;
+}
+
+.st1 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #d6d6d6;
+  stroke: #353535;
+  stroke-width: 0.1;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+.st2 {
+  fill: #007eff;
 }
 
 body {
@@ -13,55 +27,46 @@ header {
   border-bottom: 1px solid #fff;
 }
 
-.container {
-  width: 1340px;
+.map_main {
   margin: 0 auto;
-  text-align: center;
-}
-
-.map_title {
-  margin-top: 54px;
-  font-family: samsungOne_700;
-}
-
-.map_01,
-.map_02 {
-  text-align: center;
+  max-width: 1340px;
   position: relative;
-  background: transparent;
-  width: 100%;
+  height: 100%;
   overflow: hidden;
+  padding-bottom: 54px;
 }
-
-.map_01::before {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: url(/img/map_history/map_01.png) no-repeat;
+.map_main .mapwrap svg {
+  display: block;
+  width: 100%;
 }
-
-.map_02::before {
-  top: 108px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: url(/img/map_history/map_02.png) no-repeat;
+#tabs-2 .map_main svg,
+#tabs-3 .map_main svg {
+  margin-top: 100px;
 }
+/* svg spot 적용 */
+.map_main svg #spot circle {
+  cursor: pointer;
+}
+.map_main svg #spot circle:hover {
+  fill: #fff;
+}
+/* tab2 */
 
-.map_01::before,
-.map_02::before {
+/* 타이틀 */
+.map_main .map_title {
   position: absolute;
-  content: "";
-  z-index: -1;
-  background-position: top;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 54px;
+  font-family: "samsungOne_700";
+  font-weight: 700;
 }
 
 .map_submenu {
+  justify-content: space-evenly;
   background: var(--sub-bg1);
-  line-height: 80px;
+  height: 80px;
   font-family: "samsungOne_400";
-  gap: 210px;
   position: fixed;
   z-index: 1;
   bottom: 0;
@@ -69,26 +74,155 @@ header {
   right: 0;
 }
 
-.map_spots {
-  width: 100%;
-  height: 890px;
-  background: transparent;
+#tabs .map_submenu a.active {
+  color: var(--point);
+  transition: 0.3s;
 }
 
-.map_01_list {
+.map_list {
+  margin: 0 auto;
   flex-wrap: wrap;
+  gap: 25px 20px;
   margin-bottom: 81px;
 }
-.map_01_list_item {
+.map_list_item {
+  text-align: center;
   width: 320px;
   box-sizing: border-box;
-  padding: 27px 0;
-  margin-bottom: 25px;
+  padding: 27px 10px;
 }
-.map_01_list_item span:first-of-type {
+.map_list_item h3 {
+  font-family: "samsungsharpsans_bold";
+  font-weight: bold;
+  line-height: 27px;
+}
+.map_list_item span:first-of-type {
   margin-top: 27px;
 }
-.map_01_list_item span {
+.map_list_item span {
   display: block;
   line-height: 27px;
+}
+.map_list_item span:last-child {
+  margin-bottom: 27px;
+}
+
+#tabs-3 .map_list_item {
+  width: 420px;
+  padding: 27px 40px;
+}
+.mapwrap {
+  position: relative;
+}
+.mapwrap .popup {
+  background: var(--sub-bg1);
+  position: absolute;
+  border-radius: 30px;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+}
+.mapwrap .popup span:last-of-type{
+  margin-bottom: 27px;
+}
+.mapwrap .popup.hide {
+  display: none;
+}
+.map_list_item > img {
+  display: none;
+}
+#tabs-2 .map_main .mapwrap svg #spot circle,
+#tabs-3 .map_main .mapwrap svg #spot circle {
+  r:3.2;
+}
+
+
+/* 반응형 */
+@media (max-width: 768px) {
+  #tabs-1 .map_main .mapwrap svg {
+    transition: 0.4s;
+    transform: scale(1.3);
+  }
+  #tabs-2 .map_main .mapwrap svg {
+    transition: 0.4s;
+    transform-origin: left center;
+    transform: scale(1.3);
+  }
+  #tabs-3 .map_main .mapwrap svg {
+    transition: 0.4s;
+    transform: scale(1.3);
+  }
+  #tabs-2 .map_main .mapwrap svg #spot circle,
+  #tabs-3 .map_main .mapwrap svg #spot circle {
+    r:4;
+  }
+  #tabs-1 .map_main .mapwrap {
+    margin-top: 27px;
+  }
+  #tabs-2 .map_main .mapwrap,
+  #tabs-3 .map_main .mapwrap {
+    margin-top: 40px;
+  }
+  .map_submenu {
+    height: 54px;
+  }
+  #tabs > ul {
+    font-size: 24px;
+  }
+  .map_main .map_title {
+    font-size: 24px;
+  }
+  .map_list.container {
+    width: 580px;
+  }
+  .map_list {
+    margin-bottom: 54px;
+  }
+  .map_list_item {
+    width: 180px;
+  }
+  .map_list_item h3 {
+    font-size: 24px;
+  }
+  #tabs-3 .map_list {
+    justify-content: flex-start;
+  }
+  #tabs-3 .map_list_item {
+    width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  #tabs-1.map_main {
+    margin-top: 54px;
+  }
+  .map_list.container {
+    width: 340px;
+  }
+  #tabs > ul {
+    font-size: 16px;
+  }
+  #tabs-1 .map_main .mapwrap {
+    margin-top: 54px;
+  }
+  #tabs-1 .map_main .mapwrap svg {
+    transition: 0.4s;
+    transform: scale(1.3);
+  }
+  .map_list_item {
+    width: 160px;
+  }
+  .map_list_item h3 {
+    font-size: 16px;
+  }
+  .map_list_item span {
+    font-size: 14px;
+  }
+  #tabs-3 .map_list {
+    justify-content: center;
+  }
+  #tabs-3 .map_list_item {
+    width: 340px;
+  }
 }

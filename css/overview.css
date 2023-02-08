@@ -2,82 +2,473 @@ body {
   background-color: var(--main-bg);
   color: var(--text);
 }
+h1,
 h2,
 h3,
-h4 {
-  font-family: "samsungOne_700";
-  font-size: 18px;
+h4,
+p {
+  font-family: "samsungOne_400";
+  font-size: 17px;
 }
 
-/* section1 */
+/* section */
 #pearl {
   position: relative;
+  height: 100%;
+  overflow: hidden;
 }
-#pearl > div {
-  justify-content: center;
-  display: flex;
-  flex-direction: row-reverse;
-  position: relative;
+#pearl .bgs {
+  width: 50%;
+  margin: 0 auto;
+  transition: width 0.4s;
+}
+/* full */
+#pearl .bgs.full {
+  width: 100%;
+}
+#pearl .bgs.full .bgss p {
+  opacity: 1;
 }
 
-#pearl > div span {
+#pearl .bgs .bgss {
+  position: relative;
+  width: 100%;
+}
+#pearl .bgs .bgss img {
+  width: 100%;
+  object-fit: cover;
+}
+#pearl .bgs .bgss p {
   position: absolute;
-  transform: translateX(-40%);
+  left: 20%;
   top: 50%;
-  text-align: center;
+  transform: translateY(-50%);
+  z-index: 1;
+  text-align: left;
   line-height: 40px;
-  font-size: 18px;
+  font-family: "samsungOne_400";
+  opacity: 0;
+  transition: 0.5s;
 }
 
 /* section2 */
 #monitors {
-  background: url("../img/Overview_sh/bg2.png") no-repeat;
-  width: 100%;
-  height: 847px;
   position: relative;
-  background-size: cover;
-  background-position: bottom center;
-}
-#monitors h3 {
-  width: 100%;
-  position: absolute;
-  text-align: center;
   margin: 0 auto;
-  top: 40%;
+}
+#monitors img {
+  width: 100%;
+}
+#monitors div {
+  text-align: center;
   line-height: 40px;
+}
+#monitors div h1 {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
 }
 
 /* section3 */
 #toggle {
-  width: 1340px;
-  margin: 0 auto;
-}
-#toggle div:nth-child(2) {
   width: 100%;
-  height: 1070px;
+  height: 200vh;
+  /* max-width: 1340px; */
+  margin: 0 auto;
+  /* overflow: hidden; */
+}
+#toggle .content {
   display: flex;
-  flex-direction: row-reverse;
-
-  /* justify-content: space-evenly; */
-  position: relative;
+  flex-direction: column;
 }
 #toggle img {
-  position: fixed;
   width: 380px;
   top: 20%;
   bottom: 0;
 }
-#toggle div:last-child > img {
-  width: 380px;
-  height: 578px;
-  border-radius: 240px;
-  bottom: 0;
-  z-index: -1;
+#toggle .contents {
+  position: sticky;
+  top: 0;
+  /* overflow: hidden; */
+  height: 100vh;
 }
-#toggle h4 {
+#toggle .contents .content2,
+#toggle .contents .content1 {
+  position: relative;
+  width: 100%;
+}
+
+#toggle .contents .content1 img {
+  width: 20%;
+  height: 50vh;
+  border-radius: 30%;
   position: absolute;
-  top: 20%;
+  object-fit: cover;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#toggle .contents .content2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#toggle .contents .content2,
+#toggle .contents .content1 {
+  height: 100vh;
+  transition: 3s;
+}
+#toggle .contents .content2 .fonts,
+#toggle .contents .content1 .fonts {
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+}
+#toggle .contents .content1 .fonts {
+  position: absolute;
+  right: 30%;
+  top: 30%;
+}
+#toggle .contents .content2 .fonts p:first-child {
+  position: absolute;
+  top: 50%;
+  /* right: 0; */
+}
+/* #toggle .contents .content1 {
+  position: sticky;
+  top: 0;
+} */
+#toggle .contents .content2 {
+  transform: translateY(100%);
+  width: 20%;
+  height: 50vh;
+  overflow: hidden;
+  border-radius: 300px;
+  margin: 0 auto;
+  position: absolute;
   left: 0;
+  right: 0;
+  top: 0;
+  opacity: 0;
+}
+
+/* active */
+#toggle .contents .content1.active {
+  /* transition: 3s; */
+  transition: 2s;
+  opacity: 0;
+  /* display: none; */
+}
+#toggle .contents .content2.active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 2s 1s;
+  /* overflow: hidden; */
+}
+#toggle .contents .content2.fulls {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+
+  transition: 2s;
+}
+#toggle .contents .content2.active .fonts p:last-child {
+  display: none;
+}
+/* fulls */
+#toggle .contents .content2.active.fulls .fonts p:first-child {
+  display: none;
+}
+#toggle .contents .content2.active.fulls .fonts p:last-child {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  right: 0;
+  width: 100vw;
+  /* transition: 5s; */
+}
+#monitor div {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+#monitor div img:nth-child(2) {
+  width: 68%;
+  margin: 0 auto;
+  display: flex;
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#monitor div img:first-child {
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  width: 55%;
+  height: 70%;
+  transition: 2s;
+  right: 50%;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+#monitor div.big img:first-child {
+  width: 100%;
+  height: 100vh;
+  top: 50%;
+}
+#monitor p:last-child {
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  text-align: center;
+  /* font-weight: 700; */
+  font-size: 18px;
+}
+
+#monitor .bg p {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  z-index: 10;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* section5 */
+#earth {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin: 0 auto;
+}
+#earth img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  object-fit: cover;
+}
+#earth .bg2 h2 {
+  position: absolute;
+  /* left: 50%;
+  right: 50%; */
+  top: 50%;
+  /* transform: translate(-50%, -50%); */
+  width: 100%;
   text-align: center;
   line-height: 40px;
+}
+
+/* section6 */
+#display {
+  position: relative;
+}
+#display div {
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+#display .fonts {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#display h3,
+#display p {
+  font-size: 40px;
+  font-family: "samsungOne_700";
+}
+#display h3 {
+  margin-bottom: 40px;
+}
+
+/* opacity */
+#display .images.opacity {
+  opacity: 0.6;
+  transition: 0.7s;
+}
+
+@media (max-width: 768px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    font-family: "samsungOne_400";
+    font-size: 14px;
+  }
+  #pearl .bgs .bgss p {
+    line-height: 27px;
+    width: 340px;
+  }
+  #toggle .contents .content2 img {
+    width: 100%;
+    height: 30vh;
+  }
+  #toggle .contents .content1 img {
+    width: 180px;
+    height: 268px;
+    border-radius: 30%;
+    position: relative;
+  }
+  /* fulls */
+  #toggle .contents .content2.fulls img {
+    width: 100%;
+    border-radius: 0;
+    height: 100vh;
+  }
+  /* #toggle .contents .content2.active {
+    transform: translateY(-100%);
+  } */
+  #toggle .contents .content2 span {
+    width: 100%;
+  }
+  #monitors img {
+    width: 100%;
+  }
+  #monitor .bg p {
+    font-size: 13px;
+  }
+  #monitor p:last-child {
+    font-size: 15px;
+  }
+  #monitor div img:first-child {
+    top: 46%;
+    width: 54%;
+    height: 33%;
+  }
+  #monitor div.big img:first-child {
+    top: 50%;
+    width: 100%;
+    height: 100vh;
+  }
+  #earth .bg2 {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.8;
+  }
+  #earth .bg2 h2 {
+    /* max-width: 340px; */
+  }
+  #display div img {
+    width: 40%;
+  }
+  #display div {
+    width: 80%;
+  }
+  #display h4,
+  #display p {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  #display span {
+    opacity: 1;
+  }
+  #monitors div h1 {
+    width: 80%;
+    margin: 0 auto;
+    transform: translateY(-60%);
+  }
+}
+
+@media (max-width: 480px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    font-family: "samsungOne_700";
+    font-size: 12px;
+  }
+  #pearl .bgs {
+    width: 100%;
+  }
+  #pearl .bgs .bgss p {
+    opacity: 1;
+  }
+  #monitors div h1 {
+    line-height: 27px;
+  }
+  #toggle .contents .content1 img {
+    display: none;
+  }
+  #monitor {
+    padding-bottom: 163px;
+  }
+  #monitor p:last-child {
+    font-size: 11px;
+  }
+  #toggle {
+    height: auto;
+  }
+  #toggle .contents .content1 .fonts {
+    right: 0;
+    z-index: 1;
+  }
+  #toggle .contents .content2 {
+    height: 100vh;
+    opacity: 1;
+    transform: translateY(0);
+    width: 100%;
+    overflow: visible;
+  }
+  #toggle .contents .content2 .fonts p:first-child {
+    right: 15%;
+  }
+  #toggle .contents .content2 .fonts p:last-child {
+    bottom: 30%;
+    position: absolute;
+    width: 70%;
+    left: 15%;
+  }
+  #toggle .contents .content2 img {
+    /* border-radius: 30%; */
+    height: 100vh;
+    width: 100%;
+  }
+  #toggle .contents {
+    height: 100vh;
+    position: relative;
+  }
+  #monitor {
+    padding: 0;
+  }
+  #monitor div img:first-child {
+    width: 100%;
+    height: 100vh;
+  }
+
+  #earth .bg2 h2 {
+    /* width: 80%; */
+    line-height: 27px;
+  }
+  #toggle .contents .content2 span p:last-child {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #display div {
+    opacity: 0.8;
+  }
+  #display h3,
+  #display p {
+    font-size: 20px;
+    font-family: "samsungOne_700";
+  }
+  #display h3 {
+    margin-bottom: 27px;
+  }
 }
