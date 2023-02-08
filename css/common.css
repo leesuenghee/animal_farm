@@ -687,3 +687,73 @@ div {
     background-position: center;
   }
 }
+
+
+/* 팝업 */
+dialog {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  width: 480px;
+  padding: 40px;
+  z-index: 20;
+  border: 8px solid #fff;
+  background: var(--main-bg);
+  font-family: "samsungsharpsans_medium";
+}
+dialog .popup-logo {
+  text-align: center;
+}
+dialog .main-popup h2 {
+  border-radius: 30px;
+  background: var(--primary);
+  display: inline-block;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 40px;
+  padding: 10px 18px;
+  margin: 20px auto 40px;
+}
+dialog .main-popup h2,
+dialog .main-popup > p {
+  font-family: "samsungsharpsans_bold";
+  font-weight: bold;
+}
+dialog .main-popup > p {
+  line-height: 27px;
+}
+dialog .main-popup .popup-content {
+  margin: 40px 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+dialog .main-popup form {
+  text-align: center;
+}
+dialog .main-popup form input + label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  background: var(--main-bg);
+  vertical-align: middle;
+  margin-right: 20px;
+}
+dialog .main-popup form input:checked + label::before {
+  content: '✔';
+  color: var(--point);
+  font-size: 18px;
+  font-weight: 900;
+  display: inline-block;
+  background: var(--text);
+  text-align: center;
+}
+dialog .main-popup form input {
+  display: none;
+}
+dialog .popup_close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
