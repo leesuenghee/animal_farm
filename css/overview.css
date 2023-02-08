@@ -210,10 +210,15 @@ p {
   width: 55%;
   height: 70%;
   transition: 2s;
+  right: 50%;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
 }
 #monitor div.big img:first-child {
   width: 100%;
   height: 100vh;
+  top: 50%;
 }
 #monitor p:last-child {
   width: 100%;
@@ -340,7 +345,16 @@ p {
   #monitor p:last-child {
     font-size: 15px;
   }
-
+  #monitor div img:first-child {
+    top: 46%;
+    width: 54%;
+    height: 33%;
+  }
+  #monitor div.big img:first-child {
+    top: 50%;
+    width: 100%;
+    height: 100vh;
+  }
   #earth .bg2 {
     width: 100%;
     background-position: center;

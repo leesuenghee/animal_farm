@@ -26,16 +26,19 @@ header nav {
   /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
-#fullpages {
+#fullpages,
+#fullpages2 {
   position: relative;
   width: 100%;
 }
-#fullpages .images {
+#fullpages .images,
+#fullpages2 .images {
   width: 100%;
   height: 100vh;
   position: relative;
 }
-#fullpages .images::before {
+#fullpages .images::before,
+#fullpages2 .images::before {
   content: "";
   opacity: 0.5;
   position: absolute;
@@ -45,7 +48,7 @@ header nav {
   bottom: 0px;
   background-color: #000;
 }
-#fullpages:first-child div::before {
+#fullpages div::before {
   background: url("../img/CDN_sh/bg_2.png") no-repeat 0 0;
   background-size: cover;
   width: 100%;
@@ -53,7 +56,7 @@ header nav {
   position: absolute;
   background-position: center;
 }
-#fullpages:nth-child(2) div::before {
+#fullpages2 div::before {
   background: url("../img/CDN_sh/bg_1.png") no-repeat 0 0;
   background-size: cover;
   width: 100%;
@@ -61,7 +64,8 @@ header nav {
   position: absolute;
   background-position: center;
 }
-#fullpages .fonts {
+#fullpages .fonts,
+#fullpages2 .fonts {
   width: 100%;
   position: absolute;
   top: 50%;
@@ -70,7 +74,8 @@ header nav {
   text-align: center;
   line-height: 40px;
 }
-#fullpages .fonts h1 {
+#fullpages .fonts h1,
+#fullpages2 .fonts h1 {
   margin-bottom: 27px;
 }
 
