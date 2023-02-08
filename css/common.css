@@ -311,9 +311,17 @@ footer .footer .footer-line {
 footer .footer > div > .footer-line {
   display: none;
 }
-footer .footer .footer-menu li:hover a {
+footer .footer .footer-menu li:hover a,
+footer .footer .sns li:hover a {
   color: var(--point);
   transition: 0.2s ease-in;
+}
+footer .footer .sns li:hover a svg path {
+  fill: var(--point);
+  transition: 0.2s ease-in;
+}
+footer .footer .copyright {
+  color: var(--point);
 }
 footer .copyright,
 footer .sns {
