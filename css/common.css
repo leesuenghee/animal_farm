@@ -122,9 +122,11 @@ header nav .pc_gnb > ul:after {
   background: rgba(46, 46, 46, 0.5);
   opacity: 0;
   transition: opacity 0.3s;
+  visibility: hidden;
 }
 header nav .pc_gnb ul:hover:after {
   opacity: 1;
+  visibility: visible;
 }
 header nav .pc_gnb ul > li {
   position: relative;
