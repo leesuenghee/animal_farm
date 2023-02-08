@@ -1,0 +1,128 @@
+@media screen and (max-width: 1440px){
+    .wide_visual_wrapper{
+        line-height: 27px;
+    }
+    .wide_visual_wrapper h1{
+        font-size: 3rem;
+    }
+    .wide_visual_wrapper h2{
+        font-size: 2rem;
+        line-height:40px;
+    }
+    .wide_visual_wrapper p{
+        font-size: 1rem;
+    }
+    
+    
+    .main_content_container_5 .qd-oled_container li{
+        position:static;
+        margin: 0 auto;
+        
+    }
+}
+
+@media screen and (max-width: 768px){
+    .wide_visual_wrapper {
+        line-height: 27px;
+    }
+    .wide_visual_wrapper h1{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .wide_visual_wrapper h2{
+        font-size: 24px;
+    }
+    .wide_visual_wrapper p{
+        font-size: 16px;
+    }
+    .main_content_container_3{
+        padding-bottom: 100px;
+    }
+    .respon{
+        max-width:580px;
+        margin:0 auto;
+    }
+    .main_content_container_2 img{
+        position: relative;
+        max-width: 70%;
+        height: auto;
+    }
+    .content_2_text{
+        position: absolute;
+        top:50%;
+        left: 30%;
+        z-index: 3;
+    }
+    .lcd_oled_container ul{
+        margin: 0 auto;
+    }
+    .lcd_layer_list ul li img{
+        max-width:100%;
+        height:auto;
+        padding: 0 auto;
+        
+    } 
+    .main_content_container_5 .qd-oled_container li{
+       /*  position: static; */
+        width: 100%;
+    }
+    .content_6_right{
+        padding: 0;
+    }
+    
+    
+}
+@media screen and (max-width: 590px){
+    .main_content_container_5 #title_5{
+        padding-top: 0;
+    }
+    .content_4_text p{
+        display: none;
+    }
+    .windowOST_4{
+        height:80vh;
+    }
+}
+@media screen and (max-width: 480px){
+    .mobile_container{
+        padding: 0 15px;
+    }
+    .wide_visual_wrapper {
+        /* padding: 0 15px; */
+        line-height: 20px;
+    }
+    .wide_visual_wrapper h1{
+        font-size: 36px;
+    }
+    .wide_visual_wrapper h2{
+        font-size: 15px;
+    }
+    .wide_visual_wrapper h3{
+        font-size: 18px;
+    }
+    .wide_visual_wrapper p{
+        font-size: 13px;
+    }
+    .content_2{
+        padding-top: 100px;
+    }
+    .lcd_oled_container{
+        width: 340px;
+        flex-direction: row;
+    }
+    .lcd_layer_list{
+        width: 340px;
+    }
+    .oled_layer_list{
+        width:340px;
+    }
+    .main_content_container_4{
+        padding: 0;
+    }
+    
+    .content_4 h2{
+        width:260px;
+    }
+    
+    
+}
