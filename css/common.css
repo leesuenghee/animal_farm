@@ -293,6 +293,7 @@ footer .footer {
   padding: 81px 0;
 }
 footer .footer .logo {
+  display: inline-block;
   margin-bottom: 27px;
 }
 footer .footer-menu {
