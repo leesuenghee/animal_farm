@@ -21,7 +21,6 @@ $(".top_btn").click(function (e) {
   $("html,body").animate({ scrollTop: 0 }, 1000, "easeOutQuint");
 });
 
-
 //메인 슬라이드
 $(".swiper").slick({
   arrows: false,
@@ -30,7 +29,7 @@ $(".swiper").slick({
   autoplaySpeed: 2500,
 });
 
-let slideMenu = $('.slick-dots li button');
-slideMenu.each(function(){
-  slideMenu.text('');
-})
+let slideMenu = $(".slick-dots li button");
+slideMenu.each(function () {
+  slideMenu.text("");
+});
