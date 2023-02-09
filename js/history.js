@@ -9,6 +9,12 @@ var s = skrollr.init({
   },
 }); //
 
+
+
+
+
+
+
 let sections = $("section"),
   sectionInfo = [];
 
@@ -25,6 +31,16 @@ $(window).scroll(function () {
   let windowWidth = $(window).width();
   let windowOST = $(window).scrollTop();
   console.log(windowOST);
+
+//
+$(window).scroll(function(){
+  let sct = $(window).scrollTop();
+  if(sct == $(document).height() - $(window).height()){
+    hSubmenu.fadeOut();
+  } else {hSubmenu.fadeIn();}
+})//스크롤 맨밑일때 서브메뉴 fade효과
+
+
 
   // history_submenu 보이게 안보이게
   // 모바일버젼 일때 할일 (480px)
