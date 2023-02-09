@@ -298,13 +298,16 @@ header nav {
 }
 
 @media (max-width: 768px) {
-  #fullpages .fonts {
+  #fullpages .fonts,
+  #fullpages2 .fonts {
     max-width: 584px;
   }
-  #fullpages .fonts h1 {
+  #fullpages .fonts h1,
+  #fullpages2 .fonts h1 {
     font-size: 24px;
   }
-  #fullpages .fonts p {
+  #fullpages .fonts p,
+  #fullpages2 .fonts p {
     font-size: 18px;
     line-height: 27px;
   }
@@ -401,13 +404,16 @@ header nav {
 }
 
 @media (max-width: 480px) {
-  #fullpages .fonts h1 {
+  #fullpages .fonts h1,
+  #fullpages2 .fonts h1 {
     font-size: 16px;
   }
-  #fullpages .fonts p {
+  #fullpages .fonts p,
+  #fullpages2 .fonts p {
     font-size: 13px;
   }
-  #fullpages .fonts {
+  #fullpages .fonts,
+  #fullpages2 .fonts {
     max-width: 340px;
   }
 
