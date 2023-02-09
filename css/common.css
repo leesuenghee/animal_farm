@@ -716,8 +716,10 @@ div {
 dialog {
   position: fixed;
   top: 100px;
-  left: 100px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 480px;
+  margin: 0;
   padding: 40px;
   z-index: 20;
   border: 8px solid #fff;
@@ -779,4 +781,17 @@ dialog .popup_close {
   position: absolute;
   top: 20px;
   right: 20px;
+}
+@media (max-width: 480px) {
+  dialog {
+    width: 360px;
+    top: 12%;
+    padding: 30px;
+  }
+  dialog .main-popup h2 {
+    font-size: 24px;
+  }
+  dialog .main-popup > p {
+    font-size: 16px;
+  }
 }
