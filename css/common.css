@@ -488,19 +488,19 @@ div {
 }
 
 .slide1 {
-  background: url(./img/header_img/main1.png) no-repeat;
+  background: url(../img/header_img/main1.png) no-repeat;
   background-position: 73% bottom;
 }
 .slide2 {
-  background: url(./img/header_img/main2.png) no-repeat;
+  background: url(../img/header_img/main2.png) no-repeat;
   background-position: center center;
 }
 .slide3 {
-  background: url(./img/header_img/main3.png) no-repeat;
+  background: url(../img/header_img/main3.png) no-repeat;
   background-position: right center;
 }
 .slide4 {
-  background: url(./img/header_img/main4.png) no-repeat;
+  background: url(../img/header_img/main4.png) no-repeat;
   background-position: center center;
 }
 
@@ -625,7 +625,7 @@ div {
   }
 
   .slide1 {
-    background: url(./img/header_img/tb-1.png) no-repeat;
+    background: url(../img/header_img/tb-1.png) no-repeat;
     background-position: center;
   }
   .swiper-slide .slide1-text {
@@ -640,11 +640,11 @@ div {
     top: 10%;
   }
   .slide2 {
-    background: url(./img/header_img/tb-2.png) no-repeat;
+    background: url(../img/header_img/tb-2.png) no-repeat;
     background-position: center;
   }
   .slide3 {
-    background: url(./img/header_img/tb-3.png) no-repeat;
+    background: url(../img/header_img/tb-3.png) no-repeat;
   }
   .slide3 .slide3-text {
     top: 55%;
@@ -655,7 +655,7 @@ div {
     font-size: 32px;
   }
   .slide4 {
-    background: url(./img/header_img/tb-4.png) no-repeat;
+    background: url(../img/header_img/tb-4.png) no-repeat;
   }
   .swiper-slide .slide4-text {
     left: 50%;
@@ -678,15 +678,15 @@ div {
     font-size: 14px;
   }
   .slide1 {
-    background: url(./img/header_img/mb-1.png) no-repeat;
+    background: url(../img/header_img/mb-1.png) no-repeat;
     background-position: center;
   }
   .slide2 {
-    background: url(./img/header_img/mb-2.png) no-repeat;
+    background: url(../img/header_img/mb-2.png) no-repeat;
     background-position: center;
   }
   .slide3 {
-    background: url(./img/header_img/mb-3.png) no-repeat;
+    background: url(../img/header_img/mb-3.png) no-repeat;
     background-position: center;
   }
 }

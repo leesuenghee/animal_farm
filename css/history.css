@@ -96,19 +96,19 @@ body {
 
 /* section */
 #section1 {
-  background-image: url(./img/map_history/history_01.jpg);
+  background-image: url(../img/map_history/history_01.jpg);
 }
 #section2 {
-  background-image: url(./img/map_history/history_02.jpg);
+  background-image: url(../img/map_history/history_02.jpg);
 }
 #section3 {
-  background-image: url(./img/map_history/history_03.jpg);
+  background-image: url(../img/map_history/history_03.jpg);
 }
 #section4 {
-  background-image: url(./img/map_history/history_04.jpg);
+  background-image: url(../img/map_history/history_04.jpg);
 }
 #section5 {
-  background-image: url(./img/map_history/history_05.jpg);
+  background-image: url(../img/map_history/history_05.jpg);
 }
 section {
   position: relative;
