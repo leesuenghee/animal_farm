@@ -134,6 +134,11 @@ header nav .pc_gnb ul > li {
   box-sizing: border-box;
   white-space: nowrap;
 }
+header nav .pc_gnb ul > li:hover > a {
+  color: var(--point);
+  font-family: "samsungOne_700";
+  font-weight: bold;
+}
 header nav .pc_gnb ul > li > ul {
   margin-top: -18px;
   padding-top: 8px;
