@@ -60,7 +60,7 @@ $(window).scroll(function () {
       pearl.addClass("full");
     }
     if ($(window).scrollTop() > monitor.offset().top - 200) {
-      monitor_bg.addClass("big");
+      // monitor_bg.addClass("big");
     }
     if ($(window).scrollTop() > display.offset().top) {
       display_text.addClass("opacity");

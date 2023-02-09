@@ -33,7 +33,7 @@ body {
   z-index: 8;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   border-top: 2px #fff dashed;
   background-image: linear-gradient(to right, #fff 50%, #fff 0%);
   background-position: top;
@@ -96,19 +96,19 @@ body {
 
 /* section */
 #section1 {
-  background-image: url(/img/map_history/history_01.jpg);
+  background-image: url(./img/map_history/history_01.jpg);
 }
 #section2 {
-  background-image: url(/img/map_history/history_02.jpg);
+  background-image: url(./img/map_history/history_02.jpg);
 }
 #section3 {
-  background-image: url(/img/map_history/history_03.jpg);
+  background-image: url(./img/map_history/history_03.jpg);
 }
 #section4 {
-  background-image: url(/img/map_history/history_04.jpg);
+  background-image: url(./img/map_history/history_04.jpg);
 }
 #section5 {
-  background-image: url(/img/map_history/history_05.jpg);
+  background-image: url(./img/map_history/history_05.jpg);
 }
 section {
   position: relative;
@@ -199,7 +199,7 @@ section .history_title {
 }
 
 /* 반응형 */
-@media (max-width:768px){
+@media (max-width: 768px) {
   .history_wrap {
     /* width: 100%; */
     /* display: flex; */
@@ -249,14 +249,15 @@ section .history_title {
   .history_submenu ul {
     width: 90%;
   }
-  .history_submenu ul li a{
+  .history_submenu ul li a {
     padding: 0;
   }
-  #progress1, .progress1_line {
+  #progress1,
+  .progress1_line {
     display: none;
   }
 }
-@media (max-width:480px){
+@media (max-width: 480px) {
   .history_wrap {
     width: 100%;
   }
@@ -275,7 +276,7 @@ section .history_title {
     font-size: 32px;
     margin-bottom: 14px;
   }
-  .history_title p{
+  .history_title p {
     font-size: 24px;
   }
   .history_desc .year_wrap {
@@ -307,12 +308,8 @@ section .history_title {
   .history_submenu ul {
     width: 90%;
   }
-  .history_submenu ul li a{
+  .history_submenu ul li a {
     /* width: 45px; */
     padding: 0;
   }
 }
-
-
-
-

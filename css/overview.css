@@ -48,7 +48,7 @@ p {
   line-height: 40px;
   font-family: "samsungOne_400";
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.5s 0.5s;
 }
 
 /* section2 */
@@ -185,8 +185,8 @@ p {
   left: 0;
   top: 50%;
   right: 0;
-  width: 100vw;
-  /* transition: 5s; */
+  width: 100%;
+  transition: 5s;
 }
 #monitor div {
   position: relative;
@@ -207,8 +207,8 @@ p {
   position: absolute;
   z-index: -1;
   object-fit: cover;
-  width: 55%;
-  height: 70%;
+  width: 58%;
+  height: 58%;
   transition: 2s;
   right: 50%;
   left: 50%;
