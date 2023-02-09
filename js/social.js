@@ -79,26 +79,11 @@ let sc4tWrap = sc4.find('.s4_title_wrapper'),
 //     }
 // });
 
-
-var swiper = new Swiper(".s4_slides", {
-    slidesPerView: 4,
-    centeredSlides: false,
-    slidesPerGroupSkip: 1,
-    grabCursor: true,
-    keyboard: {
-      enabled: true,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-      },
-    },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+var swiper = new Swiper(".s4_slidewrapper .mySwiper", {
+  spaceBetween: 40,
+  slidesPerView: 4,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
