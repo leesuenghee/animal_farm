@@ -44,10 +44,10 @@ header {
   margin-top: 100px;
 }
 /* svg spot 적용 */
-.map_main svg #spot circle {
+.map_main svg .spot circle {
   cursor: pointer;
 }
-.map_main svg #spot circle:hover {
+.map_main svg .spot circle:hover {
   fill: #fff;
 }
 /* tab2 */
@@ -132,8 +132,8 @@ header {
 .map_list_item > img {
   display: none;
 }
-#tabs-2 .map_main .mapwrap svg #spot circle,
-#tabs-3 .map_main .mapwrap svg #spot circle {
+#tabs-2 .map_main .mapwrap svg .spot circle,
+#tabs-3 .map_main .mapwrap svg .spot circle {
   r:3.2;
 }
 
@@ -153,8 +153,8 @@ header {
     transition: 0.4s;
     transform: scale(1.3);
   }
-  #tabs-2 .map_main .mapwrap svg #spot circle,
-  #tabs-3 .map_main .mapwrap svg #spot circle {
+  #tabs-2 .map_main .mapwrap svg .spot circle,
+  #tabs-3 .map_main .mapwrap svg .spot circle {
     r:4;
   }
   #tabs-1 .map_main .mapwrap {
