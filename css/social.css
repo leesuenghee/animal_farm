@@ -383,23 +383,19 @@ main h4 {
 .social_s4 .s4_slidewrapper figure {
     border-radius: 30px;
     position: relative;
-    /* width: 450px;
-    height: 250px; */
     overflow: hidden;
+    min-width: 300px;
 }
 .social_s4 .s4_slidewrapper figcaption {
     font-family: "samsungOne_700";
     position: absolute;
-    font-size: 24px;
-     /* left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);  */
+    font-size: 18px;
+    font-weight: bold;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     line-height: 250px;
-    text-align: center;
     background: rgba(9,13,23,.5);
     transition: 0.5s;
 }
@@ -705,9 +701,15 @@ main h4 {
         grid-column: 1/-1;
         grid-row: 3/auto;
     }
+    .social_s4 .s4_slidewrapper .swiper-slide:nth-child(2n) {
+        padding-top: 108px;
+    }
     .social_s4 .s4_slidewrapper figure {
-        width: 300px;
-        height: 168px;
+        min-width: 200px;
+    }
+    .social_s4 .s4_slidewrapper figcaption {
+        line-height: 130px;
+        font-size: 14px;
     }
     .social_s5 h3 {
         padding: 135px 0 27px;
