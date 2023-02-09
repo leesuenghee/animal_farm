@@ -80,10 +80,20 @@ let sc4tWrap = sc4.find('.s4_title_wrapper'),
 // });
 
 var swiper = new Swiper(".s4_slidewrapper .mySwiper", {
-  spaceBetween: 40,
-  slidesPerView: 4,
+  spaceBetween: 10,
+  slidesPerView: 2,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
+  breakpoints: {
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    }
+  }
 });
