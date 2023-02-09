@@ -22,7 +22,7 @@ $(".top_btn").click(function (e) {
 });
 
 //메인 슬라이드
-$(".swiper").slick({
+$(".main-page .swiper").slick({
   arrows: false,
   dots: true,
   autoplay: true,
@@ -32,4 +32,49 @@ $(".swiper").slick({
 let slideMenu = $(".slick-dots li button");
 slideMenu.each(function () {
   slideMenu.text("");
+});
+
+//팝업
+let popup = $('dialog'),
+popupClose = $('.popup_close > i'),
+dayCheck = popup.find('#daycheck');
+
+
+//쿠키 설정 24시간
+function setCookie(name,value,day){
+  let date = new Date();
+  date.setDate(date.getDate()+day);
+  document.cookie = `${name}=${value};expires=${date.toGMTString()}`;
+}
+
+
+//쿠키 가져오기
+  function getCookie(name){
+    let cookieArr = document.cookie.split(';');
+    console.log(cookieArr);
+    let visited = false;
+    for(let cookie of cookieArr){
+        if(cookie.search(name) > -1){
+            visited = true;
+            break;
+        }
+    }
+console.log(visited);
+    if(visited == false){
+        popup.attr('open','');
+    } else {
+      popup.removeAttr('open');
+    }
+}
+
+//X버튼 클릭하면 닫기
+getCookie('ss');
+
+popupClose.click(()=>{
+    if(dayCheck.is(":checked")){
+        setCookie('ss','home',1);
+    }else{
+        setCookie('ss','home',-1);
+    }
+    popup.removeAttr('open');console.log(document.cookie);
 });
