@@ -1,0 +1,464 @@
+/* 공용 css */
+.ft48{
+    font-size: 48px;
+}
+.ft72{
+    font-size: 72px;
+}
+.text_culrum{
+    text-align:center;
+}
+.content_pd{
+    padding-bottom: 150px;
+}
+.jcsa{
+    justify-content: space-around;
+}
+/* 기본속성 */
+.wide_visual_wrapper{
+    background-color: var(--main-bg);
+    color:var(--text);
+    line-height: 40px;
+    
+}
+.wide_visual_wrapper h1{
+    font-size: 72px;
+}
+.wide_visual_wrapper h2{
+    font-size: 48px;
+}
+.wide_visual_wrapper h3{
+    font-size: 48px;
+}
+.wide_visual_wrapper p{
+    font-size: 24px;
+}
+.main_title_wrapper{
+    width: 100%;
+    height: 100vh; 
+}
+.main_wrapper{
+    width: 100%;
+    height: 100%; 
+}
+/* 컨텐츠 */
+.main_content_container_1{
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/oled/OLED_content1.png");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    display: table;
+
+} 
+.content_1{
+   display: table-cell;
+   vertical-align: middle;
+}
+.content_1 h1{
+    padding-bottom: 41px;
+}
+
+.main_content_container_2{
+    position:relative
+}
+.animate__animated{
+    visibility: hidden;
+    animation-duration: 3s;
+    
+}
+
+.content_2{
+    text-align:center;
+    padding-top:135px;
+    
+}
+.main_content_container_2 img{
+    position: relative;
+    max-width: 100%;
+    height: auto;
+      
+}
+.content_2_text{
+    position: absolute;
+    top:50%;
+    left: 30%;
+    z-index: 3;
+    
+}
+.content_3 h2{
+    padding-bottom:50px;
+}
+.content_3 .d-flex {
+    margin: 0 auto;
+}
+.content_3 .d-flex h2{
+    padding-bottom:26px;
+}
+.content_3 ul{
+    padding-top: 100px;
+}
+
+
+.oled_layer_list{
+    position:relative;
+    width: 330px;
+    height:330px;
+    
+}
+.lcd_layer_list{
+    position:relative;
+    width: 330px;
+    height:330px;  
+   
+}
+.lcd_layer_list li{
+    position:absolute; 
+    transition: 1s;
+}
+.oled_layer_list li{
+    position:absolute; 
+    transition: 1s;
+}
+
+
+.lcd_layer_list .nth-1{
+    left: 4px;
+    z-index: 1;
+}
+.lcd_layer_list .nth-2{
+    left: 8px;
+}
+.lcd_layer_list .nth-3{
+    left: 12px;
+}
+.lcd_layer_list .nth-4{
+    left: 16px;
+}
+.lcd_layer_list .nth-5{
+    left: 20px;
+}
+.lcd_layer_list .nth-6{
+    left: 24px;
+}
+   
+
+
+.oled_layer_list .nth-1{
+    left: 4px;
+    z-index: 1
+}
+.oled_layer_list .nth-2{
+    left: 8px;
+    
+}
+.oled_layer_list .nth-3{
+    left: 12px;
+    
+}
+.oled_layer_list .nth-4{
+    left: 16px;
+    
+}
+.lcd_container{
+   padding-bottom: 150px; 
+}
+.lcd_oled_container{
+    flex-wrap: wrap;
+}
+.windowOST_4{
+    width:100%;
+    height:139vh;
+}
+.content_4_text{
+    position:absolute;
+    top: 102px;
+    left: 50%;
+    transform: translate(-50%);
+   
+}
+.content_4 h2{
+    padding-bottom: 41px;
+}
+
+.content_4_imagebox{
+    position:relative;
+    width: 100%;
+    height: 100%;
+}
+.content_4 img{
+    width:100%;
+    transition:1s;
+    opacity : 1;
+    position: absolute;
+}
+.content_4 img.active{
+    transition:1s;
+    display: none;
+    opacity : 0.1;
+    position:absolute;
+}
+.main_content_container_5 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.main_content_container_5 #title_5{
+    padding-top: 1px;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-173px,-72px);
+}
+#title_5 h2{
+    padding-bottom: 32px;
+}
+.main_content_container_5 .qd-oled_container li{
+    list-style: none;
+    z-index: 1;
+    position: absolute;
+}
+/* .main_content_container_5 .qd-oled_container li:first-child img{
+    left: 0;
+    top: -60%;
+    width:100vw;
+}
+.main_content_container_5 .qd-oled_container li:nth-child(2){
+    top: -300%;
+    right: -30%;
+}
+.main_content_container_5 .qd-oled_container li:last-child{
+    bottom: -300%;
+    right: -80%;
+    
+}  */
+.main_content_container_5 .qd-oled_container li:first-child{
+    left: 15%;
+    top: 30%;
+    width:20vw;
+}
+.main_content_container_5 .qd-oled_container li:nth-child(2){
+    top: 0%;
+    right: 20%;
+    width:20vw;
+}
+.main_content_container_5 .qd-oled_container li:last-child{
+    bottom: 0%;
+    right: 25%;
+    width:20vw;
+    
+} 
+.main_content_container_5 .qd-oled_container li img{
+   width: 100%;
+    
+} 
+/* .main_content_container_5 .qd-oled_container li.active{
+    display: none;
+    transition: 3s; 
+}*/
+.windowOST_6{
+    position: relative;
+    height: 5000px;
+}
+.slide_6{
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+    max-width: 1903px;
+    width: 1903px;
+    max-height: 100%;
+    padding: 0px;
+    box-sizing: border-box;
+    position:sticky;
+    
+}
+.content_6{
+    margin:0 auto;
+}
+.content_6 h3{
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+.content_6 p{
+    padding-top:50px;
+}
+.content_6 .textbox{
+    min-width: 405px;
+    width:40px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding-bottom: 300px;
+
+}
+.content_6_right{
+    padding-left: 937px;
+}
+.content_6 .img_aria{
+    display: none;
+}
+
+.content_6_bg{
+    position:absolute;
+    left: 0;
+    top: 0;
+    transition: 2s;
+}
+.active .content_6_bg{
+    transform: scale(1.5);
+}
+
+.windowOST_6{
+    position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 890px;
+  background-image: url(../img/oled/OLED_content6.png);
+  
+}
+
+@media screen and (max-width: 1440px){
+    .wide_visual_wrapper{
+        line-height: 27px;
+    }
+    .wide_visual_wrapper h1{
+        font-size: 3rem;
+    }
+    .wide_visual_wrapper h2{
+        font-size: 2rem;
+        line-height:40px;
+    }
+    .wide_visual_wrapper p{
+        font-size: 1rem;
+    }
+    
+    
+    .main_content_container_5 .qd-oled_container li{
+        position:static;
+        margin: 0 auto;
+        
+    }
+}
+
+@media screen and (max-width: 768px){
+    .wide_visual_wrapper {
+        line-height: 27px;
+    }
+    .wide_visual_wrapper h1{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .wide_visual_wrapper h2{
+        font-size: 24px;
+    }
+    .wide_visual_wrapper p{
+        font-size: 16px;
+    }
+    .main_content_container_3{
+        padding-bottom: 100px;
+    }
+    .respon{
+        max-width:580px;
+        margin:0 auto;
+    }
+    
+    .main_content_container_2 img{
+        position: relative;
+        max-width: 70%;
+        height: auto;
+    }
+    .content_2_text{
+        position: absolute;
+        top:50%;
+        left: 30%;
+        z-index: 3;
+    }
+    .lcd_oled_container ul{
+        margin: 0 auto;
+    }
+    .lcd_layer_list ul li img{
+        max-width:100%;
+        height:auto;
+        padding: 0 auto;
+        
+    } 
+    .lcd_layer_list{
+        scale: 0.7;
+    }
+    .oled_layer_list{
+        scale: 0.7;
+    }
+    .main_content_container_5 #title_5{ 
+        position:relative;
+        transform: translate(-310px,-211.5px);
+    }
+    .windowOST_5{
+       display: flex;
+       flex-direction: column;
+    }
+    .content_6_right{
+        padding: 0;
+    }
+    
+    
+}
+@media screen and (max-width: 590px){
+    .main_content_container_5 #title_5{
+        padding-top: 0 auto;
+    }
+    .content_4_text p{
+        display: none;
+    }
+    .windowOST_4{
+        height:80vh;
+    }
+}
+@media screen and (max-width: 480px){
+    .mobile_container{
+        padding: 0 15px;
+    }
+    .wide_visual_wrapper {
+        /* padding: 0 15px; */
+        line-height: 20px;
+    }
+    .wide_visual_wrapper h1{
+        font-size: 36px;
+    }
+    .wide_visual_wrapper h2{
+        font-size: 15px;
+    }
+    .wide_visual_wrapper h3{
+        font-size: 18px;
+    }
+    .wide_visual_wrapper p{
+        font-size: 13px;
+    }
+    .content_2{
+        padding-top: 100px;
+    }
+    .lcd_oled_container{
+        width: 340px;
+        flex-direction: row;
+    }
+    .lcd_layer_list{
+        width: 340px;
+    }
+    .oled_layer_list{
+        width:340px;
+    }
+    .main_content_container_4{
+        padding: 0;
+    }
+    
+    .content_4 h2{
+        width:260px;
+    }
+    
+    
+}
+
