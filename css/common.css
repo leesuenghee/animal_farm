@@ -134,11 +134,6 @@ header nav .pc_gnb ul > li {
   box-sizing: border-box;
   white-space: nowrap;
 }
-header nav .pc_gnb ul > li:hover > a {
-  color: var(--point);
-  font-family: "samsungOne_700";
-  font-weight: bold;
-}
 header nav .pc_gnb ul > li > ul {
   margin-top: -18px;
   padding-top: 8px;
@@ -300,7 +295,6 @@ footer .footer {
   padding: 81px 0;
 }
 footer .footer .logo {
-  display: inline-block;
   margin-bottom: 27px;
 }
 footer .footer-menu {
@@ -431,7 +425,7 @@ div {
 .top_btn {
   position: fixed;
   right: 7%;
-  bottom: 23%;
+  bottom: 15%;
   background: none;
   border: none;
   text-align: center;
@@ -493,19 +487,19 @@ div {
 }
 
 .slide1 {
-  background: url(../img/header_img/main1.png) no-repeat;
+  background: url(/img/header_img/main1.png) no-repeat;
   background-position: 73% bottom;
 }
 .slide2 {
-  background: url(../img/header_img/main2.png) no-repeat;
+  background: url(/img/header_img/main2.png) no-repeat;
   background-position: center center;
 }
 .slide3 {
-  background: url(../img/header_img/main3.png) no-repeat;
+  background: url(/img/header_img/main3.png) no-repeat;
   background-position: right center;
 }
 .slide4 {
-  background: url(../img/header_img/main4.png) no-repeat;
+  background: url(/img/header_img/main4.png) no-repeat;
   background-position: center center;
 }
 
@@ -612,8 +606,6 @@ div {
   background: var(--point);
 }
 
-
-
 @media (max-width:1107px) {
   header nav .pc_gnb > ul > li {
     font-size: 14px;
@@ -652,7 +644,7 @@ div {
   }
 
   .slide1 {
-    background: url(../img/header_img/tb-1.png) no-repeat;
+    background: url(/img/header_img/tb-1.png) no-repeat;
     background-position: center;
   }
   .swiper-slide .slide1-text {
@@ -667,11 +659,11 @@ div {
     top: 10%;
   }
   .slide2 {
-    background: url(../img/header_img/tb-2.png) no-repeat;
+    background: url(/img/header_img/tb-2.png) no-repeat;
     background-position: center;
   }
   .slide3 {
-    background: url(../img/header_img/tb-3.png) no-repeat;
+    background: url(/img/header_img/tb-3.png) no-repeat;
   }
   .slide3 .slide3-text {
     top: 55%;
@@ -682,7 +674,7 @@ div {
     font-size: 32px;
   }
   .slide4 {
-    background: url(../img/header_img/tb-4.png) no-repeat;
+    background: url(/img/header_img/tb-4.png) no-repeat;
   }
   .swiper-slide .slide4-text {
     left: 50%;
@@ -705,84 +697,16 @@ div {
     font-size: 14px;
   }
   .slide1 {
-    background: url(../img/header_img/mb-1.png) no-repeat;
+    background: url(/img/header_img/mb-1.png) no-repeat;
     background-position: center;
   }
   .slide2 {
-    background: url(../img/header_img/mb-2.png) no-repeat;
+    background: url(/img/header_img/mb-2.png) no-repeat;
     background-position: center;
   }
   .slide3 {
-    background: url(../img/header_img/mb-3.png) no-repeat;
+    background: url(/img/header_img/mb-3.png) no-repeat;
     background-position: center;
   }
-}
 
-/* 팝업 */
-dialog {
-  position: fixed;
-  top: 100px;
-  left: 100px;
-  width: 480px;
-  padding: 40px;
-  z-index: 20;
-  border: 8px solid #fff;
-  background: var(--main-bg);
-  font-family: "samsungsharpsans_medium";
-}
-dialog .popup-logo {
-  text-align: center;
-}
-dialog .main-popup h2 {
-  border-radius: 30px;
-  background: var(--primary);
-  display: inline-block;
-  margin: 0;
-  text-transform: uppercase;
-  font-size: 40px;
-  padding: 10px 18px;
-  margin: 20px auto 40px;
-}
-dialog .main-popup h2,
-dialog .main-popup > p {
-  font-family: "samsungsharpsans_bold";
-  font-weight: bold;
-}
-dialog .main-popup > p {
-  line-height: 27px;
-}
-dialog .main-popup .popup-content {
-  margin: 40px 0;
-  font-size: 14px;
-  line-height: 20px;
-}
-dialog .main-popup form {
-  text-align: center;
-}
-dialog .main-popup form input + label::before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #fff;
-  background: var(--main-bg);
-  vertical-align: middle;
-  margin-right: 20px;
-}
-dialog .main-popup form input:checked + label::before {
-  content: "✔";
-  color: var(--point);
-  font-size: 18px;
-  font-weight: 900;
-  display: inline-block;
-  background: var(--text);
-  text-align: center;
-}
-dialog .main-popup form input {
-  display: none;
-}
-dialog .popup_close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
 }
