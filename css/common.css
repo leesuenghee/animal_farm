@@ -201,6 +201,12 @@ header nav .aside > ul > li > a {
   font-size: 20px;
   display: block;
 }
+header nav .aside > ul > li:hover > a,
+header nav .aside > ul > li > ul > li:hover > a {
+  color: var(--point);
+  font-family: "samsungOne_700";
+  font-weight: bold;
+}
 header nav .aside > ul > li > a:after {
   content: "";
   display: block;
