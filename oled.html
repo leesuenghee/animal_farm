@@ -1,343 +1,298 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/><!-- css animate -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- https://michalsnik.github.io/aos/ -->
-    <link rel="stylesheet"  href="css/oled.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css">
-    
-    <title>OLED</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- css animate -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- https://michalsnik.github.io/aos/ -->
+  <link rel="stylesheet" href="css/oled.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <meta name="description" content="삼성디스플레이 : 리뉴얼 포트폴리오. 스크롤이벤트 효과와 슬라이드 외 라이브러리 활용을 통한 동적인페이지 완성에 초점을 두었습니다." />
+  <meta name="author" content="팀명 : 동물농장 | 기획,디자인,구현 : 고*혁,이*희,오*경,박*지" />
+  <title>OLED | 삼성디스플레이</title>
+  <link rel="icon" href="img/header_img/FABECON.png" />
 </head>
+
 <body>
-    <header>
-        <nav class="container d-flex jcsb aic">
-          <h1 class="logo">
-            <a href="index.html"><span>samsung display</span></a>
-          </h1>
-          <div class="pc_gnb">
-            <ul class="d-flex jcc aic">
-              <li>
-                <a href="">기업정보 Seunghee</a>
-                <ul class="d-flex">
-                  <li><a href="overview.html">기업개요</a></li>
-                  <li><a href="SDC_culture.html">SDC culture</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">기업정보 Minji</a>
-                <ul class="d-flex">
-                  <li><a href="history.html">연혁</a></li>
-                  <li><a href="map.html">사업장 정보</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">제품기술 Junhyeok</a>
-                <ul>
-                  <li><a href="#">QD-OLED</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">지속가능경영 Nakyoung</a>
-                <ul>
-                  <li><a href="social.html">사회공헌</a></li>
-                </ul>
-              </li>
+  <header>
+    <nav class="container d-flex jcsb aic">
+      <h1 class="logo">
+        <a href="index.html"><span>samsung display</span></a>
+      </h1>
+      <div class="pc_gnb">
+        <ul class="d-flex jcc aic">
+          <li>
+            <a href="overview.html">기업정보 Seunghee</a>
+            <ul class="d-flex">
+              <li><a href="overview.html">기업개요</a></li>
+              <li><a href="SDC_culture.html">SDC culture</a></li>
             </ul>
-          </div>
-          <button class="toggleBtn">
-            <i class="fa-solid fa-bars"></i>
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-          <div class="aside d-flex aic">
-            <ul class="d-flex jcc aic">
-              <li>
-                <a href="">기업정보 Seunghee</a>
-                <ul class="d-flex">
-                  <li><a href="">기업개요</a></li>
-                  <li><a href="">SDC culture</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="">기업정보 Minji</a>
-                <ul class="d-flex">
-                  <li><a href="">연혁</a></li>
-                  <li><a href="">사업장 정보</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="">제품기술 Junhyeok</a>
-                <ul>
-                  <li><a href="">QD-OLED</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="">지속가능경영 Nakyoung</a>
-                <ul>
-                  <li><a href="">사회공헌</a></li>
-                </ul>
-              </li>
+          </li>
+          <li>
+            <a href="history.html">기업정보 Minji</a>
+            <ul class="d-flex">
+              <li><a href="history.html">연혁</a></li>
+              <li><a href="map.html">사업장 정보</a></li>
             </ul>
-      <div id="pearl" class="pd_ow">
-        <div>
-          <img
-            src="./img/Overview_sh/bg1.png"
-            alt=""
-            data-100="width:100%;"
-            data-0="width:35%; "
-          />
-          <span>
-            <h2 data-100="font-weight:700;">
-              삼성디스플레이는 앞선 기술력을 바탕으로 세계 디스플레이 시장을
-              선도하고 있으며,
-            </h2>
-            <p data-100="font-weight:700;">
-              끊임없는 기술혁신을 통해 상상 속에서만 가능했던 제품을 현실로 만드는
-              회사입니다.
-            </p>
-          </span>
+          </li>
+          <li>
+            <a href="oled.html">제품기술 Junhyeok</a>
+            <ul>
+              <li><a href="oled.html">QD-OLED</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="social.html">지속가능경영 Nakyoung</a>
+            <ul>
+              <li><a href="social.html">사회공헌</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <button class="toggleBtn">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="aside d-flex aic">
+        <ul class="d-flex jcc aic">
+          <li>
+            <a href="overview.html">기업정보 Seunghee</a>
+            <ul class="d-flex">
+              <li><a href="overview.html">기업개요</a></li>
+              <li><a href="SDC_culture.html">SDC culture</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="history.html">기업정보 Minji</a>
+            <ul class="d-flex">
+              <li><a href="history.html">연혁</a></li>
+              <li><a href="map.html">사업장 정보</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="oled.html">제품기술 Junhyeok</a>
+            <ul>
+              <li><a href="oled.html">QD-OLED</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="social.html">지속가능경영 Nakyoung</a>
+            <ul>
+              <li><a href="social.html">사회공헌</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="wide_visual_wrapper"> <!-- 높이 4478 -->
+    <section class="main_title_wrapper">
+      <div class="main_content_container_1 ">
+        <div class="content_1 text_culrum">
+          <h1>OLED</h1>
+          <p class="ft32">스스로 빛을 내는 퀀텀닷은 명암 단계별로 광범위하고 세밀하게 정확한 색 구현이 가능하며,</p>
+          <p class="ft32">효율적인 빛의 활용과 간단한 구조로 차세대 대형 디스플레이에 사용되고 있습니다.</p>
         </div>
       </div>
-      <section id="monitors" class="pd_ow">
-        <h3 class="animate__animated" data-effect="animate__fadeInUp">
-          삼성디스플레이는 2012년 OLED와 LCD의 합병으로 사업의 시너지를
-          극대화했으며, <br />
-          독보적인 기술을 바탕으로 스마트폰, 노트북, 모니터, TV 등에 프리미엄
-          디스플레이 제품을 공급하고 있습니다.
-        </h3>
-      </section>
-      <section id="toggle">
-        <div class="content pd_ow">
-          <div class="ts">
-            <img src="./img/Overview_sh/bg3.png" alt="" />
+    </section>
+    <section class="animate__animated main_wrapper main_wrapper_scroll content_pd respon">
+      <div class=" main_content_container_2 ">
+        <div class="content_2 text_culrum ">
+          <h2>퀸텀닷</h2>
+          <div class="content_2_text">
+            <p>스스로 빛을 내는 퀀텀닷은 명암 단계별로 광범위하고 세밀하게 정확한 색 구현이 가능하며,</p>
+            <p>효율적인 빛의 활용과 간단한 구조로 차세대 대형 디스플레이로 주목받고 있습니다.</p>
+          </div>
+        </div>
+        <img src="img/oled/OLED_content2.png" alt="">
+      </div>
+    </section>
+    <section class="windowOST_3 main_wrapper content_pd respon ">
+      <div class="main_content_container_3 ">
+        <div class="content_3 text_culrum ">
+          <div class="content_pd">
+            <h2>스스로 빛나니까 더 얇은 삼성 OLED</h2>
+            <p>백라이트도 컬러 필터도 필요 없습니다. 삼성 OLED는 스스로 빛과 색을 내는 유기물질로 이 모든 걸 대체했죠.</p>
             <p>
-              세계 최초로 플렉서블 OLED와 <br >
-              폴더블 디스플레이를 양산하는 하고 있으며
+              심플한 구조로 놀랍도록 얇은 디스플레이. 물론, 화질은 끝내줍니다.
             </p>
           </div>
-          <div class="ts">
-            <img src="./img/Overview_sh/bg4.png" alt="" />
-            <p>
-              상상 속에만 존재하던 디스플레이를 <br>현실로 만들어 가고 있습니다.
-            </p>
-            <p>
-              대형 디스플레이 시장의 판도를 뒤집을 QD-OLED라는 새로운 도전을
-              시작하고 있습니다.
-            </p>
-          </div>
-        </nav>
-      </header>
-    <div class="wide_visual_wrapper"> <!-- 높이 4478 -->
-        <section class="main_title_wrapper">
-            <div class="main_content_container_1 ">
-                <div class="content_1 text_culrum">
-                    <h1>OLED</h1>
-                    <p class="ft32">스스로 빛을 내는 퀀텀닷은 명암 단계별로 광범위하고 세밀하게 정확한 색 구현이 가능하며,</p>
-                    <p class="ft32">효율적인 빛의 활용과 간단한 구조로 차세대 대형 디스플레이에 사용되고 있습니다.</p>
-                </div>
-            </div>
-        </section>
-        <section class="animate__animated main_wrapper main_wrapper_scroll content_pd respon">
-            <div class=" main_content_container_2 ">
-                <div class="content_2 text_culrum ">
-                    <h2>퀸텀닷</h2>
-                    <div class="content_2_text">
-                        <p>스스로 빛을 내는 퀀텀닷은 명암 단계별로 광범위하고 세밀하게 정확한 색 구현이 가능하며,</p>
-                        <p>효율적인 빛의 활용과 간단한 구조로 차세대 대형 디스플레이로 주목받고 있습니다.</p>
-                    </div>
-                </div>
-                <img src="img/oled/OLED_content2.png" alt="">
-            </div>
-        </section>
-        <section class="windowOST_3 main_wrapper content_pd respon ">
-            <div class="main_content_container_3 ">
-                <div class="content_3 text_culrum ">
-                    <div class="content_pd">
-                        <h2>스스로 빛나니까 더 얇은 삼성 OLED</h2>
-                        <p>백라이트도 컬러 필터도 필요 없습니다. 삼성 OLED는 스스로 빛과 색을 내는 유기물질로 이 모든 걸 대체했죠.</p>
-                        <p>
-                            심플한 구조로 놀랍도록 얇은 디스플레이. 물론, 화질은 끝내줍니다.
-                        </p>
-                    </div>
-                    <div class="lcd_oled_container d-flex jcsa content_pd"><!--  플렉스 -->
-                        <div class="lcd_container">
-                            <h2>LCD</h2>
-                            <p>Conventional</p>
-                            <ul class="lcd_layer_list">
-                                <li class="lcd_layer_item nth-1"><img src="img/oled/OLED_lcd6.png" alt=""></li>
-                                <li class="lcd_layer_item nth-2"><img src="img/oled/OLED_lcd5.png" alt=""></li>
-                                <li class="lcd_layer_item nth-3"><img src="img/oled/OLED_lcd4.png" alt=""></li>
-                                <li class="lcd_layer_item nth-4"><img src="img/oled/OLED_lcd3.png" alt=""></li>
-                                <li class="lcd_layer_item nth-5"><img src="img/oled/OLED_lcd2.png" alt=""></li>
-                                <li class="lcd_layer_item nth-6"><img src="img/oled/OLED_lcd1.png" alt=""></li>
-                            </ul>
-                        </div>  
-                        <div class="oled_container">
-                            <h2>OLED</h2>
-                            <p>Orgonic Light Emiting Diode</p>
-                            <ul class="oled_layer_list">
-                                <li class="oled_layer_item nth-1"><img src="img/oled/OLED_oled1.png" alt=""></li>
-                                <li class="oled_layer_item nth-2"><img src="img/oled/OLED_oled2.png" alt=""></li>
-                                <li class="oled_layer_item nth-3"><img src="img/oled/OLED_oled3.png" alt=""></li>
-                                <li class="oled_layer_item nth-4"><img src="img/oled/OLED_oled4.png" alt=""></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="windowOST_4 main_wrapper">
-            <div class="main_content_container_4 content_pd">
-                <div class="content_4 "> 
-                    <div class="content_4_imagebox">
-                        <img class = "content_4_img_1" src="img/oled/OLED_content4_1.png" alt="">
-                        <img class = "content_4_img_2 active"src="img/oled/OLED_content4_2.png" alt="">
-                        <div class="content_4_text text_culrum">
-                            <h2>완전히 빠져들게 하는 살아 있는 컬러</h2>
-                            <p>영화와 게임 좋아하시나요? 삼성 OLED는 DCI-P3 120%에 해당하는 색 재현력으로 컬러를 섬세하고 정확하게 표현합니다.</p>
-                            <p>
-                            영화는 더욱 생생하게 게임은 더욱 실감 나게 빠져보세요.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="windowOST_5 main_wrapper">
-            <div class="main_content_container_5 content_pd">
-                <div class="text_culrum" id="title_5">
-                    <h2>QD-OLED</h2>
-                    <h2>Why QD-OLED?</h2>
-                </div>
-                <div class="qd-oled_container"><!-- 반응형 중앙정렬 -->
-                    <li class="active" data-aos="zoom-in-up"
-                    data-aos-duration="4000"><img src="img/oled/OLED_content5_1.png" alt=""></li>
-                    <li class="active" data-aos="zoom-in-up" data-aos-duration="4000"><img src="img/oled/OLED_content5_2.png" alt=""></li>
-                    <li class="active" data-aos="zoom-in-up" data-aos-duration="4000"><img src="img/oled/OLED_content5_3.png" alt=""></li> 
-                </div>
-            </div>
-        </section>
-        
-        <section class=" windowOST_6 main_content_container_6 main_wrapper">
-            <div class="content_6 container">
-                <div class="content_6_right textbox"  data-aos="fade-left">
-                    <div class="img_aria">
-                        <img src="image/OLED_content6.png" alt="">
-                    </div>
-                    <h3>Best for Eye Health</h3>
-                    <img src="img/oled/OLED_content6_1.png" alt="">
-                    <p>QD-OLED는 인체에 영향을 미치는 ‘유해 블루라이트’ 비중을 최적화하여
-                        보다 편안하게 화면을 감상할 수 있습니다.
-                    </p>
-                </div>
-                <div class="textbox"data-aos="fade-right">
-                    <div class="img_aria">
-                        <img src="image/OLED_content6.png" alt="">
-                    </div>
-                    <h3>TV</h3>
-                    <img src="img/oled/OLED_content6_2.png" alt="">
-                    <p>QD-OLED는 완벽한 블랙을 표현함으로써 가장 넓은 범위의 밝기를 표현하며 
-                        밝기 변화에 따라 폭 넓은 색 표현이 가능하여 경쟁 기술 대비 탁월한 HDR 표현이 가능합니다.
-                    </p>
-                </div>
-                <div class="content_6_right textbox"  data-aos="fade-left">
-                    <div class="img_aria">
-                        <img src="image/OLED_content6.png" alt="">
-                    </div>
-                    <h3>reflect</h3>
-                    <img src="img/oled/OLED_content6_3.png" alt="">
-                    <p>삼성 QD-OLED는현존 디스플레이 중 빛 반사가 가장 낮아 장소와 환경에 구애 받지 않고
-                        밝은 시청 환경에서도 빛 반사가 없는 최고의 화질을 제공해줍니다.
-                    </p>
-                </div>
-                <div class="textbox"  data-aos="fade-right">
-                    <div class="img_aria">
-                        <img src="image/OLED_content6.png" alt="">
-                    </div>
-                    <h3>Monitor</h3>
-                    <img src="img/oled/OLED_content6_4.png" alt="">
-                    <p>삼성 QD-OLED는 보다 빠른 응답속도로 끊김 없는 화면을 구현하여
-                        게임이나 영상을 즐길 때 최적의 환경을 제공합니다.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <footer class="container">
-            <div class="footer">
-              <h1 class="logo">
-                <a href="index.html"><span>samsung display</span></a>
-              </h1>
-              <ul class="d-flex footer-menu">
-                <li><a href="">윤리경영</a></li>
-                <li><a href="">천안 아산 인프라</a></li>
-                <li><a href="">사외내방신청</a></li>
-                <li><a href="">협력회사 Voice</a></li>
-                <li><a href="">신규거래제안(오픈소싱)</a></li>
-                <li><a href="">개인정보처리방침</a></li>
-                <li><a href="">B2B대금결제안내</a></li>
-                <li><a href="">보안신고센터</a></li>
-                <li><a href="">공정위 4대 실천사항</a></li>
-                <li><a href="">특허/상표</a></li>
-                <li><a href="">업데이트 이력</a></li>
+          <div class="lcd_oled_container d-flex jcsa content_pd"><!--  플렉스 -->
+            <div class="lcd_container">
+              <h2>LCD</h2>
+              <p>Conventional</p>
+              <ul class="lcd_layer_list">
+                <li class="lcd_layer_item nth-1"><img src="img/oled/OLED_lcd6.png" alt=""></li>
+                <li class="lcd_layer_item nth-2"><img src="img/oled/OLED_lcd5.png" alt=""></li>
+                <li class="lcd_layer_item nth-3"><img src="img/oled/OLED_lcd4.png" alt=""></li>
+                <li class="lcd_layer_item nth-4"><img src="img/oled/OLED_lcd3.png" alt=""></li>
+                <li class="lcd_layer_item nth-5"><img src="img/oled/OLED_lcd2.png" alt=""></li>
+                <li class="lcd_layer_item nth-6"><img src="img/oled/OLED_lcd1.png" alt=""></li>
               </ul>
-              <div class="footer-line"></div>
-              <div class="d-flex jcsb">
-                <ul class="d-flex copyright">
-                  <li>Copyright &copy; SAMSUNG DISPLAY All rights reserved.</li>
-                  <li>대표번호 : 031-5181-1114</li>
-                </ul>
-                <div class="footer-line"></div>
-                <ul class="d-flex aic sns">
-                  <li>
-                    <a href=""><i class="fa-brands fa-youtube"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-                  </li>
-                  <li>
-                    <a href=""
-                      ><svg
-                        width="41"
-                        height="47"
-                        viewBox="0 0 41 47"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M5.85714 5.31012C5.05179 5.31012 4.39286 5.97106 4.39286 6.77887V36.1539C4.39286 36.9617 5.05179 37.6226 5.85714 37.6226H26.3571V30.2789C26.3571 28.6541 27.6658 27.3414 29.2857 27.3414H36.6071V6.77887C36.6071 5.97106 35.9482 5.31012 35.1429 5.31012H5.85714ZM26.3571 42.0289H5.85714C2.62656 42.0289 0 39.3943 0 36.1539V6.77887C0 3.53844 2.62656 0.90387 5.85714 0.90387H35.1429C38.3734 0.90387 41 3.53844 41 6.77887V27.3414V27.8463C41 29.4068 40.3868 30.9031 39.2886 32.0047L31.0062 40.3123C29.908 41.4138 28.4163 42.0289 26.8605 42.0289H26.3571Z"
-                          fill="white"
-                        />
-                        <g clip-path="url(#clip0_270_7)">
-                          <path
-                            d="M15.888 14.9672C16.2307 14.8373 16.6139 14.9474 16.846 15.2383L23.9541 24.1666V15.8174C23.9541 15.3174 24.34 14.9135 24.8177 14.9135C25.2953 14.9135 25.6812 15.3174 25.6812 15.8174V26.6635C25.6812 27.0448 25.4546 27.3838 25.1118 27.5137C24.7691 27.6436 24.3859 27.5335 24.1538 27.2425L17.0457 18.3142V26.6635C17.0457 27.1635 16.6598 27.5674 16.1822 27.5674C15.7045 27.5674 15.3186 27.1635 15.3186 26.6635V15.8174C15.3186 15.4361 15.5453 15.0971 15.888 14.9672Z"
-                            fill="white"
-                          />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_270_7">
-                            <rect
-                              width="10.3626"
-                              height="14.4615"
-                              fill="white"
-                              transform="translate(15.3186 14.0096)"
-                            />
-                          </clipPath>
-                        </defs></svg
-                    ></a>
-                  </li>
-                </ul>
-              </div>
             </div>
-          </footer>
+            <div class="oled_container">
+              <h2>OLED</h2>
+              <p>Orgonic Light Emiting Diode</p>
+              <ul class="oled_layer_list">
+                <li class="oled_layer_item nth-1"><img src="img/oled/OLED_oled1.png" alt=""></li>
+                <li class="oled_layer_item nth-2"><img src="img/oled/OLED_oled2.png" alt=""></li>
+                <li class="oled_layer_item nth-3"><img src="img/oled/OLED_oled3.png" alt=""></li>
+                <li class="oled_layer_item nth-4"><img src="img/oled/OLED_oled4.png" alt=""></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="windowOST_4 main_wrapper">
+      <div class="main_content_container_4 content_pd">
+        <div class="content_4 ">
+          <div class="content_4_imagebox">
+            <img class="content_4_img_1" src="img/oled/OLED_content4_1.png" alt="">
+            <img class="content_4_img_2 active" src="img/oled/OLED_content4_2.png" alt="">
+            <div class="content_4_text text_culrum">
+              <h2>완전히 빠져들게 하는 살아 있는 컬러</h2>
+              <p>영화와 게임 좋아하시나요? 삼성 OLED는 DCI-P3 120%에 해당하는 색 재현력으로 컬러를 섬세하고 정확하게 표현합니다.</p>
+              <p>
+                영화는 더욱 생생하게 게임은 더욱 실감 나게 빠져보세요.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="windowOST_5 main_wrapper">
+      <div class="main_content_container_5 content_pd">
+        <div class="text_culrum" id="title_5">
+          <h2>QD-OLED</h2>
+          <h2>Why QD-OLED?</h2>
+        </div>
+        <div class="qd-oled_container"><!-- 반응형 중앙정렬 -->
+          <li class="active" data-aos="zoom-in-up" data-aos-duration="4000"><img src="img/oled/OLED_content5_1.png"
+              alt=""></li>
+          <li class="active" data-aos="zoom-in-up" data-aos-duration="4000"><img src="img/oled/OLED_content5_2.png"
+              alt=""></li>
+          <li class="active" data-aos="zoom-in-up" data-aos-duration="4000"><img src="img/oled/OLED_content5_3.png"
+              alt=""></li>
+        </div>
+      </div>
+    </section>
+
+    <section class=" windowOST_6 main_content_container_6 main_wrapper">
+      <div class="content_6 container">
+        <div class="content_6_right textbox" data-aos="fade-left">
+          <div class="img_aria">
+            <img src="image/OLED_content6.png" alt="">
+          </div>
+          <h3>Best for Eye Health</h3>
+          <img src="img/oled/OLED_content6_1.png" alt="">
+          <p>QD-OLED는 인체에 영향을 미치는 ‘유해 블루라이트’ 비중을 최적화하여
+            보다 편안하게 화면을 감상할 수 있습니다.
+          </p>
+        </div>
+        <div class="textbox" data-aos="fade-right">
+          <div class="img_aria">
+            <img src="image/OLED_content6.png" alt="">
+          </div>
+          <h3>TV</h3>
+          <img src="img/oled/OLED_content6_2.png" alt="">
+          <p>QD-OLED는 완벽한 블랙을 표현함으로써 가장 넓은 범위의 밝기를 표현하며
+            밝기 변화에 따라 폭 넓은 색 표현이 가능하여 경쟁 기술 대비 탁월한 HDR 표현이 가능합니다.
+          </p>
+        </div>
+        <div class="content_6_right textbox" data-aos="fade-left">
+          <div class="img_aria">
+            <img src="image/OLED_content6.png" alt="">
+          </div>
+          <h3>reflect</h3>
+          <img src="img/oled/OLED_content6_3.png" alt="">
+          <p>삼성 QD-OLED는현존 디스플레이 중 빛 반사가 가장 낮아 장소와 환경에 구애 받지 않고
+            밝은 시청 환경에서도 빛 반사가 없는 최고의 화질을 제공해줍니다.
+          </p>
+        </div>
+        <div class="textbox" data-aos="fade-right">
+          <div class="img_aria">
+            <img src="image/OLED_content6.png" alt="">
+          </div>
+          <h3>Monitor</h3>
+          <img src="img/oled/OLED_content6_4.png" alt="">
+          <p>삼성 QD-OLED는 보다 빠른 응답속도로 끊김 없는 화면을 구현하여
+            게임이나 영상을 즐길 때 최적의 환경을 제공합니다.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <button class="top_btn">
+    <img src="./img/TOP/TOP.png" alt="" /><i class="fa-solid fa-arrow-up-long"></i>
+  </button>
+  <footer class="container">
+    <div class="footer">
+      <h1 class="logo">
+        <a href="index.html"><span>samsung display</span></a>
+      </h1>
+      <ul class="d-flex footer-menu">
+        <li><a href="">윤리경영</a></li>
+        <li><a href="">천안 아산 인프라</a></li>
+        <li><a href="">사외내방신청</a></li>
+        <li><a href="">협력회사 Voice</a></li>
+        <li><a href="">신규거래제안(오픈소싱)</a></li>
+        <li><a href="">개인정보처리방침</a></li>
+        <li><a href="">B2B대금결제안내</a></li>
+        <li><a href="">보안신고센터</a></li>
+        <li><a href="">공정위 4대 실천사항</a></li>
+        <li><a href="">특허/상표</a></li>
+        <li><a href="">업데이트 이력</a></li>
+      </ul>
+      <div class="footer-line"></div>
+      <div class="d-flex jcsb">
+        <ul class="d-flex copyright">
+          <li>Copyright &copy; SAMSUNG DISPLAY All rights reserved.</li>
+          <li>대표번호 : 031-5181-1114</li>
+        </ul>
+        <div class="footer-line"></div>
+        <ul class="d-flex aic sns">
+          <li>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href=""><svg width="41" height="47" viewBox="0 0 41 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.85714 5.31012C5.05179 5.31012 4.39286 5.97106 4.39286 6.77887V36.1539C4.39286 36.9617 5.05179 37.6226 5.85714 37.6226H26.3571V30.2789C26.3571 28.6541 27.6658 27.3414 29.2857 27.3414H36.6071V6.77887C36.6071 5.97106 35.9482 5.31012 35.1429 5.31012H5.85714ZM26.3571 42.0289H5.85714C2.62656 42.0289 0 39.3943 0 36.1539V6.77887C0 3.53844 2.62656 0.90387 5.85714 0.90387H35.1429C38.3734 0.90387 41 3.53844 41 6.77887V27.3414V27.8463C41 29.4068 40.3868 30.9031 39.2886 32.0047L31.0062 40.3123C29.908 41.4138 28.4163 42.0289 26.8605 42.0289H26.3571Z"
+                  fill="white" />
+                <g clip-path="url(#clip0_270_7)">
+                  <path
+                    d="M15.888 14.9672C16.2307 14.8373 16.6139 14.9474 16.846 15.2383L23.9541 24.1666V15.8174C23.9541 15.3174 24.34 14.9135 24.8177 14.9135C25.2953 14.9135 25.6812 15.3174 25.6812 15.8174V26.6635C25.6812 27.0448 25.4546 27.3838 25.1118 27.5137C24.7691 27.6436 24.3859 27.5335 24.1538 27.2425L17.0457 18.3142V26.6635C17.0457 27.1635 16.6598 27.5674 16.1822 27.5674C15.7045 27.5674 15.3186 27.1635 15.3186 26.6635V15.8174C15.3186 15.4361 15.5453 15.0971 15.888 14.9672Z"
+                    fill="white" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_270_7">
+                    <rect width="10.3626" height="14.4615" fill="white" transform="translate(15.3186 14.0096)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-    
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo="crossorigin="anonymous"></script>
-    <script src="js/oled.js"></script>
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+    integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+  <script src="js/oled.js"></script>
 </body>
+
 </html>
