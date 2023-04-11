@@ -617,22 +617,22 @@ div {
   background: var(--point);
 }
 
-@media (max-width:1107px) {
+@media (max-width: 1107px) {
   header nav .pc_gnb > ul > li {
     font-size: 14px;
   }
 }
-@media (max-width:1034px) {
+@media (max-width: 1034px) {
   header nav .pc_gnb > ul {
     gap: 40px;
   }
 }
-@media (max-width:908px) {
+@media (max-width: 908px) {
   header nav .pc_gnb > ul {
     gap: 15px;
   }
 }
-@media (max-width:845px) {
+@media (max-width: 845px) {
   header nav .pc_gnb > ul > li {
     font-size: 12px;
   }
@@ -719,9 +719,7 @@ div {
     background: url(../img/header_img/mb-3.png) no-repeat;
     background-position: center;
   }
-
 }
-
 
 /* 팝업 */
 dialog {
@@ -805,4 +803,8 @@ dialog .popup_close {
   dialog .main-popup > p {
     font-size: 16px;
   }
+}
+dialog .popup-content .ming_made {
+  font-size: 18px;
+  font-weight: bold;
 }
