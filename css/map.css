@@ -123,7 +123,7 @@ header {
   transform: translateX(-50%);
   padding: 5px;
 }
-.mapwrap .popup span:last-of-type{
+.mapwrap .popup span:last-of-type {
   margin-bottom: 27px;
 }
 .mapwrap .popup.hide {
@@ -134,9 +134,8 @@ header {
 }
 #tabs-2 .map_main .mapwrap svg .spot circle,
 #tabs-3 .map_main .mapwrap svg .spot circle {
-  r:3.2;
+  r: 3.2;
 }
-
 
 /* 반응형 */
 @media (max-width: 768px) {
@@ -155,7 +154,7 @@ header {
   }
   #tabs-2 .map_main .mapwrap svg .spot circle,
   #tabs-3 .map_main .mapwrap svg .spot circle {
-    r:4;
+    r: 4;
   }
   #tabs-1 .map_main .mapwrap {
     margin-top: 27px;
@@ -190,6 +189,9 @@ header {
   }
   #tabs-3 .map_list_item {
     width: 280px;
+  }
+  .popup:not(.hide) > .map_list_item > img {
+    display: none;
   }
 }
 
