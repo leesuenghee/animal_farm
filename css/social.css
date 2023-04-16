@@ -250,7 +250,15 @@ b {
     overflow: hidden;
     height: 843px;
 }
-
+.social_s3 .s3_slidewrapper > a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+}
 .social_s3 .s3_slidewrapper a i {
     background: rgba(255,255,255,.2);
     color: #fff;
@@ -258,14 +266,12 @@ b {
     height: 60px;
     transition: 0.4s;
     line-height: 60px;
-    position: absolute;
     z-index: 10;
-    right: 0;
 }
-.social_s3 .s3_slidewrapper a:first-of-type i {
+.social_s3 .s3_slidewrapper a:first-of-type {
     bottom: 60px;
 }
-.social_s3 .s3_slidewrapper a:last-of-type i{
+.social_s3 .s3_slidewrapper a:last-of-type {
     bottom: 0;
 }
 .social_s3 .s3_slidewrapper i:hover {
